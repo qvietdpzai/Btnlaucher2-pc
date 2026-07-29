@@ -10,6 +10,7 @@ on:
       - 'btnlauncher2-keystone-ui/**'
       - 'btnlauncher2-electron-app/**'
       - 'pnpm-workspace.yaml'
+      - 'pnpm-lock.yaml'
       - '.github/**'
   pull_request:
 
