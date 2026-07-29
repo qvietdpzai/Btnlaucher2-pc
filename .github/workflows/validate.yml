@@ -9,6 +9,7 @@ on:
       - 'btnlauncher2-runtime-api/**'
       - 'btnlauncher2-keystone-ui/**'
       - 'btnlauncher2-electron-app/**'
+      - 'pnpm-workspace.yaml'
   pull_request:
 
 jobs:
