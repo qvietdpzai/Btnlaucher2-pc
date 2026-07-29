@@ -49,7 +49,7 @@
         "@btnlauncher2/runtime-api": "workspace:*",
         "@btnlauncher2/oxlint-config": "workspace:*",
         "@btnlauncher2/wrtc-multiplayer": "workspace:*",
-        "@btnlauncher2/windows-utils": "^0.0.15",
+        "@xmcl/windows-utils": "^0.0.15",
         "builtin-modules": "^3.3.0",
         "chalk": "^4.1.2",
         "create-desktop-shortcuts": "^1.10.1",
