@@ -1,5 +1,5 @@
 import { PeerState, createPromiseSignal } from '@btnlauncher2/runtime-api'
-import { UnblockedNatInfo, getNatInfoUDP, sampleNatType } from '@btnlauncher2/stun-client'
+import { UnblockedNatInfo, getNatInfoUDP, sampleNatType } from '@xmcl/stun-client'
 
 export async function raceNatType(state: PeerState, iceServers: RTCIceServer[]) {
   console.log('Start to sample the nat type')

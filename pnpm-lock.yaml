@@ -916,7 +916,7 @@ importers:
       '@btnlauncher2/runtime-api':
         specifier: workspace:*
         version: link:../../btnlauncher2-runtime-api
-      '@btnlauncher2/stun-client':
+      '@xmcl/stun-client':
         specifier: ^1.0.0
         version: 1.0.0
       '@btnlauncher2/text-component':
@@ -3541,10 +3541,10 @@ packages:
     peerDependencies:
       vue: ^3.5.0
 
-  '@btnlauncher2/stun-client@1.0.0':
+  '@xmcl/stun-client@1.0.0':
     resolution: {integrity: sha512-OrvzFEMGC9eSNvfHiIsa4GAUpslD64fS/LtI+WaXliL9122dDn2guxiwhvw8aWuBTS0HdbCCBjRtLXS6LbecWw==}
 
-  '@btnlauncher2/windows-utils@0.0.15':
+  '@xmcl/windows-utils@0.0.15':
     resolution: {integrity: sha512-UZkmEF87mfpiTe9+O9dAggTK/OeLfd61qZhlDUNolw5UfjjjzmdNe7Crgo81AKuDXhkv21TYsj9jt3okPd4vlw==}
 
   '@xmldom/xmldom@0.8.13':
@@ -8330,9 +8330,9 @@ snapshots:
     dependencies:
       vue: 3.5.33(typescript@5.9.3)
 
-  '@btnlauncher2/stun-client@1.0.0': {}
+  '@xmcl/stun-client@1.0.0': {}
 
-  '@btnlauncher2/windows-utils@0.0.15': {}
+  '@xmcl/windows-utils@0.0.15': {}
 
   '@xmldom/xmldom@0.8.13': {}
 

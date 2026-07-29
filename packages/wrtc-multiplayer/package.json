@@ -16,7 +16,7 @@
     "@btnlauncher2/client": "workspace:*",
     "@btnlauncher2/nat-api": "workspace:*",
     "@btnlauncher2/runtime-api": "workspace:*",
-    "@btnlauncher2/stun-client": "^1.0.0",
+    "@xmcl/stun-client": "^1.0.0",
     "@btnlauncher2/text-component": "workspace:*",
     "@btnlauncher2/utils": "workspace:*",
     "lodash.debounce": "^4.0.8",
