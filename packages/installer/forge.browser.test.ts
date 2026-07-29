@@ -7,7 +7,7 @@ import {
 } from './forge.browser'
 
 // Mock the forge-site-parser
-vi.mock('@xmcl/forge-site-parser', () => ({
+vi.mock('@btnlauncher2/forge-site-parser', () => ({
   parse: vi.fn((html: string) => {
     if (html.includes('1.20.1')) {
       return {

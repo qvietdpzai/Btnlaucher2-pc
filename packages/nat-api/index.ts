@@ -1,5 +1,5 @@
 /**
- * @module @xmcl/nat-api
+ * @module @btnlauncher2/nat-api
  */
 
 export * from './lib/upnp'

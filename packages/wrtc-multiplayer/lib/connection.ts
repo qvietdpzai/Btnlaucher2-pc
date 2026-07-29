@@ -1,4 +1,4 @@
-import { ConnectionUserInfo, RTCSessionDescription } from '@xmcl/runtime-api'
+import { ConnectionUserInfo, RTCSessionDescription } from '@btnlauncher2/runtime-api'
 import { createReadStream, existsSync } from 'fs'
 import debounce from 'lodash.debounce'
 import { createConnection } from 'net'
@@ -16,7 +16,7 @@ import { MessageIdentity, MessageIdentityEntry } from './messages/identity'
 import { MessageLanEntry } from './messages/lan'
 import { MessageEntry, MessageHandler, MessageType } from './messages/message'
 import { RTCDuplexChannel } from './RTCDuplexChannel'
-import { WorkerQueue } from '@xmcl/utils'
+import { WorkerQueue } from '@btnlauncher2/utils'
 
 const getRegistry = (entries: MessageEntry<any>[]) => {
   const reg: Record<string, MessageHandler<any>> = {}

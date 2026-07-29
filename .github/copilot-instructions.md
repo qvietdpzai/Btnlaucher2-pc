@@ -4,7 +4,7 @@
 > important rule for online Copilot sessions is repeated here for
 > convenience.
 
-## Visual verification (mandatory for `xmcl-keystone-ui/` changes)
+## Visual verification (mandatory for `btnlauncher2-keystone-ui/` changes)
 
 If your change is visible to the user:
 
@@ -19,7 +19,7 @@ If your change is visible to the user:
    ```bash
    pnpm e2e:install        # first time only — Playwright is opt-in
    pnpm build:renderer
-   pnpm --prefix=xmcl-electron-app compile
+   pnpm --prefix=btnlauncher2-electron-app compile
    pnpm test:e2e:scratch        # add `xvfb-run --auto-servernum` on Linux
    ```
 

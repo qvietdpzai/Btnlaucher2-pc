@@ -1,11 +1,11 @@
-import { MinecraftFolder, ResolvedVersion } from '@xmcl/core'
-import { isNotNull } from '@xmcl/core/utils'
+import { MinecraftFolder, ResolvedVersion } from '@btnlauncher2/core'
+import { isNotNull } from '@btnlauncher2/core/utils'
 import {
   DownloadBaseOptions,
   download,
   downloadMultiple,
   getDownloadBaseOptions,
-} from '@xmcl/file-transfer'
+} from '@btnlauncher2/file-transfer'
 import { link } from 'fs'
 import { readFile, stat, writeFile } from 'fs/promises'
 import { join } from 'path'

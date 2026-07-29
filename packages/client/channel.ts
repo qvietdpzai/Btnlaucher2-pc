@@ -1,4 +1,4 @@
-import { ByteBuffer } from '@xmcl/bytebuffer'
+import { ByteBuffer } from '@btnlauncher2/bytebuffer'
 import { EventEmitter } from 'events'
 import { NetConnectOpts, Socket } from 'net'
 import { Transform, TransformCallback, TransformOptions, Writable } from 'stream'

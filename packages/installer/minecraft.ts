@@ -8,8 +8,8 @@ import {
   ResolvedVersion,
   Version,
   Version as VersionJson,
-} from '@xmcl/core'
-import { download, DownloadBaseOptions, getDownloadBaseOptions } from '@xmcl/file-transfer'
+} from '@btnlauncher2/core'
+import { download, DownloadBaseOptions, getDownloadBaseOptions } from '@btnlauncher2/file-transfer'
 import { unlink, writeFile } from 'fs/promises'
 import { join, relative, sep } from 'path'
 import { diagnoseFile } from './diagnose'

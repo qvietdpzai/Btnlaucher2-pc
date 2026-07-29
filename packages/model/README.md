@@ -1,9 +1,9 @@
 # Model Module
 
-[![npm version](https://img.shields.io/npm/v/@xmcl/model.svg)](https://www.npmjs.com/package/@xmcl/model)
-[![Downloads](https://img.shields.io/npm/dm/@xmcl/model.svg)](https://npmjs.com/@xmcl/model)
-[![Install size](https://packagephobia.now.sh/badge?p=@xmcl/model)](https://packagephobia.now.sh/result?p=@xmcl/model)
-[![npm](https://img.shields.io/npm/l/@xmcl/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@btnlauncher2/model.svg)](https://www.npmjs.com/package/@btnlauncher2/model)
+[![Downloads](https://img.shields.io/npm/dm/@btnlauncher2/model.svg)](https://npmjs.com/@btnlauncher2/model)
+[![Install size](https://packagephobia.now.sh/badge?p=@btnlauncher2/model)](https://packagephobia.now.sh/result?p=@btnlauncher2/model)
+[![npm](https://img.shields.io/npm/l/@btnlauncher2/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
 [![Build Status](https://github.com/voxelum/minecraft-launcher-core-node/workflows/Build/badge.svg)](https://github.com/Voxelum/minecraft-launcher-core-node/actions?query=workflow%3ABuild)
 [![stability-experimental](https://img.shields.io/badge/stability-experimental-orange.svg)](https://github.com/emersion/stability-badges#experimental)
 
@@ -18,7 +18,7 @@ _Please read how to use [resourcepacks](https://github.com/Voxelum/minecraft-lau
 Create THREE.js block model:
 
 ```ts
-    import { BlockModelFactory } from "@xmcl/model";
+    import { BlockModelFactory } from "@btnlauncher2/model";
 
     const textureRegistry: TextureRegistry;
 
@@ -31,7 +31,7 @@ Create THREE.js block model:
 Create THREE.js player model:
 
 ```ts
-    import { PlayerModel } from "@xmcl/model";
+    import { PlayerModel } from "@btnlauncher2/model";
 
     const player: PlayerModel = new PlayerModel();
     const isSlimSkin: boolean; // if this skin use alex model

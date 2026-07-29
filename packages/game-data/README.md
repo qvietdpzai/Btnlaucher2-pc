@@ -1,9 +1,9 @@
 # Game Data
 
-[![npm version](https://img.shields.io/npm/v/@xmcl/world.svg)](https://www.npmjs.com/package/@xmcl/world)
-[![Downloads](https://img.shields.io/npm/dm/@xmcl/world.svg)](https://npmjs.com/@xmcl/world)
-[![Install size](https://packagephobia.now.sh/badge?p=@xmcl/world)](https://packagephobia.now.sh/result?p=@xmcl/world)
-[![npm](https://img.shields.io/npm/l/@xmcl/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@btnlauncher2/world.svg)](https://www.npmjs.com/package/@btnlauncher2/world)
+[![Downloads](https://img.shields.io/npm/dm/@btnlauncher2/world.svg)](https://npmjs.com/@btnlauncher2/world)
+[![Install size](https://packagephobia.now.sh/badge?p=@btnlauncher2/world)](https://packagephobia.now.sh/result?p=@btnlauncher2/world)
+[![npm](https://img.shields.io/npm/l/@btnlauncher2/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
 [![Build Status](https://github.com/voxelum/minecraft-launcher-core-node/workflows/Build/badge.svg)](https://github.com/Voxelum/minecraft-launcher-core-node/actions?query=workflow%3ABuild)
 
 Provides functions to parse Minecraft game data like level data, server data.
@@ -15,7 +15,7 @@ Provides functions to parse Minecraft game data like level data, server data.
 Read the level info from a buffer.
 
 ```ts
-import { WorldReader, LevelDataFrame } from '@xmcl/game-data'
+import { WorldReader, LevelDataFrame } from '@btnlauncher2/game-data'
 const worldSaveFolder: string;
 const reader: WorldReader = await WorldReader.create(worldSaveFolder);
 const levelData: LevelDataFrame = await reader.getLevelData();
@@ -24,7 +24,7 @@ const levelData: LevelDataFrame = await reader.getLevelData();
 **_Preview_** Read the region data, this feature is not tested yet, but the api will look like this
 
 ```ts
-import { WorldReader, RegionDataFrame, RegionReader } from "@xmcl/game-data";
+import { WorldReader, RegionDataFrame, RegionReader } from "@btnlauncher2/game-data";
 const worldSaveFolder: string;
 const reader: WorldReader = await WorldReader.create(worldSaveFolder);
 const chunkX: number;
@@ -57,7 +57,7 @@ One chunk (section) in region contains 4096 (16x16x16) blockstates, and they are
 ### Read and Write Server Info
 
 ```ts
-import { readInfo, writeInfo, ServerInfo } from "@xmcl/game-data";
+import { readInfo, writeInfo, ServerInfo } from "@btnlauncher2/game-data";
 
 const seversDatBuffer: Buffer; // this is the servers.dat under .minecraft folder
 const infos: ServerInfo[] = await readServerInfo(seversDatBuffer);

@@ -1,9 +1,9 @@
 # Installer Module
 
-[![npm version](https://img.shields.io/npm/v/@xmcl/installer.svg)](https://www.npmjs.com/package/@xmcl/installer)
-[![Downloads](https://img.shields.io/npm/dm/@xmcl/installer.svg)](https://npmjs.com/@xmcl/installer)
-[![Install size](https://packagephobia.now.sh/badge?p=@xmcl/installer)](https://packagephobia.now.sh/result?p=@xmcl/installer)
-[![npm](https://img.shields.io/npm/l/@xmcl/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@btnlauncher2/installer.svg)](https://www.npmjs.com/package/@btnlauncher2/installer)
+[![Downloads](https://img.shields.io/npm/dm/@btnlauncher2/installer.svg)](https://npmjs.com/@btnlauncher2/installer)
+[![Install size](https://packagephobia.now.sh/badge?p=@btnlauncher2/installer)](https://packagephobia.now.sh/result?p=@btnlauncher2/installer)
+[![npm](https://img.shields.io/npm/l/@btnlauncher2/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
 [![Build Status](https://github.com/voxelum/minecraft-launcher-core-node/workflows/Build/badge.svg)](https://github.com/Voxelum/minecraft-launcher-core-node/actions?query=workflow%3ABuild)
 
 Provide functions to install Minecraft client, libraries, and assets with smart diagnostics and efficient downloads.
@@ -24,8 +24,8 @@ Provide functions to install Minecraft client, libraries, and assets with smart 
 Install a Minecraft version with all dependencies (jar, libraries, assets, and profiles):
 
 ```ts
-import { completeInstallation } from "@xmcl/installer";
-import { MinecraftLocation, ResolvedVersion, Version } from "@xmcl/core";
+import { completeInstallation } from "@btnlauncher2/installer";
+import { MinecraftLocation, ResolvedVersion, Version } from "@btnlauncher2/core";
 
 const minecraft: MinecraftLocation;
 const version: string; // version string like 1.20.1
@@ -49,7 +49,7 @@ await completeInstallation(resolvedVersion, {
 Install just the Minecraft client or server jar:
 
 ```ts
-import { installMinecraftJar } from "@xmcl/installer";
+import { installMinecraftJar } from "@btnlauncher2/installer";
 
 await installMinecraftJar(resolvedVersion, {
   side: 'client', // or 'server'
@@ -64,7 +64,7 @@ await installMinecraftJar(resolvedVersion, {
 Install all required libraries:
 
 ```ts
-import { installLibraries } from "@xmcl/installer";
+import { installLibraries } from "@btnlauncher2/installer";
 
 await installLibraries(resolvedVersion, {
   tracker: (event) => {
@@ -80,7 +80,7 @@ await installLibraries(resolvedVersion, {
 Install game assets:
 
 ```ts
-import { installAssets } from "@xmcl/installer";
+import { installAssets } from "@btnlauncher2/installer";
 
 await installAssets(resolvedVersion, {
   tracker: (event) => {
@@ -122,7 +122,7 @@ try {
 Check installation status without fixing issues. When `diagnose: true` is set, `completeInstallation` will throw `InstallError` with `InstallIssue` details instead of downloading missing files:
 
 ```ts
-import { completeInstallation, InstallError, type InstallIssue } from "@xmcl/installer";
+import { completeInstallation, InstallError, type InstallIssue } from "@btnlauncher2/installer";
 
 try {
   await completeInstallation(resolvedVersion, {
@@ -158,8 +158,8 @@ try {
 Track installation progress with the built-in tracker system. The tracker is a function that receives event objects with `phase` and `payload` properties. For download phases, the `payload.download` object provides readonly progress information:
 
 ```ts
-import type { CompleteTrackerEvents } from "@xmcl/installer";
-import type { Tracker } from "@xmcl/installer";
+import type { CompleteTrackerEvents } from "@btnlauncher2/installer";
+import type { Tracker } from "@btnlauncher2/installer";
 
 // Tracker is a function receiving discriminated union events
 const tracker: Tracker<CompleteTrackerEvents> = (event) => {
@@ -275,7 +275,7 @@ await installMinecraftJar(resolvedVersion, {
 Use browser-compatible APIs with the fetch API:
 
 ```ts
-import { getVersionList, getForgeVersionList } from "@xmcl/installer/browser";
+import { getVersionList, getForgeVersionList } from "@btnlauncher2/installer/browser";
 
 // These functions use fetch instead of undici
 const versions = await getVersionList({
@@ -297,7 +297,7 @@ Customize the download behavior using the `throttler` option. The download manag
 - Speed monitoring and dynamic range splitting
 
 ```ts
-import { getDefaultDownloadThrottler } from "@xmcl/file-transfer";
+import { getDefaultDownloadThrottler } from "@btnlauncher2/file-transfer";
 import { Agent } from "undici";
 
 // Create a custom download manager
@@ -330,7 +330,7 @@ await completeInstallation(resolvedVersion, {
 Install Forge mod loader:
 
 ```ts
-import { installForge, getForgeVersionList } from "@xmcl/installer";
+import { installForge, getForgeVersionList } from "@btnlauncher2/installer";
 
 // Get available Forge versions
 const versionList = await getForgeVersionList();
@@ -365,7 +365,7 @@ await installForge({
 Install Fabric mod loader:
 
 ```ts
-import { installFabric, getFabricLoaderArtifact } from "@xmcl/installer";
+import { installFabric, getFabricLoaderArtifact } from "@btnlauncher2/installer";
 
 // Get Fabric loader version
 const loaderArtifact = await getFabricLoaderArtifact();
@@ -382,7 +382,7 @@ await installFabric({
 Install Quilt mod loader:
 
 ```ts
-import { installQuilt, getQuiltVersionList } from "@xmcl/installer";
+import { installQuilt, getQuiltVersionList } from "@btnlauncher2/installer";
 
 const versionList = await getQuiltVersionList();
 const quiltVersion = versionList.find(v => v.version === '0.20.2');
@@ -395,7 +395,7 @@ await installQuilt(quiltVersion, '1.20.1', minecraftLocation);
 Install NeoForge (the fork of Forge):
 
 ```ts
-import { installNeoForge } from "@xmcl/installer";
+import { installNeoForge } from "@btnlauncher2/installer";
 
 await installNeoForge({
   version: '20.4.80',
@@ -410,7 +410,7 @@ await installNeoForge({
 Install LabyMod client:
 
 ```ts
-import { installLabyMod4, getLabyModManifest } from "@xmcl/installer";
+import { installLabyMod4, getLabyModManifest } from "@btnlauncher2/installer";
 
 const manifest = await getLabyModManifest({
   environment: 'production'
@@ -430,7 +430,7 @@ await installLabyMod4(manifest, '1.20.1', minecraftLocation, {
 Install Java runtime from Mojang's official distribution:
 
 ```ts
-import { installJavaRuntimeTask } from "@xmcl/installer";
+import { installJavaRuntimeTask } from "@btnlauncher2/installer";
 import { extractFile } from "lzma-native"; // or use 7zip-bin
 
 await installJavaRuntimeTask({
@@ -453,7 +453,7 @@ import {
   completeInstallation,
   InstallError,
   type InstallIssue
-} from "@xmcl/installer";
+} from "@btnlauncher2/installer";
 
 // Diagnose complete installation
 try {

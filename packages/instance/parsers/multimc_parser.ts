@@ -33,7 +33,7 @@ export interface MultiMCConfig {
   PreLaunchCommand: string
   /** Per-instance command that wraps (prepends) the JVM invocation */
   WrapperCommand: string
-  /** Per-instance command run after the game exits (no xmcl equivalent yet) */
+  /** Per-instance command run after the game exits (no btnlauncher2 equivalent yet) */
   PostExitCommand: string
 }
 
@@ -156,7 +156,7 @@ export async function parseMultiMCInstance(path: string): Promise<CreateInstance
   // gh #1386 — Import per-instance commands from MultiMC's instance.cfg.
   // MultiMC only honors the per-instance commands when `OverrideCommands=true`;
   // global commands are not exposed in instance.cfg so we cannot import them
-  // here. PostExitCommand has no xmcl equivalent and is dropped.
+  // here. PostExitCommand has no btnlauncher2 equivalent and is dropped.
   if (instanceCFG.OverrideCommands === 'true') {
     if (instanceCFG.PreLaunchCommand) {
       instanceOptions.preExecuteCommand = instanceCFG.PreLaunchCommand

@@ -1,4 +1,4 @@
-import type { ConnectionUserInfo, MultiplayerRoomAdmission } from '@xmcl/runtime-api'
+import type { ConnectionUserInfo, MultiplayerRoomAdmission } from '@btnlauncher2/runtime-api'
 import { describe, expect, it, vi } from 'vitest'
 import type { Peers } from './peers'
 import { MultiplayerRoom, type MultiplayerRoomApi } from './peerGorup'

@@ -13,7 +13,7 @@ import { getInstanceFiles } from './files_discovery'
 
 describe('duplicateInstance', () => {
   test('tolerates ENOENT on stale manifest entries without per-file unhandledRejection', async () => {
-    const root = mkdtempSync(join(tmpdir(), 'xmcl-dup-'))
+    const root = mkdtempSync(join(tmpdir(), 'btnlauncher2-dup-'))
     const src = join(root, 'src')
     const dest = join(root, 'dest')
     mkdirSync(src, { recursive: true })
@@ -42,7 +42,7 @@ describe('duplicateInstance', () => {
   })
 
   test('throws a typed InstanceDuplicatePartialError when non-ENOENT failures occur', async () => {
-    const root = mkdtempSync(join(tmpdir(), 'xmcl-dup-fail-'))
+    const root = mkdtempSync(join(tmpdir(), 'btnlauncher2-dup-fail-'))
     const src = join(root, 'src')
     // Intentionally do NOT create dest — copyFile will fail with ENOENT
     // on its parent. We then turn that into a non-ENOENT condition by

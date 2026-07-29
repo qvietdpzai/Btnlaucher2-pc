@@ -8,7 +8,7 @@
  *     anything the renderer fetches directly (CurseForge, Modrinth, store
  *     project icons, etc).
  *
- *  2. Main-process intercept via `XMCL_E2E_MOCKS_FILE` — points the launcher
+ *  2. Main-process intercept via `BTNLAUNCHER2_E2E_MOCKS_FILE` — points the launcher
  *     at a JSON file describing URL patterns + canned responses. Used for
  *     services that fetch through the main process (Mojang manifest, Forge
  *     installer XML, MSAL token exchange).

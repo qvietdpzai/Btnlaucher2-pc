@@ -6,10 +6,10 @@
  * Or you can just load resource pack metadata by {@link readPackMetaAndIcon}.
  *
  * @packageDocumentation
- * @module @xmcl/resourcepack
+ * @module @btnlauncher2/resourcepack
  */
 
-import { FileSystem, resolveFileSystem } from '@xmcl/system'
+import { FileSystem, resolveFileSystem } from '@btnlauncher2/system'
 import { PackMeta } from './format'
 
 export * from './resourceManager'

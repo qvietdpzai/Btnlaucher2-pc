@@ -1,4 +1,4 @@
-import { ForgeModParseFailedError, readForgeMod } from '@xmcl/mod-parser'
+import { ForgeModParseFailedError, readForgeMod } from '@btnlauncher2/mod-parser'
 import { basename } from 'path'
 import type { IResourceParser } from './index'
 import { ForgeModCommonMetadata, forceForgeModMetadata, normalizeForgeModMetadata } from '../mod'

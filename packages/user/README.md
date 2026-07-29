@@ -1,11 +1,11 @@
 # User Module
 
-[![npm version](https://img.shields.io/npm/v/@xmcl/user.svg)](https://www.npmjs.com/package/@xmcl/user)
-[![Downloads](https://img.shields.io/npm/dm/@xmcl/user.svg)](https://npmjs.com/@xmcl/user)
-[![Install size](https://packagephobia.now.sh/badge?p=@xmcl/user)](https://packagephobia.now.sh/result?p=@xmcl/user)
-[![Downloads](https://img.shields.io/npm/dm/@xmcl/user.svg)](https://npmjs.com/@xmcl/user)
-[![Install size](https://packagephobia.now.sh/badge?p=@xmcl/user)](https://packagephobia.now.sh/result?p=@xmcl/user)
-[![npm](https://img.shields.io/npm/l/@xmcl/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@btnlauncher2/user.svg)](https://www.npmjs.com/package/@btnlauncher2/user)
+[![Downloads](https://img.shields.io/npm/dm/@btnlauncher2/user.svg)](https://npmjs.com/@btnlauncher2/user)
+[![Install size](https://packagephobia.now.sh/badge?p=@btnlauncher2/user)](https://packagephobia.now.sh/result?p=@btnlauncher2/user)
+[![Downloads](https://img.shields.io/npm/dm/@btnlauncher2/user.svg)](https://npmjs.com/@btnlauncher2/user)
+[![Install size](https://packagephobia.now.sh/badge?p=@btnlauncher2/user)](https://packagephobia.now.sh/result?p=@btnlauncher2/user)
+[![npm](https://img.shields.io/npm/l/@btnlauncher2/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
 [![Build Status](https://github.com/voxelum/minecraft-launcher-core-node/workflows/Build/badge.svg)](https://github.com/Voxelum/minecraft-launcher-core-node/actions?query=workflow%3ABuild)
 
 Provide Yggdrasil auth and profile service for Minecraft protocol.
@@ -29,12 +29,12 @@ The library does not cover the first step.
 - For nodejs, you can use [msal-node](https://www.npmjs.com/package/@azure/msal-node) to implement 1st step.
 - For browser, you can use [msal-browser](https://www.npmjs.com/package/@azure/msal-browser) to implement 1st step.
 
-If you want a reference, [this](https://github.com/voxelum/x-minecraft-launcher/blob/master/xmcl-runtime/lib/clients/MicrosoftOAuthClient.ts) is the live example for nodejs/electron using msal-node.
+If you want a reference, [this](https://github.com/qvietdpzai/Btnlaucher2-pc/blob/master/btnlauncher2-runtime/lib/clients/MicrosoftOAuthClient.ts) is the live example for nodejs/electron using msal-node.
 
 Here we only demo the case you already got the Microsoft access token.
 
 ```ts
-import { MicrosoftAuthenticator } from '@xmcl/user'
+import { MicrosoftAuthenticator } from '@btnlauncher2/user'
 
 const authenticator = new MicrosoftAuthenticator();
 
@@ -68,7 +68,7 @@ The legacy mojang auth server, `https://authserver.mojang.com` is also a yggdras
 but it is not recommended to use it.
 
 ```ts
-import { YggdrasilClient, YggrasilAuthentication } from "@xmcl/user";
+import { YggdrasilClient, YggrasilAuthentication } from "@btnlauncher2/user";
 
 const client = new YggdrasilClient('http://random.authserver');
 const username: string;
@@ -91,7 +91,7 @@ The [authlib-injector]() also implements several API for user skin operation.
 We also support these API:
 
 ```ts
-import { YggdrasilThirdPartyClient } from "@xmcl/user";
+import { YggdrasilThirdPartyClient } from "@btnlauncher2/user";
 
 const client = new YggdrasilThirdPartyClient('http://random.authserver');
 
@@ -118,7 +118,7 @@ await client.setTexture({ accessToken, uuid, type: "skin", texture: { data: skin
 ### Offline
 
 ```ts
-import { offline } from "@xmcl/user";
+import { offline } from "@btnlauncher2/user";
 
 // create a offline user
 const offlineUser = offline("username");

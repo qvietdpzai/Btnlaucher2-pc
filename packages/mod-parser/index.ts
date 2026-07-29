@@ -1,5 +1,5 @@
 /**
- * @module @xmcl/mod-parser
+ * @module @btnlauncher2/mod-parser
  */
 export * from './forge'
 export * from './forgeConfig'

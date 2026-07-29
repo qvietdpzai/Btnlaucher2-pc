@@ -1,5 +1,5 @@
 {
-  "name": "@xmcl/yauzl",
+  "name": "@btnlauncher2/yauzl",
   "version": "2.10.0",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Voxelum/x-minecraft-launcher.git",
+    "url": "git+https://github.com/qvietdpzai/Btnlaucher2-pc.git",
     "directory": "packages/yauzl"
   },
   "author": "cijhn@hotmail.com",
@@ -34,16 +34,16 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Voxelum/x-minecraft-launcher/issues"
+    "url": "https://github.com/qvietdpzai/Btnlaucher2-pc/issues"
   },
-  "homepage": "https://github.com/Voxelum/x-minecraft-launcher/tree/master/packages/yauzl#readme",
+  "homepage": "https://github.com/qvietdpzai/Btnlaucher2-pc/tree/master/packages/yauzl#readme",
   "files": [
     "index.js",
     "index.d.ts",
     "LICENSE.upstream"
   ],
   "devDependencies": {
-    "@xmcl/oxlint-config": "workspace:^*",
+    "@btnlauncher2/oxlint-config": "workspace:^*",
     "@types/node": "^24.13.3",
     "typescript": "^5.9.3",
     "vitest": "^4.1.0"

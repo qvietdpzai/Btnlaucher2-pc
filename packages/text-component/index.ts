@@ -1,5 +1,5 @@
 /**
- * @module @xmcl/text-component
+ * @module @btnlauncher2/text-component
  */
 /**
  * @see https://minecraft.gamepedia.com/Raw_JSON_text_format

@@ -1,8 +1,8 @@
 {
-  "name": "@xmcl/utils",
+  "name": "@btnlauncher2/utils",
   "private": true,
   "version": "1.0.1",
-  "description": "Utility of the xmcl",
+  "description": "Utility of the btnlauncher2",
   "main": "./index.ts",
   "type": "module",
   "author": "ci010 <cijhn@hotmail.com>",

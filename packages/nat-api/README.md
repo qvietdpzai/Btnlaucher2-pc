@@ -16,7 +16,7 @@ The major differences are:
 **Required: NodeJS >= 16**
 
 ```sh
-npm install @xmcl/nat-api
+npm install @btnlauncher2/nat-api
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ const client = await createUpnpClient()
 
 // map 25565 to 25565 for 1 min:
 await client.map({
-  description: "Mapped by @xmcl/nat-api",
+  description: "Mapped by @btnlauncher2/nat-api",
   protocol: 'tcp',
   public: 25565,
   private: 25565,

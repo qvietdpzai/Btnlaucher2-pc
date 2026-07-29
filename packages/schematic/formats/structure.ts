@@ -1,4 +1,4 @@
-import { deserialize, serialize, TagType } from '@xmcl/nbt'
+import { deserialize, serialize, TagType } from '@btnlauncher2/nbt'
 import { Blueprint, BlockState, BlueprintFormat, isAir, stringifyBlockState } from '../model'
 import { compoundListSchema } from '../nbtSchema'
 import { withSchema } from '../nbtUtil'

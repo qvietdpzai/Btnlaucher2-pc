@@ -26,7 +26,7 @@ const CLOSED_MESSAGES = [
 ]
 
 /**
- * Mark an error as already-handled so the telemetry sink in xmcl-runtime can
+ * Mark an error as already-handled so the telemetry sink in btnlauncher2-runtime can
  * skip it instead of re-reporting it for every subsequent query.
  */
 function markDisposed(e: unknown) {

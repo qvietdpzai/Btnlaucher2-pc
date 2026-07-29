@@ -79,7 +79,7 @@ export interface MicrosoftAuthenticatorOptions {
   *
   * Retry semantics (for 408/425/429/5xx) are intentionally out of scope of
   * this module -- compose them on the caller side by wrapping the injected
-  * `fetch` (see ``xmcl-runtime/user/utils/withRetry.ts`` in the launcher).
+  * `fetch` (see ``btnlauncher2-runtime/user/utils/withRetry.ts`` in the launcher).
   */
 export class MicrosoftMinecraftXboxLoginError extends Error {
   name = 'MicrosoftMinecraftXboxLoginError'

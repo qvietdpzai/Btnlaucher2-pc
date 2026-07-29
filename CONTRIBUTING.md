@@ -33,20 +33,20 @@ For renderer side, which is the pure front-end
 
 ![diagram](/assets/diagram.svg)
 
-- xmcl
+- btnlauncher2
   - The linked git repo [launcher-core](https://github.com/voxelum/minecraft-launcher-core-node) is a git submodule in this project.
   - Implements the core Minecraft install & launch logic, and expose them as a library.
-- xmcl-electron-app
+- btnlauncher2-electron-app
   - Use Electron to implement the runtime.
-  - This directly depends on the xmcl-runtime.
-  - This implicitly depends on xmcl-keystone-ui (temporally, might be removed later?)
-- xmcl-keystone-ui
+  - This directly depends on the btnlauncher2-runtime.
+  - This implicitly depends on btnlauncher2-keystone-ui (temporally, might be removed later?)
+- btnlauncher2-keystone-ui
   - The major default UI of the launcher.
   - 100% browser compatible. No Electron API involved in this project.
-- xmcl-runtime
+- btnlauncher2-runtime
   - The core implementation of the launcher architecture. This only depends on Node.js, and does not require Electron runtime.
-- xmcl-runtime-api
-  - This is the shared code & API for XMCL runtime. It can be used for renderer app (browser side)
+- btnlauncher2-runtime-api
+  - This is the shared code & API for btnlauncher2 runtime. It can be used for renderer app (browser side)
 
 
 ### Concept/Structure
@@ -59,21 +59,21 @@ The renderer is/are just (a) browsers which communicate with main. It maintains 
 
 ### Recommended Read Code Instruction
 
-If you are interested in a specific page logic, you can go to `xmcl-keystone-ui/src/windows/main/views`. The `.vue` files under this folder are the major component used in the launcher. The prefix of the file are the domain of the UI.
+If you are interested in a specific page logic, you can go to `btnlauncher2-keystone-ui/src/windows/main/views`. The `.vue` files under this folder are the major component used in the launcher. The prefix of the file are the domain of the UI.
 
 See some examples:
 
 1. `AppSideBar.vue` is the sidebar component, and the `AppSideBarInstanceItem.vue` is the component used in `AppSideBar.vue` representing an instance.
 2. `Curseforge.vue` is the CurseForge page component, and the `CurseforgeCategories.vue` is the category card used in `Curseforge.vue` page.
 
-If you are interested in core logic, you can goto `xmcl-runtime/services/`. Each file under it are representing a service for a specific domain/aspect of the launcher logic. During this process, you should also aware about the corresponding files under the `xmcl-runtime-api/services/`, which declare the interface of the actual services.
+If you are interested in core logic, you can goto `btnlauncher2-runtime/services/`. Each file under it are representing a service for a specific domain/aspect of the launcher logic. During this process, you should also aware about the corresponding files under the `btnlauncher2-runtime-api/services/`, which declare the interface of the actual services.
 
 Some examples:
 
-1. `xmcl-runtime/services/InstanceService.ts` contains the API implementation of add/remove/update of instances. The `xmcl-runtime-api/services/InstanceService.ts` contains the interface of the `InstanceService`
-2. `xmcl-runtime/services/InstanceVersionService.ts` contains the API implementation of checking instance version health. It will determine what version will the instance use, and whether should we install that version.
-3. `xmcl-runtime/services/InstallService.ts` contains the API implementation of install Minecraft/Forge/Fabric and etc.
-3. `xmcl-runtime/services/LaunchService.ts` contains the API implementation of launch an instance.
+1. `btnlauncher2-runtime/services/InstanceService.ts` contains the API implementation of add/remove/update of instances. The `btnlauncher2-runtime-api/services/InstanceService.ts` contains the interface of the `InstanceService`
+2. `btnlauncher2-runtime/services/InstanceVersionService.ts` contains the API implementation of checking instance version health. It will determine what version will the instance use, and whether should we install that version.
+3. `btnlauncher2-runtime/services/InstallService.ts` contains the API implementation of install Minecraft/Forge/Fabric and etc.
+3. `btnlauncher2-runtime/services/LaunchService.ts` contains the API implementation of launch an instance.
 
 ## Contribute
 
@@ -86,7 +86,7 @@ Highly recommend to use the VSCode to open the project.
 Clone the project with submodule flag `--recurse-submodules`.
 
 ```bash
-git clone --recurse-submodules https://github.com/Voxelum/x-minecraft-launcher
+git clone --recurse-submodules https://github.com/qvietdpzai/Btnlaucher2-pc
 ```
 
 If you forget to add `--recurse-submodules` flag, you need to initialize & update the git submodule manually.
@@ -124,7 +124,7 @@ pnpm install
 
 #### Set Environment Variables
 
-You should set the `CURSEFORGE_API_KEY` by creating a `.env` file under `xmcl-electron-app`. This `.env` file is added in `.gitignore` file.
+You should set the `CURSEFORGE_API_KEY` by creating a `.env` file under `btnlauncher2-electron-app`. This `.env` file is added in `.gitignore` file.
 
 **DO NOT LEAK YOUR CURSEFORGE API KEY**
 
@@ -231,7 +231,7 @@ First, you need to build the frontend code:
 pnpm build:renderer
 ```
 
-Unless the code under `xmcl-keystone-ui` changed, you don't need to build this again.
+Unless the code under `btnlauncher2-keystone-ui` changed, you don't need to build this again.
 
 Then, you can build Electron bundling with frontend you just build:
 

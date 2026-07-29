@@ -1,9 +1,9 @@
 # Download Core
 
-[![npm version](https://img.shields.io/npm/v/@xmcl/file-transfer.svg)](https://www.npmjs.com/package/@xmcl/file-transfer)
-[![Downloads](https://img.shields.io/npm/dm/@xmcl/file-transfer.svg)](https://npmjs.com/@xmcl/file-transfer)
-[![Install size](https://packagephobia.now.sh/badge?p=@xmcl/file-transfer)](https://packagephobia.now.sh/result?p=@xmcl/file-transfer)
-[![npm](https://img.shields.io/npm/l/@xmcl/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@btnlauncher2/file-transfer.svg)](https://www.npmjs.com/package/@btnlauncher2/file-transfer)
+[![Downloads](https://img.shields.io/npm/dm/@btnlauncher2/file-transfer.svg)](https://npmjs.com/@btnlauncher2/file-transfer)
+[![Install size](https://packagephobia.now.sh/badge?p=@btnlauncher2/file-transfer)](https://packagephobia.now.sh/result?p=@btnlauncher2/file-transfer)
+[![npm](https://img.shields.io/npm/l/@btnlauncher2/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
 [![Build Status](https://github.com/voxelum/minecraft-launcher-core-node/workflows/Build/badge.svg)](https://github.com/Voxelum/minecraft-launcher-core-node/actions?query=workflow%3ABuild)
 
 A high-performance download primitive built on [undici](https://github.com/nodejs/undici).
@@ -19,7 +19,7 @@ Features:
 > **Note on integrity checking.** This package does **not** verify
 > downloaded content against a hash. Callers that need integrity
 > guarantees must do their own post-download verification (see
-> `@xmcl/instance` for an example) or pass an explicit dispatcher
+> `@btnlauncher2/instance` for an example) or pass an explicit dispatcher
 > that enforces it.
 
 > **Note on atomic writes.** `download()` writes directly to
@@ -27,14 +27,14 @@ Features:
 > mid-stream, a partial file may exist at `destination`. Callers that
 > need atomic semantics should download to a side path of their
 > choice and rename it themselves on success — see
-> `xmcl-runtime/market/downloadStaged.ts` for one such helper.
+> `btnlauncher2-runtime/market/downloadStaged.ts` for one such helper.
 
 ## Usage
 
 ### Single download
 
 ```ts
-import { download } from '@xmcl/file-transfer'
+import { download } from '@btnlauncher2/file-transfer'
 
 await download({
   // Required
@@ -56,7 +56,7 @@ await download({
 attempted. The download succeeds as soon as any URL succeeds.
 
 ```ts
-import { download } from '@xmcl/file-transfer'
+import { download } from '@btnlauncher2/file-transfer'
 
 await download({
   url: ['http://primary.example/file.zip', 'http://mirror.example/file.zip'],
@@ -71,7 +71,7 @@ dispatcher and tracker. Returns a `PromiseSettledResult` per file so
 the caller can decide how to surface partial failures.
 
 ```ts
-import { downloadMultiple, ProgressTrackerMultiple } from '@xmcl/file-transfer'
+import { downloadMultiple, ProgressTrackerMultiple } from '@btnlauncher2/file-transfer'
 
 const tracker = new ProgressTrackerMultiple()
 const results = await downloadMultiple({
@@ -91,7 +91,7 @@ for (const r of results) {
 ### Progress tracking
 
 ```ts
-import { download, ProgressTrackerSingle } from '@xmcl/file-transfer'
+import { download, ProgressTrackerSingle } from '@btnlauncher2/file-transfer'
 
 const tracker = new ProgressTrackerSingle()
 const t = setInterval(() => {
@@ -114,7 +114,7 @@ By default a file is downloaded with up to 4 parallel range requests
 when its declared `expectedTotal` exceeds 5 MB. To tune:
 
 ```ts
-import { download, DefaultRangePolicy } from '@xmcl/file-transfer'
+import { download, DefaultRangePolicy } from '@btnlauncher2/file-transfer'
 
 await download({
   url: 'https://example.com/big.zip',
@@ -135,7 +135,7 @@ Callers that issue many downloads should share a single undici
 `Dispatcher` so connection pools and retry policies are reused:
 
 ```ts
-import { download, getDefaultAgent } from '@xmcl/file-transfer'
+import { download, getDefaultAgent } from '@btnlauncher2/file-transfer'
 
 const dispatcher = getDefaultAgent({ maxRetries: 5 })
 

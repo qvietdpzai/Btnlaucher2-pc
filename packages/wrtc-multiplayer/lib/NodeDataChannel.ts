@@ -1,4 +1,4 @@
-import { NativeModuleLoader } from '@xmcl/utils'
+import { NativeModuleLoader } from '@btnlauncher2/utils'
 import { dependencies } from '../package.json'
 
 type NodeDataChannel = typeof import('node-datachannel')

@@ -44,7 +44,7 @@ describe('manifest_generation', () => {
   })
 
   it('generateInstanceServerManifest returns server files only', async () => {
-    const tmp = await mkdtemp(join(os.tmpdir(), 'xmcl-test-'))
+    const tmp = await mkdtemp(join(os.tmpdir(), 'btnlauncher2-test-'))
     try {
       const serverDir = join(tmp, 'server')
       await ensureDir(serverDir)

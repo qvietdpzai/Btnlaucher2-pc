@@ -1,6 +1,6 @@
 {
   "version": "0.4.4",
-  "name": "@xmcl/nat-api",
+  "name": "@btnlauncher2/nat-api",
   "description": "Port mapping with UPnP and NAT-PMP",
   "main": "./index.ts",
   "publishConfig": {
@@ -40,7 +40,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Voxelum/x-minecraft-launcher.git"
+    "url": "git+https://github.com/qvietdpzai/Btnlaucher2-pc.git"
   },
   "bugs": {
     "url": "https://github.com/voxelum/nat-api/issues"

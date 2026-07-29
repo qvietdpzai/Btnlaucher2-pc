@@ -1,4 +1,4 @@
-import { readForgeModToml } from '@xmcl/mod-parser'
+import { readForgeModToml } from '@btnlauncher2/mod-parser'
 import { NeoforgeMetadata } from '../mod'
 import { ResourceDomain } from '../ResourceDomain'
 import { ResourceType } from '../ResourceType'

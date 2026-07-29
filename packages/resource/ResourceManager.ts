@@ -14,7 +14,7 @@ import {
   watchResourcesDirectory,
 } from './core/watchResourcesDirectory'
 import { ResourceSnapshotTable, ResourceUriTable } from './schema'
-import { AnyError } from '@xmcl/utils'
+import { AnyError } from '@btnlauncher2/utils'
 
 export class ResourceManager {
   #watched: Record<string, { enqueue: (job: ResourceWorkerQueuePayload) => void }> = {}

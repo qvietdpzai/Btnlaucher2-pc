@@ -6,7 +6,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      你知道吗？XMCL 也有 [Discord 频道](https://discord.com/channels/405213567118213121/1073220911106371626)来讨论 Bug 和问题！
+      你知道吗？BTNLAUNCHER2 也有 [Discord 频道](https://discord.com/channels/405213567118213121/1073220911106371626)来讨论 Bug 和问题！
 - type: checkboxes
   attributes:
     label: 是否已经有人报告过这个问题？

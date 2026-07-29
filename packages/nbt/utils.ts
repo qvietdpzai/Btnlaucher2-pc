@@ -1,4 +1,4 @@
-import { ByteBuffer } from '@xmcl/bytebuffer'
+import { ByteBuffer } from '@btnlauncher2/bytebuffer'
 import type { ReadContext, WriteContext } from './index'
 
 export function writeUTF8(out: ByteBuffer, str = '', context: WriteContext) {

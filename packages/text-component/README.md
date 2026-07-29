@@ -1,9 +1,9 @@
 # Text-component Module
 
-[![npm version](https://img.shields.io/npm/v/@xmcl/text-component.svg)](https://www.npmjs.com/package/@xmcl/text-component)
-[![Downloads](https://img.shields.io/npm/dm/@xmcl/text-component.svg)](https://npmjs.com/@xmcl/text-component)
-[![Install size](https://packagephobia.now.sh/badge?p=@xmcl/text-component)](https://packagephobia.now.sh/result?p=@xmcl/text-component)
-[![npm](https://img.shields.io/npm/l/@xmcl/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@btnlauncher2/text-component.svg)](https://www.npmjs.com/package/@btnlauncher2/text-component)
+[![Downloads](https://img.shields.io/npm/dm/@btnlauncher2/text-component.svg)](https://npmjs.com/@btnlauncher2/text-component)
+[![Install size](https://packagephobia.now.sh/badge?p=@btnlauncher2/text-component)](https://packagephobia.now.sh/result?p=@btnlauncher2/text-component)
+[![npm](https://img.shields.io/npm/l/@btnlauncher2/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
 [![Build Status](https://github.com/voxelum/minecraft-launcher-core-node/workflows/Build/badge.svg)](https://github.com/Voxelum/minecraft-launcher-core-node/actions?query=workflow%3ABuild)
 
 Provide functions to parse Minecraft text component.
@@ -15,7 +15,7 @@ Provide functions to parse Minecraft text component.
 Create TextComponent from string OR Minecraft's formatted string, like `'§cThis is red'`:
 
 ```ts
-import { TextComponent, fromFormattedString } from "@xmcl/text-component";
+import { TextComponent, fromFormattedString } from "@btnlauncher2/text-component";
 const formattedString: string;
 const fromFormatted: TextComponent = fromFormattedString(formattedString);
 ```
@@ -23,7 +23,7 @@ const fromFormatted: TextComponent = fromFormattedString(formattedString);
 Render the TextComponent to css:
 
 ```ts
-import { TextComponent, render, RenderNode } from "@xmcl/text-component";
+import { TextComponent, render, RenderNode } from "@btnlauncher2/text-component";
 const yourComponent: TextComponent;
 const node: RenderNode = render(yourComponent);
 
@@ -46,7 +46,7 @@ function renderToDom(node: RenderNode) {
 Iterate the TextComponent and its children:
 
 ```ts
-import { TextComponent, flat } from "@xmcl/text-component";
+import { TextComponent, flat } from "@btnlauncher2/text-component";
 const yourComponent: TextComponent;
 const selfAndAllChildren: Array<TextComponent> = flat(yourComponent);
 ```

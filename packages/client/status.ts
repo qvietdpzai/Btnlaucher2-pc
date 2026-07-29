@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
-import { TextComponent } from '@xmcl/text-component'
+import { TextComponent } from '@btnlauncher2/text-component'
 import { Channel } from './channel'
 import { VarInt, String, Long as CLong, Short, Json } from './coders'
 import { Packet, Field } from './packet'

@@ -1,5 +1,5 @@
-import { LanServerInfo } from '@xmcl/client'
-import { ConnectionUserInfo, InstanceManifest } from '@xmcl/runtime-api'
+import { LanServerInfo } from '@btnlauncher2/client'
+import { ConnectionUserInfo, InstanceManifest } from '@btnlauncher2/runtime-api'
 
 export interface PeerContext {
   getUserInfo(): ConnectionUserInfo

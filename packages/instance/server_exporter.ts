@@ -1,4 +1,4 @@
-import { ServerOptions, generateArgumentsServer } from '@xmcl/core'
+import { ServerOptions, generateArgumentsServer } from '@btnlauncher2/core'
 import { copy, writeFile } from 'fs-extra'
 import { delimiter, join, relative } from 'path'
 

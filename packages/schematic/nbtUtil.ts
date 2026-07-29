@@ -1,5 +1,5 @@
-import { setPrototypeOf, TagType } from '@xmcl/nbt'
-import type { Schema } from '@xmcl/nbt'
+import { setPrototypeOf, TagType } from '@btnlauncher2/nbt'
+import type { Schema } from '@btnlauncher2/nbt'
 
 /**
  * Detect whether the given buffer is gzip-compressed (NBT files usually are).
@@ -10,7 +10,7 @@ export function isGzip(data: Uint8Array) {
 
 /**
  * Attach an NBT type schema to a plain object so it can be serialized by
- * `@xmcl/nbt`. Fields not present in the schema are skipped on write, so every
+ * `@btnlauncher2/nbt`. Fields not present in the schema are skipped on write, so every
  * field that should be persisted must be described.
  */
 export function withSchema<T extends object>(object: T, schema: Schema): T {

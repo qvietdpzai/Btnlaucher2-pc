@@ -26,20 +26,20 @@
 
 ![diagram](/assets/diagram.svg)
 
-- xmcl
+- btnlauncher2
   - 链接指向的 git 仓库 [launcher-core](https://github.com/voxelum/minecraft-launcher-core-node) 是本项目的一个子模块。
   - 实现核心 Minecraft 安装和启动逻辑，并将它们作为库暴露出来。
-- xmcl-electron-app
+- btnlauncher2-electron-app
   - 用 Electron 实现运行时。
-  - 它依赖 xmcl-runtime。
-  - 它的部分内容依赖 xmcl-keystone-ui（临时的，可能将在未来被删除）
-- xmcl-keystone-ui
+  - 它依赖 btnlauncher2-runtime。
+  - 它的部分内容依赖 btnlauncher2-keystone-ui（临时的，可能将在未来被删除）
+- btnlauncher2-keystone-ui
   - 启动器的默认 UI。
   - 100% 兼容浏览器，此项目中不涉及 Electron 的 API。
-- xmcl-runtime
+- btnlauncher2-runtime
   - 启动器架构的核心实现。它只依赖 Node.js，不需要 Electron 运行时。
-- xmcl-runtime-api
-  - 这是 XMCL 运行时的共享代码与 API。它可用于渲染器应用程序（浏览器侧）
+- btnlauncher2-runtime-api
+  - 这是 btnlauncher2 运行时的共享代码与 API。它可用于渲染器应用程序（浏览器侧）
 
 ### 概念与结构
 
@@ -51,21 +51,21 @@
 
 ### 代码阅读指南
 
-如果你对特定的页面逻辑感兴趣，你可以看看 `xmcl-keyston-ui/src/windows/main/views`。这个文件夹下的 `.vue` 文件是启动器中使用的主要组件。文件的前缀是用户界面的关键字。
+如果你对特定的页面逻辑感兴趣，你可以看看 `btnlauncher2-keyston-ui/src/windows/main/views`。这个文件夹下的 `.vue` 文件是启动器中使用的主要组件。文件的前缀是用户界面的关键字。
 
 请看一些例子：
 
 1. `AppSideBar.vue`是侧边栏组件，`AppSideBarInstanceItem.vue`是`AppSideBar.vue`中使用的组件，代表一个实例。
 2. `Curseforge.vue`是 CurseForge 页面组件，`CurseforgeCategories.vue`是`Curseforge.vue`页面中使用的类别卡。
 
-如果你对核心逻辑感兴趣，你可以看看 `xmcl-runtime/services/`。它下面的每个文件都将一个特定领域/业务的逻辑封装成了“服务”。在阅读服务的过程中，你也需要看看 `xmcl-runtime-api/services/` 下的对应的服务声明。
+如果你对核心逻辑感兴趣，你可以看看 `btnlauncher2-runtime/services/`。它下面的每个文件都将一个特定领域/业务的逻辑封装成了“服务”。在阅读服务的过程中，你也需要看看 `btnlauncher2-runtime-api/services/` 下的对应的服务声明。
 
 一些例子：
 
-1. `xmcl-runtime/services/InstanceService.ts`包含添加/删除/更新实例的 API 实现。`xmcl-runtime-api/services/InstanceService.ts`包含了`InstanceService`的接口。
-2. `xmcl-runtime/services/InstanceVersionService.ts`包含检查实例版本健康状况的 API 实现。它将确定实例将使用什么版本，以及我们是否应该安装该版本。
-3. `xmcl-runtime/services/InstallService.ts`包含安装 Minecraft/Forge/Fabric 等的API实现。
-4. `xmcl-runtime/services/LaunchService.ts`包含启动实例的 API 实现。
+1. `btnlauncher2-runtime/services/InstanceService.ts`包含添加/删除/更新实例的 API 实现。`btnlauncher2-runtime-api/services/InstanceService.ts`包含了`InstanceService`的接口。
+2. `btnlauncher2-runtime/services/InstanceVersionService.ts`包含检查实例版本健康状况的 API 实现。它将确定实例将使用什么版本，以及我们是否应该安装该版本。
+3. `btnlauncher2-runtime/services/InstallService.ts`包含安装 Minecraft/Forge/Fabric 等的API实现。
+4. `btnlauncher2-runtime/services/LaunchService.ts`包含启动实例的 API 实现。
 
 ## 开发
 
@@ -78,7 +78,7 @@
 用 git 克隆项目，需要使用 `--recurse-submodules` 选项：
 
 ```bash
-git clone --recurse-submodules https://github.com/Voxelum/x-minecraft-launcher
+git clone --recurse-submodules https://github.com/qvietdpzai/Btnlaucher2-pc
 ```
 
 如果您忘记添加 `--recurse-submodules` 标志，则需要手动初始化和更新 git 子模块：
@@ -109,7 +109,7 @@ pnpm install
 </details>
 
 #### 设置环境变量
-在`xmcl-electron-app`下创建`.env`文件来设置`CURSEFORGE_API_KEY`。`.env`文件已被添加到`.gitignore`文件中。
+在`btnlauncher2-electron-app`下创建`.env`文件来设置`CURSEFORGE_API_KEY`。`.env`文件已被添加到`.gitignore`文件中。
 
 **请注意保护好你的 CURSEFORGE API KEY**
 
@@ -217,7 +217,7 @@ commit type: commit description
 pnpm build:renderer
 ```
 
-除非你在 `xmcl-keystone-ui` 有新的改动，你已经不需再重新跑这个命令了。
+除非你在 `btnlauncher2-keystone-ui` 有新的改动，你已经不需再重新跑这个命令了。
 
 然后你需要构建 Electron，将你刚刚构建的前端代码和 Electron 打包到一起
 

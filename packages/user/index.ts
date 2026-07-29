@@ -1,5 +1,5 @@
 /**
- * @module @xmcl/user
+ * @module @btnlauncher2/user
  */
 export * from './offline'
 export { type GameProfile, type GameProfileWithProperties } from './gameProfile'

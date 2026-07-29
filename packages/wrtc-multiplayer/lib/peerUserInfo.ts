@@ -1,4 +1,4 @@
-import { GameProfileAndTexture } from '@xmcl/runtime-api'
+import { GameProfileAndTexture } from '@btnlauncher2/runtime-api'
 
 export function createPeerUserInfo() {
   let gameProfile: GameProfileAndTexture | undefined

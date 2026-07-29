@@ -1,7 +1,7 @@
 # AGENTS.md — Instructions for AI coding agents
 
 > Read this file in full before making any changes. It is a contract between
-> the human maintainers of XMCL and any agent (GitHub Copilot, Claude Code,
+> the human maintainers of btnlauncher2 and any agent (GitHub Copilot, Claude Code,
 > Cursor, etc.) that opens a session against this repository.
 
 This file is short on purpose. Repository conventions live in
@@ -9,7 +9,7 @@ This file is short on purpose. Repository conventions live in
 
 ---
 
-## Visual verification — when you change anything in `xmcl-keystone-ui/`
+## Visual verification — when you change anything in `btnlauncher2-keystone-ui/`
 
 If your change is **visible to the user** (a new dialog, a new tab, a
 relocated button, a styling tweak), you MUST capture screenshots of the
@@ -72,8 +72,8 @@ PR — you do not need to clean them up.
 ```bash
 pnpm install --frozen-lockfile     # first time only
 pnpm e2e:install --frozen-lockfile # first time only — installs Playwright (e2e is outside the workspace)
-pnpm build:renderer                # required after any xmcl-keystone-ui change
-pnpm --prefix=xmcl-electron-app compile
+pnpm build:renderer                # required after any btnlauncher2-keystone-ui change
+pnpm --prefix=btnlauncher2-electron-app compile
 pnpm test:e2e:scratch
 ```
 

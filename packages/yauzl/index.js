@@ -472,7 +472,7 @@ ZipFile.prototype._readEntry = function() {
           entry.fileName = entry.fileName.replace(/\\/g, "/");
         }
         // Allow the consumer to supply a custom per-entry validateFileName
-        // hook on the ZipFile instance. This is used by @xmcl/system to
+        // hook on the ZipFile instance. This is used by @btnlauncher2/system to
         // rewrite absolute paths to relative ones for resource packs that
         // were authored on Windows. Falls back to the strict module-level
         // validator when no hook is provided.

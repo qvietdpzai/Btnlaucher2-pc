@@ -4,7 +4,7 @@ import {
   SetRemoteDescriptionOptions,
   TransferDescription,
   createPromiseSignal,
-} from '@xmcl/runtime-api'
+} from '@btnlauncher2/runtime-api'
 import { randomUUID } from 'crypto'
 import EventEmitter from 'events'
 import { promisify } from 'util'

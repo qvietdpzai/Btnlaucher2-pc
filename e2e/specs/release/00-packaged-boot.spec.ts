@@ -13,8 +13,8 @@
  *      inside `app.asar`. This is the exact path that crashed on macOS in
  *      #1576 (`ENOENT, llhttp-wasm.wasm not found in …/app.asar`) on the first
  *      download. We force it deterministically and network-free by dispatching
- *      one request at a loopback server via the main-process `__xmclE2EProbeHttp`
- *      hook (installed in xmcl-electron-app/main/index.ts under XMCL_E2E).
+ *      one request at a loopback server via the main-process `__btnlauncher2E2EProbeHttp`
+ *      hook (installed in btnlauncher2-electron-app/main/index.ts under BTNLAUNCHER2_E2E).
  *
  * Both assertions are driven from the main process (`app.evaluate`) because
  * Playwright's CDP page-target attachment is unreliable against the launcher's
@@ -74,7 +74,7 @@ test.describe('Packaged app (release-gated)', () => {
     const server: Server = await new Promise((res) => {
       const s = createServer((_req, reply) => {
         reply.writeHead(200, { 'content-type': 'text/plain' })
-        reply.end('xmcl-e2e-ok')
+        reply.end('btnlauncher2-e2e-ok')
       })
       s.listen(0, '127.0.0.1', () => res(s))
     })
@@ -82,16 +82,16 @@ test.describe('Packaged app (release-gated)', () => {
       const port = (server.address() as AddressInfo).port
       const url = `http://127.0.0.1:${port}/`
       const result = await packaged.app.evaluate(async (_electron, target) => {
-        const probe = (globalThis as any).__xmclE2EProbeHttp
+        const probe = (globalThis as any).__btnlauncher2E2EProbeHttp
         if (typeof probe !== 'function') {
-          throw new Error('__xmclE2EProbeHttp hook missing — is XMCL_E2E set for the packaged app?')
+          throw new Error('__btnlauncher2E2EProbeHttp hook missing — is BTNLAUNCHER2_E2E set for the packaged app?')
         }
         // Throws `ENOENT … llhttp-wasm.wasm` on the broken (pre-#1578) build.
         return probe(target)
       }, url)
 
       expect(result.status, 'bundled undici request status').toBe(200)
-      expect(result.bodyLength, 'bundled undici response body length').toBe('xmcl-e2e-ok'.length)
+      expect(result.bodyLength, 'bundled undici response body length').toBe('btnlauncher2-e2e-ok'.length)
     } finally {
       await new Promise<void>((r) => server.close(() => r()))
     }

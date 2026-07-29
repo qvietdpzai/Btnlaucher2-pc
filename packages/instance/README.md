@@ -1,4 +1,4 @@
-# @xmcl/instance
+# @btnlauncher2/instance
 
 Core instance management functionality for Minecraft launchers. This package provides functional utilities for managing Minecraft instances without coupling to specific launcher implementations.
 
@@ -14,7 +14,7 @@ Core instance management functionality for Minecraft launchers. This package pro
 ## Installation
 
 ```bash
-npm install @xmcl/instance
+npm install @btnlauncher2/instance
 ```
 
 ## Basic Usage
@@ -22,7 +22,7 @@ npm install @xmcl/instance
 ### Instance File Discovery
 
 ```typescript
-import { discoverInstanceFiles, createDefaultFileFilter } from '@xmcl/instance'
+import { discoverInstanceFiles, createDefaultFileFilter } from '@btnlauncher2/instance'
 
 const logger = {
   warn: (msg) => console.warn(msg),
@@ -41,7 +41,7 @@ import {
   parseModrinthInstance,
   parseCurseforgeInstance,
   parseVanillaInstance
-} from '@xmcl/instance'
+} from '@btnlauncher2/instance'
 
 // Parse MultiMC instance
 const mmcInstance = await parseMultiMCInstance('/path/to/mmc/instance')
@@ -59,7 +59,7 @@ const vanillaInstances = await parseVanillaInstance('/path/to/.minecraft')
 ### Generate Instance Manifest
 
 ```typescript
-import { generateInstanceManifest } from '@xmcl/instance'
+import { generateInstanceManifest } from '@btnlauncher2/instance'
 
 const manifest = await generateInstanceManifest(
   { path: '/path/to/instance', hashes: ['sha1', 'md5'] },
@@ -73,7 +73,7 @@ const manifest = await generateInstanceManifest(
 ### Compute File Deltas
 
 ```typescript
-import { computeFileUpdates } from '@xmcl/instance'
+import { computeFileUpdates } from '@btnlauncher2/instance'
 
 const updates = await computeFileUpdates(
   '/path/to/instance',

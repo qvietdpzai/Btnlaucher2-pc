@@ -6,7 +6,7 @@
  * 0.56.5 (`Uncaught ReferenceError: init_runtime_dom_esm_bundler is not
  * defined` in `VSpacer-*.js`, see vitejs/vite#22583). This kind of bug only
  * reproduces against the production build, never in dev mode, so we must
- * exercise the packaged `xmcl-electron-app/dist/` bundle in both shapes a
+ * exercise the packaged `btnlauncher2-electron-app/dist/` bundle in both shapes a
  * real user can encounter:
  *
  *   - **New user**: empty appData, no `root` file → onboarding wizard renders

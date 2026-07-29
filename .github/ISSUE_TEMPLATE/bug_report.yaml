@@ -6,7 +6,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      Did you know? XMCL also has a [Discord channel](https://discord.com/channels/405213567118213121/1073220911106371626) to discuss bugs and issues!
+      Did you know? btnlauncher2 also has a [Discord channel](https://discord.com/channels/405213567118213121/1073220911106371626) to discuss bugs and issues!
 - type: checkboxes
   attributes:
     label: Is there an existing issue for this?

@@ -1,5 +1,5 @@
-import type { FabricModMetadata, LiteloaderModMetadata, QuiltModMetadata } from '@xmcl/mod-parser'
-import type { PackMeta } from '@xmcl/resourcepack'
+import type { FabricModMetadata, LiteloaderModMetadata, QuiltModMetadata } from '@btnlauncher2/mod-parser'
+import type { PackMeta } from '@btnlauncher2/resourcepack'
 import { ForgeModCommonMetadata } from './mod'
 import { File } from './File'
 import { ResourceMetadata } from './ResourceMetadata'

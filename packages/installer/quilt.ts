@@ -1,4 +1,4 @@
-import { MinecraftFolder, MinecraftLocation, Version } from '@xmcl/core'
+import { MinecraftFolder, MinecraftLocation, Version } from '@btnlauncher2/core'
 import { writeFile } from 'fs/promises'
 import { InstallOptions } from './utils'
 import { DEFAULT_META_URL_QUILT } from './quilt.browser'

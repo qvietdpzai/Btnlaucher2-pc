@@ -1,4 +1,4 @@
-import { InstanceManifest, ShareInstanceOptions } from '@xmcl/runtime-api'
+import { InstanceManifest, ShareInstanceOptions } from '@btnlauncher2/runtime-api'
 import { join } from 'path'
 import { MessageShareManifest } from './messages/download'
 import { Peers } from './peers'

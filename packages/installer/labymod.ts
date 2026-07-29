@@ -1,11 +1,11 @@
 /* eslint-disable n/no-unsupported-features/node-builtins */
-import { LibraryInfo, MinecraftFolder, MinecraftLocation } from '@xmcl/core'
+import { LibraryInfo, MinecraftFolder, MinecraftLocation } from '@btnlauncher2/core'
 import {
   DownloadBaseOptions,
   download,
   downloadMultiple,
   getDownloadBaseOptions,
-} from '@xmcl/file-transfer'
+} from '@btnlauncher2/file-transfer'
 
 import { writeFile } from 'fs/promises'
 import { dirname, join } from 'path'

@@ -33,7 +33,7 @@ function createContext(
 }
 
 async function setupDirs() {
-  const root = await mkdtemp(join(tmpdir(), 'xmcl-handler-'))
+  const root = await mkdtemp(join(tmpdir(), 'btnlauncher2-handler-'))
   const instance = join(root, 'instance')
   const workspace = join(root, 'workspace')
   const backup = join(root, 'backup')

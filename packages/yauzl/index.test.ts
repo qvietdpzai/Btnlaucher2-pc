@@ -46,7 +46,7 @@ async function walkEntries(zip: ZipFile, handler: (e: Entry) => Promise<void> | 
   })
 }
 
-describe('@xmcl/yauzl', () => {
+describe('@btnlauncher2/yauzl', () => {
   test('opens a standard yauzl-compatible archive (smoke)', async () => {
     // This package is API-identical to upstream yauzl 2.10.0; we only need
     // to verify that the fix for ZIP64-with-0xFFFF-disk-number does not
@@ -146,7 +146,7 @@ describe('@xmcl/yauzl', () => {
       malformed.writeUInt16LE(0, 151 + 10)     // totalEntries     = 0 (lie)
       // cdOffset (94) and cdSize (57) stay truthful — these are the only
       // fields lenient mode trusts.
-      const dir = join(tmpdir(), 'xmcl-yauzl-test')
+      const dir = join(tmpdir(), 'btnlauncher2-yauzl-test')
       mkdirSync(dir, { recursive: true })
       const p = join(dir, 'lenient.zip')
       writeFileSync(p, malformed)
@@ -163,7 +163,7 @@ describe('@xmcl/yauzl', () => {
       const malformed = Buffer.from(base)
       malformed.writeUInt16LE(0xffff, 151 + 4)        // diskNumber sentinel
       malformed.writeUInt32LE(0xffffffff, 151 + 16)   // cdOffset sentinel
-      const dir = join(tmpdir(), 'xmcl-yauzl-test')
+      const dir = join(tmpdir(), 'btnlauncher2-yauzl-test')
       mkdirSync(dir, { recursive: true })
       const p = join(dir, 'malformed-unrecoverable.zip')
       writeFileSync(p, malformed)

@@ -225,7 +225,7 @@ const v23: Migration = {
 // (upstream) yauzl rejected — e.g. ZIP64 single-disk packs from
 // PackSquash, lenient-EOCD packs, paid Chinese resource packs that
 // trip "end of central directory record signature not found" — get
-// re-parsed by the new `@xmcl/yauzl` fork. Without this, the snapshot
+// re-parsed by the new `@btnlauncher2/yauzl` fork. Without this, the snapshot
 // row keeps the stale `InvalidZipFileError` code forever and the UI
 // surfaces the file as broken even though the new parser can read it.
 const v24: Migration = {
@@ -239,7 +239,7 @@ const v24: Migration = {
 }
 
 // Clean up snapshots.parseError rows that were poisoned with the literal
-// text 'null' by the @xmcl/sqlite JSONPlugin bug — `typeof null ===
+// text 'null' by the @btnlauncher2/sqlite JSONPlugin bug — `typeof null ===
 // 'object'` made `JSON.stringify(null)` ("null") leak into every
 // nullable column whenever takeSnapshot wrote `parseError: null`. The
 // plugin is fixed in this release; v25 wipes the rows that v24 cannot

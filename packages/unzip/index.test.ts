@@ -1,8 +1,8 @@
 import { open } from './index'
 import { describe, test, expect, vi } from 'vitest'
-import { open as yopen, fromBuffer, fromFd } from '@xmcl/yauzl'
+import { open as yopen, fromBuffer, fromFd } from '@btnlauncher2/yauzl'
 
-vi.mock('@xmcl/yauzl', () => {
+vi.mock('@btnlauncher2/yauzl', () => {
   return {
     open: vi.fn(),
     fromBuffer: vi.fn(),

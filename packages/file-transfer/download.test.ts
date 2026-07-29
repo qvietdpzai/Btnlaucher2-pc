@@ -39,10 +39,10 @@ async function startServer(routes: Record<string, RouteSpec>) {
 }
 
 async function tempDir() {
-  return mkdtemp(join(tmpdir(), 'xmcl-ft-'))
+  return mkdtemp(join(tmpdir(), 'btnlauncher2-ft-'))
 }
 
-describe('@xmcl/file-transfer download', () => {
+describe('@btnlauncher2/file-transfer download', () => {
   it('downloads a basic 200 response into the destination', async () => {
     const content = 'hello world'
     const { server, baseUrl } = await startServer({
@@ -248,7 +248,7 @@ describe('@xmcl/file-transfer download', () => {
   })
 })
 
-describe('@xmcl/file-transfer download (controller)', () => {
+describe('@btnlauncher2/file-transfer download (controller)', () => {
   /**
    * A Range-capable server that dribbles every response a few bytes at a
    * time so the controller's sampler has time to fire (and possibly
@@ -407,7 +407,7 @@ describe('@xmcl/file-transfer download (controller)', () => {
   })
 })
 
-describe('@xmcl/file-transfer download (controller range-split)', () => {
+describe('@btnlauncher2/file-transfer download (controller range-split)', () => {
   function serveRange(
     full: Buffer,
     req: IncomingMessage,

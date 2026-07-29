@@ -1,4 +1,4 @@
-# XMCL End-to-End Tests
+# btnlauncher2 End-to-End Tests
 
 This package runs the launcher end-to-end via Playwright's Electron driver.
 It is **also the source of truth for the user tutorial** under
@@ -12,7 +12,7 @@ The suite is split into groups with different goals and environments:
 
 | Group | Folder | Environment | Runs |
 |---|---|---|---|
-| **Safety-net (兜底)** | [`specs/ci/`](specs/ci) | Isolated, deterministic — a throwaway temp profile per test, no live-network installs, Java launch stubbed. Launches the flat `xmcl-electron-app/dist/`. | Automatically in CI/CD on every push / PR |
+| **Safety-net (兜底)** | [`specs/ci/`](specs/ci) | Isolated, deterministic — a throwaway temp profile per test, no live-network installs, Java launch stubbed. Launches the flat `btnlauncher2-electron-app/dist/`. | Automatically in CI/CD on every push / PR |
 | **Packaged-boot** | [`specs/release/`](specs/release) | The REAL `electron-builder --dir` artifact (packed `app.asar`). Boots it and drives one loopback HTTP request through the bundled `undici`. | Automatically, but ONLY for the `Prepare Release` PR (branch `prepare-release`) + manual dispatch |
 | **Showcase (promo)** | [`specs/showcase/`](specs/showcase) | Real — a persistent profile on the current PC (`e2e/.showcase-data`), live network, real Java, content accumulates across runs | Manually, locally, to capture screenshots for promo posts / videos |
 
@@ -71,9 +71,9 @@ Modrinth, CurseForge) so flakiness is expected on poor connections.
 ```bash
 pnpm install                      # repo root — no Playwright pulled
 pnpm e2e:install                  # one-time — Playwright into e2e/node_modules
-pnpm build:renderer && pnpm --prefix=xmcl-electron-app compile
+pnpm build:renderer && pnpm --prefix=btnlauncher2-electron-app compile
 pnpm test:e2e:ci         # safety-net group (fast, deterministic — the CI gate)
-pnpm test:e2e:release    # packaged-boot group (needs `xmcl-electron-app build` first)
+pnpm test:e2e:release    # packaged-boot group (needs `btnlauncher2-electron-app build` first)
 pnpm test:e2e:showcase   # showcase group (real env, screenshots — run locally)
 pnpm test:e2e:scratch    # scratch / visual-verification specs only
 pnpm test:e2e:ui         # Playwright UI mode (interactive)
@@ -124,12 +124,12 @@ e2e/
 
 | Concern | Mechanism |
 |---|---|
-| Launcher root | Per-test temp dir injected via `XMCL_E2E_APP_DATA` |
-| Auto-updater | Disabled when `XMCL_E2E` is set (see `pluginAutoUpdate.ts`) |
-| Java spawn | Stubbed when `XMCL_E2E_NO_LAUNCH` is set (see `LaunchService.ts`) |
+| Launcher root | Per-test temp dir injected via `BTNLAUNCHER2_E2E_APP_DATA` |
+| Auto-updater | Disabled when `BTNLAUNCHER2_E2E` is set (see `pluginAutoUpdate.ts`) |
+| Java spawn | Stubbed when `BTNLAUNCHER2_E2E_NO_LAUNCH` is set (see `LaunchService.ts`) |
 | Microsoft auth | Planned: `helpers/auth-mock.ts` will intercept MSAL endpoints |
 | Renderer network | `page.route()` per spec via `helpers/network.ts` |
-| Main-process network | Planned: `XMCL_E2E_MOCKS_FILE` JSON intercept |
+| Main-process network | Planned: `BTNLAUNCHER2_E2E_MOCKS_FILE` JSON intercept |
 
 Showcase specs (`specs/showcase/`) intentionally **opt out** of the isolated
 profile: the fixture detects a spec under `specs/showcase/` and points both
@@ -143,7 +143,7 @@ network and installed content are real.
 Every locator in `helpers/pom/` MUST use `getByTestId()` or `getByRole()`.
 Never use locale-dependent text or styling classes. When a spec needs a
 new anchor, add a `data-testid="..."` attribute to the corresponding
-component in `xmcl-keystone-ui/`.
+component in `btnlauncher2-keystone-ui/`.
 
 ### Caption grammar
 
@@ -163,7 +163,7 @@ not already covered by the storylines above. If so:
 2. Compose with helpers from `helpers/tasks/`. Add new tasks only if reused
    across multiple storylines.
 3. Add `data-testid` attributes (not text/class selectors) for any new
-   anchors in `xmcl-keystone-ui/` and surface them in
+   anchors in `btnlauncher2-keystone-ui/` and surface them in
    [`helpers/pom/AppShell.ts`](helpers/pom/AppShell.ts).
 4. Call `shoot(ctx, '01-...', { caption: '…' })` at every key point.
 5. Run `pnpm test:e2e:showcase` then `pnpm build:tutorial` and inspect
@@ -175,7 +175,7 @@ CI runs only the safety-net group (`en`) on PRs. Capture more locales locally
 with the showcase group:
 
 ```bash
-XMCL_E2E_LOCALES=en,zh-CN pnpm test:e2e:showcase
+BTNLAUNCHER2_E2E_LOCALES=en,zh-CN pnpm test:e2e:showcase
 ```
 
 Trigger the workflow manually (`workflow_dispatch`) on GitHub to run the

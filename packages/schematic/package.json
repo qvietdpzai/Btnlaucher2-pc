@@ -1,5 +1,5 @@
 {
-  "name": "@xmcl/schematic",
+  "name": "@btnlauncher2/schematic",
   "version": "1.0.1",
   "main": "./index.ts",
   "description": "Read, convert and edit Minecraft blueprint/schematic files (litematic, schem, structure nbt, building gadget)",
@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build:type": "tsc",
-    "build:cjs": "esbuild --target=node16 --platform=node --external:@xmcl/* --sourcemap --format=cjs --bundle --outfile=dist/index.js index.ts",
-    "build:esm": "esbuild --target=node16 --platform=node --external:@xmcl/* --sourcemap --format=esm --bundle --outfile=dist/index.mjs index.ts"
+    "build:cjs": "esbuild --target=node16 --platform=node --external:@btnlauncher2/* --sourcemap --format=cjs --bundle --outfile=dist/index.js index.ts",
+    "build:esm": "esbuild --target=node16 --platform=node --external:@btnlauncher2/* --sourcemap --format=esm --bundle --outfile=dist/index.mjs index.ts"
   },
   "publishConfig": {
     "access": "public",
@@ -17,11 +17,11 @@
     "module": "./dist/index.mjs"
   },
   "dependencies": {
-    "@xmcl/nbt": "workspace:^*"
+    "@btnlauncher2/nbt": "workspace:^*"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Voxelum/x-minecraft-launcher.git"
+    "url": "git+https://github.com/qvietdpzai/Btnlaucher2-pc.git"
   },
   "author": "cijhn@hotmail.com",
   "keywords": [
@@ -40,7 +40,7 @@
   "homepage": "https://github.com/Voxelum/minecraft-launcher-core-node#readme",
   "devDependencies": {
     "@types/node": "^24.13.3",
-    "@xmcl/oxlint-config": "workspace:^*",
+    "@btnlauncher2/oxlint-config": "workspace:^*",
     "esbuild": "^0.25.12",
     "oxlint": "^1.63.0",
     "typescript": "^5.9.3",

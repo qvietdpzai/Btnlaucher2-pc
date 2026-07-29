@@ -1,7 +1,7 @@
 import * as path from 'path'
 import { readFabricMod } from './fabric'
 import { describe, test, expect } from 'vitest'
-import { openFileSystem } from '@xmcl/system'
+import { openFileSystem } from '@btnlauncher2/system'
 
 describe('Fabric', () => {
   describe('#readFabricMod', () => {

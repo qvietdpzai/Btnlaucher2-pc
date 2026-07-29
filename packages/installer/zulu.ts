@@ -1,5 +1,5 @@
-import { download, DownloadBaseOptions, getDownloadBaseOptions } from '@xmcl/file-transfer'
-import { open, openEntryReadStream, readAllEntries } from '@xmcl/unzip'
+import { download, DownloadBaseOptions, getDownloadBaseOptions } from '@btnlauncher2/file-transfer'
+import { open, openEntryReadStream, readAllEntries } from '@btnlauncher2/unzip'
 import { createReadStream, createWriteStream } from 'fs'
 import { stat, symlink, unlink } from 'fs/promises'
 import { basename, dirname, join } from 'path'

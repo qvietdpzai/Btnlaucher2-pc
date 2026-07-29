@@ -69,10 +69,10 @@ async function main() {
         content = `---\nversion: ${version}\ndate: ${today.getUTCFullYear()}-${(today.getUTCMonth() + 1).toString().padStart(2, '0')}-${today.getUTCDate().toString().padStart(2, '0')}\nlayout: changelog\n---\n${content}`
 
         try {
-            if (existsSync(`xmcl-page/src/${l}/changelogs`)) {
-                writeFileSync(`xmcl-page/src/${l}/changelogs/${version}.md`, content)
+            if (existsSync(`btnlauncher2-page/src/${l}/changelogs`)) {
+                writeFileSync(`btnlauncher2-page/src/${l}/changelogs/${version}.md`, content)
             } else {
-                writeFileSync(`xmcl-page/docs/${l}/changelogs/${version}.md`, content)
+                writeFileSync(`btnlauncher2-page/docs/${l}/changelogs/${version}.md`, content)
             }
         } catch (e) {
             console.error(`Fail to update ${l} release note:`)

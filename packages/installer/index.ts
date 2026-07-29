@@ -1,7 +1,7 @@
 /**
  * The installer module provides commonly used installation functions for Minecraft.
  * @packageDocumentation
- * @module @xmcl/installer
+ * @module @btnlauncher2/installer
  */
 
 export * from './assets'

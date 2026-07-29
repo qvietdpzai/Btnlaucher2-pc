@@ -5,8 +5,8 @@ import { dirname, resolve } from 'node:path'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // Locale matrix is intentionally minimal in this PR (en only).
-// Adding more locales is a one-line change: read process.env.XMCL_E2E_LOCALES.
-const locales = (process.env.XMCL_E2E_LOCALES ?? 'en').split(',').map((s) => s.trim())
+// Adding more locales is a one-line change: read process.env.BTNLAUNCHER2_E2E_LOCALES.
+const locales = (process.env.BTNLAUNCHER2_E2E_LOCALES ?? 'en').split(',').map((s) => s.trim())
 
 export default defineConfig({
   testDir: './specs',
@@ -29,9 +29,9 @@ export default defineConfig({
   ],
   use: {
     trace: 'retain-on-failure',
-    // Default keeps videos only for failures. Set XMCL_E2E_VIDEO=all to
+    // Default keeps videos only for failures. Set BTNLAUNCHER2_E2E_VIDEO=all to
     // record the full run (used for local showcase capture / promo footage).
-    video: process.env.XMCL_E2E_VIDEO === 'all' ? 'on' : 'retain-on-failure',
+    video: process.env.BTNLAUNCHER2_E2E_VIDEO === 'all' ? 'on' : 'retain-on-failure',
   },
   projects: locales.map((locale) => ({
     name: `electron-${locale}`,
@@ -41,7 +41,7 @@ export default defineConfig({
     } as Record<string, unknown>,
     metadata: {
       locale,
-      electronAppPath: resolve(__dirname, '../xmcl-electron-app/dist/index.js'),
+      electronAppPath: resolve(__dirname, '../btnlauncher2-electron-app/dist/index.js'),
     },
   })),
 })

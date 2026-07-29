@@ -17,9 +17,9 @@
     "exclude": [
         "docs/**/*",
         "packages/**/*.d.ts",
-        "xmcl-runtime-api/**/*",
-        "xmcl-runtime/**/*",
-        "xmcl-electron-app/**/*",
+        "btnlauncher2-runtime-api/**/*",
+        "btnlauncher2-runtime/**/*",
+        "btnlauncher2-electron-app/**/*",
         "node_modules/**/*"
     ]
 }

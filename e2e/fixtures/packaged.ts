@@ -2,9 +2,9 @@
  * Packaged-app fixture.
  *
  * Unlike `fixtures/launcher.ts` — which launches the *flat*
- * `xmcl-electron-app/dist/index.js` directory with the workspace Electron
+ * `btnlauncher2-electron-app/dist/index.js` directory with the workspace Electron
  * binary — this fixture launches the **real artifact** produced by
- * `electron-builder --dir` (i.e. `pnpm --prefix xmcl-electron-app build`),
+ * `electron-builder --dir` (i.e. `pnpm --prefix btnlauncher2-electron-app build`),
  * where every bundle lives inside a packed `app.asar`.
  *
  * Why it exists: bugs like #1576 (the `llhttp-wasm.wasm not found in
@@ -26,7 +26,7 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = resolve(__dirname, '../..')
-const OUTPUT_ROOT = resolve(REPO_ROOT, 'xmcl-electron-app/build/output')
+const OUTPUT_ROOT = resolve(REPO_ROOT, 'btnlauncher2-electron-app/build/output')
 
 /**
  * Locate the packaged executable `electron-builder --dir` emitted for the
@@ -35,7 +35,7 @@ const OUTPUT_ROOT = resolve(REPO_ROOT, 'xmcl-electron-app/build/output')
  * runner arch and fall back to whatever exists.
  */
 function findPackagedBinary(): string {
-  const productName = 'X Minecraft Launcher'
+  const productName = 'Btn Minecraft Launcher'
   if (process.platform === 'win32') {
     return join(OUTPUT_ROOT, 'win-unpacked', `${productName}.exe`)
   }
@@ -49,7 +49,7 @@ function findPackagedBinary(): string {
     }
     return join(OUTPUT_ROOT, archDirs[0], `${productName}.app`, 'Contents', 'MacOS', productName)
   }
-  return join(OUTPUT_ROOT, 'linux-unpacked', 'xmcl')
+  return join(OUTPUT_ROOT, 'linux-unpacked', 'btnlauncher2')
 }
 
 export interface PackagedFixture {
@@ -66,31 +66,31 @@ export const test = base.extend<{ packaged: PackagedFixture }>({
     const bin = findPackagedBinary()
     if (!existsSync(bin)) {
       throw new Error(
-        `Packaged binary not found at ${bin}. Run \`pnpm --prefix xmcl-electron-app build\` ` +
+        `Packaged binary not found at ${bin}. Run \`pnpm --prefix btnlauncher2-electron-app build\` ` +
         '(electron-builder --dir) before the packaged-boot e2e.',
       )
     }
 
-    const tempRoot = await mkdtemp(join(tmpdir(), 'xmcl-e2e-pkg-'))
+    const tempRoot = await mkdtemp(join(tmpdir(), 'btnlauncher2-e2e-pkg-'))
     const appDataPath = join(tempRoot, 'appData')
     const gameDataPath = join(tempRoot, 'gameData')
     await mkdir(appDataPath, { recursive: true })
     await mkdir(gameDataPath, { recursive: true })
     // Skip the first-launch wizard: point the launcher root at our temp dir.
-    const xmclDir = join(appDataPath, 'xmcl')
-    await mkdir(xmclDir, { recursive: true })
-    await writeFile(join(xmclDir, 'root'), gameDataPath)
+    const btnlauncher2Dir = join(appDataPath, 'btnlauncher2')
+    await mkdir(btnlauncher2Dir, { recursive: true })
+    await writeFile(join(btnlauncher2Dir, 'root'), gameDataPath)
 
     const app = await _electron.launch({
       executablePath: bin,
       // No `args`: the packaged binary bakes the app.asar entry in.
       env: {
         ...process.env,
-        XMCL_E2E: '1',
-        XMCL_E2E_APP_DATA: appDataPath,
-        XMCL_E2E_GAME_DATA: gameDataPath,
-        XMCL_E2E_NO_LAUNCH: '1',
-        XMCL_E2E_LOCALE: 'en',
+        BTNLAUNCHER2_E2E: '1',
+        BTNLAUNCHER2_E2E_APP_DATA: appDataPath,
+        BTNLAUNCHER2_E2E_GAME_DATA: gameDataPath,
+        BTNLAUNCHER2_E2E_NO_LAUNCH: '1',
+        BTNLAUNCHER2_E2E_LOCALE: 'en',
         NODE_ENV: 'production',
         FORCE_COLOR: '0',
       },

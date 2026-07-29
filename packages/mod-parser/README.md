@@ -1,9 +1,9 @@
 # Mod Parser
 
-[![npm version](https://img.shields.io/npm/v/@xmcl/mod-parser.svg)](https://www.npmjs.com/package/@xmcl/mod-parser)
-[![Downloads](https://img.shields.io/npm/dm/@xmcl/mod-parser.svg)](https://npmjs.com/@xmcl/mod-parser)
-[![Install size](https://packagephobia.now.sh/badge?p=@xmcl/mod-parser)](https://packagephobia.now.sh/result?p=@xmcl/mod-parser)
-[![npm](https://img.shields.io/npm/l/@xmcl/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@btnlauncher2/mod-parser.svg)](https://www.npmjs.com/package/@btnlauncher2/mod-parser)
+[![Downloads](https://img.shields.io/npm/dm/@btnlauncher2/mod-parser.svg)](https://npmjs.com/@btnlauncher2/mod-parser)
+[![Install size](https://packagephobia.now.sh/badge?p=@btnlauncher2/mod-parser)](https://packagephobia.now.sh/result?p=@btnlauncher2/mod-parser)
+[![npm](https://img.shields.io/npm/l/@btnlauncher2/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
 [![Build Status](https://github.com/voxelum/minecraft-launcher-core-node/workflows/Build/badge.svg)](https://github.com/Voxelum/minecraft-launcher-core-node/actions?query=workflow%3ABuild)
 
 ## Usage
@@ -11,7 +11,7 @@
 ### Parse Fabric Mod Metadata
 
 ```ts
-import { readFabricMod, FabricModMetadata } from "@xmcl/mods";
+import { readFabricMod, FabricModMetadata } from "@btnlauncher2/mods";
 const modJarBinary = fs.readFileSync("your-fabric.jar");
 const metadata: FabricModMetadata = await readFabricMod(modJarBinary);
 
@@ -24,7 +24,7 @@ const sameMetadata: FabricModMetadata = await readFabricMod("your-fabric.jar");
 Read the forge mod metadata, including `@Mod` annotation, mcmods.info, and toml metadata.
 
 ```ts
-import { readForgeMod, ForgeModMetadata } from "@xmcl/mods";
+import { readForgeMod, ForgeModMetadata } from "@btnlauncher2/mods";
 const forgeModJarBuff: Buffer;
 const metadata: ForgeModMetadata[] = await readForgeMod(forgeModJarBuff);
 const modid = metadata[0].modid; // get modid of first mods
@@ -33,8 +33,8 @@ const modid = metadata[0].modid; // get modid of first mods
 If you don't want to read that much (as it will transverse all the file in jar), you can try to use them separately:
 
 ```ts
-import { resolveFileSystem } from "@xmcl/system";
-import { readForgeModJson, readForgeModManifest, readForgeModToml, ForgeModMetadata, readForgeModAsm } from "@xmcl/mods";
+import { resolveFileSystem } from "@btnlauncher2/system";
+import { readForgeModJson, readForgeModManifest, readForgeModToml, ForgeModMetadata, readForgeModAsm } from "@btnlauncher2/mods";
 const forgeModJarBuff: Buffer;
 const fs = await resolveFileSystem(forgeModJarBuff);
 // read json
@@ -53,7 +53,7 @@ await readForgeModAsm(fs, metadata, { manifest });
 Read the forge mod config file (.cfg)
 
 ```ts
-import { ForgeConfig } from "@xmcl/mods";
+import { ForgeConfig } from "@btnlauncher2/mods";
 const modConfigString: string;
 const config: ForgeConfig = ForgeConfig.parse(modConfigString);
 const serializedBack: string = ForgeConfig.stringify(config);
@@ -64,6 +64,6 @@ const serializedBack: string = ForgeConfig.stringify(config);
 Read .litemod metadata:
 
 ```ts
-import { LiteloaderModMetadata, readLiteloaderMod } from "@xmcl/mods";
+import { LiteloaderModMetadata, readLiteloaderMod } from "@btnlauncher2/mods";
 const metadata: LiteloaderModMetadata = await readLiteloaderMod(`${mock}/mods/sample-mod.litemod`);
 ```

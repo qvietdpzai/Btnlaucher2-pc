@@ -1,4 +1,4 @@
-import { createSsdp, UpnpClient, UpnpUnmapOptions, UpnpMapOptions } from '@xmcl/nat-api'
+import { createSsdp, UpnpClient, UpnpUnmapOptions, UpnpMapOptions } from '@btnlauncher2/nat-api'
 
 async function create() {
   try {

@@ -1,8 +1,8 @@
-import { getPrototypeOf, TagType } from '@xmcl/nbt'
-import type { CompoundSchema, Schema } from '@xmcl/nbt'
+import { getPrototypeOf, TagType } from '@btnlauncher2/nbt'
+import type { CompoundSchema, Schema } from '@btnlauncher2/nbt'
 
 /**
- * Best-effort inference of an `@xmcl/nbt` schema from a runtime value.
+ * Best-effort inference of an `@btnlauncher2/nbt` schema from a runtime value.
  *
  * Objects that originate from `deserialize` already carry an exact NBT
  * prototype (which disambiguates byte/short/int, list vs. typed array, etc.) —

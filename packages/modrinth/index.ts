@@ -1,6 +1,6 @@
 /* eslint-disable n/no-unsupported-features/node-builtins */
 /**
- * @module @xmcl/modrinth
+ * @module @btnlauncher2/modrinth
  */
 
 import {

@@ -1,5 +1,5 @@
 import { describe, test, expect, vi, beforeEach } from 'vitest'
-import { Platform } from '@xmcl/core'
+import { Platform } from '@btnlauncher2/core'
 import {
   fetchJavaRuntimeManifest,
   JavaRuntimes,
@@ -14,8 +14,8 @@ import {
   DEFAULT_RUNTIME_ALL_URL,
 } from './java-runtime.browser'
 
-// Mock @xmcl/core
-vi.mock('@xmcl/core', () => ({
+// Mock @btnlauncher2/core
+vi.mock('@btnlauncher2/core', () => ({
   getPlatform: vi.fn(() => ({
     name: 'windows',
     arch: 'x64',

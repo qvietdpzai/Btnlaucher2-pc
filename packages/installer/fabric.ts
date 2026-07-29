@@ -1,5 +1,5 @@
-import type { Version } from '@xmcl/core'
-import { MinecraftFolder, MinecraftLocation } from '@xmcl/core'
+import type { Version } from '@btnlauncher2/core'
+import { MinecraftFolder, MinecraftLocation } from '@btnlauncher2/core'
 import { writeFile } from 'fs/promises'
 import { DEFAULT_META_URL_FABRIC, FabricLoaderArtifact } from './fabric.browser'
 import { ensureFile, InstallOptions } from './utils'

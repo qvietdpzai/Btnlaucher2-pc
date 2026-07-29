@@ -63,7 +63,7 @@
                     ],
                     "background": {
                         "activeOnStart": true,
-                        "beginsPattern": "pnpm run --prefix=xmcl-electron-app dev",
+                        "beginsPattern": "pnpm run --prefix=btnlauncher2-electron-app dev",
                         "endsPattern": "^electron main ready",
                     }
                 }

@@ -1,6 +1,6 @@
-import { resolveFileSystem, FileSystem } from '@xmcl/system'
+import { resolveFileSystem, FileSystem } from '@btnlauncher2/system'
 import { TomlDate, parse as parseToml } from 'smol-toml'
-import { AnnotationVisitor, ClassReader, ClassVisitor, MethodVisitor, Opcodes } from '@xmcl/asm'
+import { AnnotationVisitor, ClassReader, ClassVisitor, MethodVisitor, Opcodes } from '@btnlauncher2/asm'
 
 /**
  * The @Mod data from class file

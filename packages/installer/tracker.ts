@@ -2,7 +2,7 @@ import {
   ProgressTracker,
   ProgressTrackerMultiple,
   ProgressTrackerSingle,
-} from '@xmcl/file-transfer'
+} from '@btnlauncher2/file-transfer'
 
 type TrackEvent<T extends object> = {
   [K in keyof T]: { phase: K; payload: T[K] }

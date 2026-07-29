@@ -17,14 +17,14 @@ You need to fork & clone the project using git.
 Suppose you already fork the project in Github to your repo:
 
 ```bash
-git clone --recurse-submodules https://github.com/your-id/x-minecraft-launcher
+git clone --recurse-submodules https://github.com/your-id/Btnlaucher2-pc
 ```
 
 ### Install
 
 **Optional**, install the project using [pnpm](https://pnpm.io):
 
-Under the folder you cloned, e.g. `x-minecraft-launcher`, run command
+Under the folder you cloned, e.g. `Btnlaucher2-pc`, run command
 
 ```
 pnpm install
@@ -40,8 +40,8 @@ Install the i18n-ally (lokalise.i18n-ally) extension. The VSCode might hint you 
 
 You need to find the corresponding locale yaml file under
 
-- xmcl-keystone-ui/locales
-- xmcl-electron-app/main/locales
+- btnlauncher2-keystone-ui/locales
+- btnlauncher2-electron-app/main/locales
 
 The file name is the locale code. You can reference [this document](http://man.hubwiz.com/docset/electron.docset/Contents/Resources/Documents/docs/api/locales.html) to choice the locale.
 

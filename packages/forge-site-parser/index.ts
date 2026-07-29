@@ -1,5 +1,5 @@
 /**
- * @module @xmcl/forge-site-parser
+ * @module @btnlauncher2/forge-site-parser
  */
 import { parse as parseHtml, HTMLElement, Node } from 'node-html-parser'
 

@@ -1,10 +1,10 @@
-import { Platform } from '@xmcl/core'
+import { Platform } from '@btnlauncher2/core'
 import {
   download,
   DownloadBaseOptions,
   downloadMultiple,
   getDownloadBaseOptions,
-} from '@xmcl/file-transfer'
+} from '@btnlauncher2/file-transfer'
 import { createHash } from 'crypto'
 import { link, readFile } from 'fs/promises'
 import { dirname, join } from 'path'

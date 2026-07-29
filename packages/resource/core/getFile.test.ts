@@ -13,7 +13,7 @@ describe('getFiles', () => {
   })
 
   it('finds blueprint files in nested folders while exposing their basenames', async () => {
-    const directory = await mkdtemp(join(tmpdir(), 'xmcl-resource-'))
+    const directory = await mkdtemp(join(tmpdir(), 'btnlauncher2-resource-'))
     temporaryDirectories.push(directory)
     await mkdir(join(directory, 'folder'))
     await writeFile(join(directory, 'a.nbt'), '')

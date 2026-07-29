@@ -1,4 +1,4 @@
-import type { ForgeModMetadata, ForgeModParseFailedError, ForgeModTOMLData } from '@xmcl/mod-parser'
+import type { ForgeModMetadata, ForgeModParseFailedError, ForgeModTOMLData } from '@btnlauncher2/mod-parser'
 
 export interface ForgeModCommonMetadata extends ForgeModMetadata {
   modid: string

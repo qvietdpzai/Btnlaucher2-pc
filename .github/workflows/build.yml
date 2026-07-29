@@ -5,10 +5,10 @@ on:
     branches:
       - master
     paths:
-      - "xmcl-runtime/**"
-      - "xmcl-runtime-api/**"
-      - "xmcl-keystone-ui/**"
-      - "xmcl-electron-app/**"
+      - "btnlauncher2-runtime/**"
+      - "btnlauncher2-runtime-api/**"
+      - "btnlauncher2-keystone-ui/**"
+      - "btnlauncher2-electron-app/**"
       - "packages/**"
       - "package.json"
       - "pnpm-lock.yaml"
@@ -51,8 +51,8 @@ jobs:
       - name: Cache Vite deps
         uses: actions/cache@v5
         with:
-          path: xmcl-keystone-ui/node_modules/.vite
-          key: ${{ runner.os }}-vite-${{ hashFiles('pnpm-lock.yaml', 'xmcl-keystone-ui/vite.config.ts') }}
+          path: btnlauncher2-keystone-ui/node_modules/.vite
+          key: ${{ runner.os }}-vite-${{ hashFiles('pnpm-lock.yaml', 'btnlauncher2-keystone-ui/vite.config.ts') }}
       - name: Install
         run: pnpm install --frozen-lockfile
       - name: Setup Linux
@@ -62,8 +62,8 @@ jobs:
           sudo apt-get install -y libarchive-tools
       - name: Build
         run: |
-          pnpm run --prefix xmcl-keystone-ui build
-          pnpm run --prefix xmcl-electron-app build
+          pnpm run --prefix btnlauncher2-keystone-ui build
+          pnpm run --prefix btnlauncher2-electron-app build
         env:
           BUILD_NUMBER: ${{ github.run_number }}
           NODE_OPTIONS: --max-old-space-size=32768
@@ -77,8 +77,8 @@ jobs:
         with:
           name: sourcemap
           path: |
-            xmcl-electron-app/dist/*.js.map
-            xmcl-electron-app/dist/renderer/assets/*.js.map
+            btnlauncher2-electron-app/dist/*.js.map
+            btnlauncher2-electron-app/dist/renderer/assets/*.js.map
       - name: Upload Build
         # Windows .appx in this artifact is UNSIGNED. The `release` job
         # publishes it to a *draft* release; signing happens out-of-band via
@@ -88,42 +88,42 @@ jobs:
         with:
           name: build-${{ runner.os }}
           path: |
-            xmcl-electron-app/build/output/
+            btnlauncher2-electron-app/build/output/
       - name: Upload Windows Zip Build
         if: ${{ runner.os == 'Windows' }}
         uses: actions/upload-artifact@v6
         with:
           name: win-b${{ github.run_number }}
           path: |
-            xmcl-electron-app/build/output/win-unpacked/
+            btnlauncher2-electron-app/build/output/win-unpacked/
       - name: Upload Linux x64 Zip Build
         if: ${{ runner.os == 'Linux' }}
         uses: actions/upload-artifact@v6
         with:
           name: linux-b${{ github.run_number }}-x64
           path: |
-            xmcl-electron-app/build/output/linux-unpacked/
+            btnlauncher2-electron-app/build/output/linux-unpacked/
       - name: Upload Linux arm64 Zip Build
         if: ${{ runner.os == 'Linux' }}
         uses: actions/upload-artifact@v6
         with:
           name: linux-b${{ github.run_number }}-arm64
           path: |
-            xmcl-electron-app/build/output/linux-arm64-unpacked/
+            btnlauncher2-electron-app/build/output/linux-arm64-unpacked/
       - name: Upload Mac x64 Zip Build
         if: ${{ runner.os == 'macOS' }}
         uses: actions/upload-artifact@v6
         with:
           name: mac-b${{ github.run_number }}-x64
           path: |
-            xmcl-electron-app/build/output/mac/
+            btnlauncher2-electron-app/build/output/mac/
       - name: Upload Mac arm64 Zip Build
         if: ${{ runner.os == 'macOS' }}
         uses: actions/upload-artifact@v6
         with:
           name: mac-b${{ github.run_number }}-arm64
           path: |
-            xmcl-electron-app/build/output/mac-arm64/
+            btnlauncher2-electron-app/build/output/mac-arm64/
 
   build-arch:
     needs: build
@@ -168,23 +168,23 @@ jobs:
           chown -R builder:builder ./
 
           if [ "${{ matrix.arch }}" = "x86_64" ]; then
-            cp "../xmcl-${{ steps.version.outputs.version }}-amd64.deb" ./
-            DEB_FILE="xmcl-${{ steps.version.outputs.version }}-amd64.deb"
+            cp "../btnlauncher2-${{ steps.version.outputs.version }}-amd64.deb" ./
+            DEB_FILE="btnlauncher2-${{ steps.version.outputs.version }}-amd64.deb"
           elif [ "${{ matrix.arch }}" = "aarch64" ]; then
-            cp "../xmcl-${{ steps.version.outputs.version }}-arm64.deb" ./
-            DEB_FILE="xmcl-${{ steps.version.outputs.version }}-arm64.deb"
+            cp "../btnlauncher2-${{ steps.version.outputs.version }}-arm64.deb" ./
+            DEB_FILE="btnlauncher2-${{ steps.version.outputs.version }}-arm64.deb"
           fi
 
           cat > PKGBUILD << EOF
-          pkgname=xmcl-launcher
+          pkgname=btnlauncher2-launcher
           pkgver=${{ steps.version.outputs.version }}
           pkgrel=1
-          pkgdesc="X Minecraft Launcher - A modern Minecraft launcher"
+          pkgdesc="Btn Minecraft Launcher - A modern Minecraft launcher"
           arch=('${{ matrix.arch }}')
-          url="https://xmcl.app/"
+          url="https://btnlauncher2.app/"
           license=('MIT')
-          provides=("xmcl")
-          conflicts=('xmcl-launcher-bin')
+          provides=("btnlauncher2")
+          conflicts=('btnlauncher2-launcher-bin')
           options=(!strip !debug)
           source=("$DEB_FILE")
           noextract=("$DEB_FILE")
@@ -211,7 +211,7 @@ jobs:
           su builder -c "CARCH=${{ matrix.arch }} makepkg -sf --noconfirm"
           if [ -f *.pkg.tar.zst ]; then
             for f in *.pkg.tar.zst; do
-              mv "$f" "../xmcl-${{ steps.version.outputs.version }}-${{ matrix.arch }}.pacman"
+              mv "$f" "../btnlauncher2-${{ steps.version.outputs.version }}-${{ matrix.arch }}.pacman"
             done
           fi
 
@@ -287,7 +287,7 @@ jobs:
         env:
           AZURE_ACCOUNT_KEY: ${{ secrets.AZURE_ACCOUNT_KEY }}
         with:
-          account: xmcl
+          account: btnlauncher2
           container: sourcemap
           directory: ./sourcemap
 
@@ -320,7 +320,7 @@ jobs:
           path: build
       - name: Prepare Release
         id: prepare_release
-        uses: Voxelum/semantic-version-bump-action@xmcl
+        uses: Voxelum/semantic-version-bump-action@btnlauncher2
         with:
           packages: |
             ./packages/asm
@@ -357,14 +357,14 @@ jobs:
             ./packages/worker
             ./packages/wrtc-multiplayer
             ./packages/yauzl
-            ./xmcl-keystone-ui
-            ./xmcl-runtime
-            ./xmcl-runtime-api
+            ./btnlauncher2-keystone-ui
+            ./btnlauncher2-runtime
+            ./btnlauncher2-runtime-api
           root: "."
           stage: "release"
       - name: Create Tag
         run: |
-          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/voxelum/x-minecraft-launcher.git"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/qvietdpzai/Btnlaucher2-pc.git"
           git config user.name ci010
           git config user.email cijhn@hotmail.com
           git tag -f ${{ steps.prepare_release.outputs.tag }}
@@ -380,7 +380,7 @@ jobs:
           version: ${{ steps.prepare_release.outputs.version }}
       - name: Draft Release
         id: create_release
-        uses: voxelum/create-release@xmcl
+        uses: voxelum/create-release@btnlauncher2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -393,8 +393,8 @@ jobs:
       - name: Checkout Website
         uses: actions/checkout@v5
         with:
-          repository: Voxelum/xmcl-page
-          path: xmcl-page
+          repository: qvietdpzai/Btnlaucher2-pc
+          path: btnlauncher2-page
           token: ${{ secrets.PAT_GITHUB_TOKEN }}
       - name: Create Release Note
         uses: ./.github/actions/generate-release-note
@@ -403,11 +403,11 @@ jobs:
           version: ${{ steps.prepare_release.outputs.version }}
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-      - name: Push Release Note to xmcl-page
+      - name: Push Release Note to btnlauncher2-page
         # Each release produces brand-new `<version>.md` files under
         # `src/<locale>/changelogs/` and `docs/<locale>/changelogs/`, so
         # there's no conflict risk. Skip the PR dance and push directly.
-        working-directory: xmcl-page
+        working-directory: btnlauncher2-page
         run: |
           if [ -z "$(git status --porcelain)" ]; then
             echo "No changelog changes to commit."

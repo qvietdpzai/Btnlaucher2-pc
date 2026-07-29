@@ -1,15 +1,15 @@
 <p align="center">
-  <a href="https://xmcl.app" target="_blank">
-    <img alt="Logo" width="100" src="https://github.com/Voxelum/x-minecraft-launcher/blob/master/xmcl-electron-app/icons/dark@256x256.png">
+  <a href="https://btnlauncher2.app" target="_blank">
+    <img alt="Logo" width="100" src="https://github.com/qvietdpzai/Btnlaucher2-pc/blob/master/btnlauncher2-electron-app/icons/dark@256x256.png">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Voxelum/x-minecraft-launcher">
-    <img src="https://github.com/Voxelum/x-minecraft-launcher/workflows/Build/badge.svg" alt="Build">
+  <a href="https://github.com/qvietdpzai/Btnlaucher2-pc">
+    <img src="https://github.com/qvietdpzai/Btnlaucher2-pc/workflows/Build/badge.svg" alt="Build">
   </a>
-  <a href="https://github.com/Voxelum/x-minecraft-launcher/blob/master/LICENSE">
-    <img src="https://img.shields.io/npm/l/@xmcl/core.svg" alt="License">
+  <a href="https://github.com/qvietdpzai/Btnlaucher2-pc/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/@btnlauncher2/core.svg" alt="License">
   </a>
   <a href="https://conventionalcommits.org">
     <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Commit">
@@ -19,19 +19,19 @@
     <img src="https://discord.com/api/guilds/405213567118213121/widget.png" alt="Discord">
   </a>
   <a href="https://kook.top/gqjSHh">
-    <img src="https://img.shields.io/endpoint?url=https://api.xmcl.app/kook-badge" alt="Kook">
+    <img src="https://img.shields.io/endpoint?url=https://api.btnlauncher2.app/kook-badge" alt="Kook">
   </a>
   <a href="https://afdian.com/@ci010">
-    <img src="https://img.shields.io/endpoint?url=https://api.xmcl.app/afdian-badge" alt="afdian">
+    <img src="https://img.shields.io/endpoint?url=https://api.btnlauncher2.app/afdian-badge" alt="afdian">
   </a>
-  <a href="https://patreon.com/xmcl">
-    <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dxmcl%26type%3Dpledges" alt="patreon">
+  <a href="https://patreon.com/btnlauncher2">
+    <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dbtnlauncher2%26type%3Dpledges" alt="patreon">
   </a>
 </p>
 
-![home](https://raw.githubusercontent.com/Voxelum/xmcl-page/master/.vitepress/theme/assets/home.png)
+![home](https://raw.githubusercontent.com/qvietdpzai/Btnlaucher2-pc/master/.vitepress/theme/assets/home.png)
 
-공식 사이트([https://xmcl.app](https://xmcl.app/ko))에서 앱을 다운로드할 수 있어요.
+공식 사이트([https://btnlauncher2.app](https://btnlauncher2.app/ko))에서 앱을 다운로드할 수 있어요.
 
 만약 `winget`을 사용 중이면, 아래 명령어로 설치할 수 있어요:
 
@@ -42,8 +42,8 @@ winget install CI010.XMinecraftLauncher
 macOS에서는 Homebrew tap을 통해 설치할 수 있어요:
 
 ```bash
-brew tap voxelum/xmcl
-brew install --cask --no-quarantine voxelum/xmcl
+brew tap voxelum/btnlauncher2
+brew install --cask --no-quarantine voxelum/btnlauncher2
 ```
 
 ## 기능
@@ -62,11 +62,11 @@ brew install --cask --no-quarantine voxelum/xmcl
 
 ## 기여하기
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Voxelum/x-minecraft-launcher)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Voxelum/Btnlaucher2-pc)
 
 일반 개발 관련해서는 [기여하기](CONTRIBUTING.ko.md)를 참고해 주세요.
 
-번역(i18n) 작업을 하려면 [현지화를 시작하기](https://xmcl.app/ko/guide/i18n)를 따라 진행해 주세요.
+번역(i18n) 작업을 하려면 [현지화를 시작하기](https://btnlauncher2.app/ko/guide/i18n)를 따라 진행해 주세요.
 
 ## 라이선스
 
@@ -76,7 +76,7 @@ brew install --cask --no-quarantine voxelum/xmcl
 
 | [![](https://github.com/DGP-Studio/Snap.Hutao/assets/10614984/73ae8b90-f3c7-4033-b2b7-f4126331ce66)](https://signpath.io/) | Windows용 무료 코드 서명(제공: [SignPath.io](https://signpath.io/), 인증서: [SignPath Foundation](https://signpath.org/)) |
 | :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: |
-| [![](https://deno.com/images/deno_logo_4.gif)](https://deno.com/deploy) | [Deno Deploy](https://deno.com/deploy), XMCL은 서버리스 자바스크립트 앱에 Deno Deploy를 활용하고 있어요. 제공: [Deno](https://deno.com/) |
+| [![](https://deno.com/images/deno_logo_4.gif)](https://deno.com/deploy) | [Deno Deploy](https://deno.com/deploy), BTNLAUNCHER2은 서버리스 자바스크립트 앱에 Deno Deploy를 활용하고 있어요. 제공: [Deno](https://deno.com/) |
 | [![](../assets/EdgeOne.png)](https://edgeone.ai/) | [Tencent EdgeOne](https://edgeone.ai/)이 아시아 CDN, 엣지, 보안 솔루션을 제공해요. CDN 가속 및 보안은 Tencent EdgeOne의 후원을 받고 있어요. |
 
 ### 스폰서 (AFDIAN)

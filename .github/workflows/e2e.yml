@@ -3,22 +3,22 @@ name: e2e
 on:
   # Safety-net (兜底) group runs automatically to guarantee the packaged
   # renderer still boots in a production build (catches bundler / chunk-split
-  # regressions that only reproduce against xmcl-electron-app/dist).
+  # regressions that only reproduce against btnlauncher2-electron-app/dist).
   push:
     branches: [master]
     paths:
-      - 'xmcl-keystone-ui/**'
-      - 'xmcl-electron-app/**'
-      - 'xmcl-runtime/**'
-      - 'xmcl-runtime-api/**'
+      - 'btnlauncher2-keystone-ui/**'
+      - 'btnlauncher2-electron-app/**'
+      - 'btnlauncher2-runtime/**'
+      - 'btnlauncher2-runtime-api/**'
       - 'e2e/**'
       - '.github/workflows/e2e.yml'
   pull_request:
     paths:
-      - 'xmcl-keystone-ui/**'
-      - 'xmcl-electron-app/**'
-      - 'xmcl-runtime/**'
-      - 'xmcl-runtime-api/**'
+      - 'btnlauncher2-keystone-ui/**'
+      - 'btnlauncher2-electron-app/**'
+      - 'btnlauncher2-runtime/**'
+      - 'btnlauncher2-runtime-api/**'
       - 'e2e/**'
       - '.github/workflows/e2e.yml'
   # Showcase group + tutorial capture is manual: it hits live network endpoints
@@ -62,7 +62,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Install Electron binary
-        run: pnpm --prefix=xmcl-electron-app exec install-electron
+        run: pnpm --prefix=btnlauncher2-electron-app exec install-electron
 
       - name: Install e2e dependencies
         # `e2e` is intentionally OUTSIDE the workspace so default `pnpm i`
@@ -75,7 +75,7 @@ jobs:
           NODE_ENV: production
 
       - name: Compile main process
-        run: pnpm --prefix=xmcl-electron-app compile
+        run: pnpm --prefix=btnlauncher2-electron-app compile
 
       - name: Run e2e safety-net group
         # Linux runners are headless; xvfb-run gives Electron an X display.
@@ -98,7 +98,7 @@ jobs:
   # packed app.asar) and asserts the bundled undici can make an HTTP request
   # from inside the asar. This is the only group that can catch packaging /
   # asar-layout regressions like #1576 (llhttp-wasm.wasm ENOENT), which never
-  # reproduce against the flat xmcl-electron-app/dist the other groups launch.
+  # reproduce against the flat btnlauncher2-electron-app/dist the other groups launch.
   #
   # It requires a full pack (heavy), so it runs ONLY for the automated
   # "Prepare Release" PR (head branch `prepare-release`, opened by the Build
@@ -153,12 +153,12 @@ jobs:
         run: pnpm e2e:install --frozen-lockfile
 
       - name: Build renderer
-        run: pnpm run --prefix xmcl-keystone-ui build
+        run: pnpm run --prefix btnlauncher2-keystone-ui build
         env:
           NODE_ENV: production
 
       - name: Package app (electron-builder --dir)
-        run: pnpm run --prefix xmcl-electron-app build
+        run: pnpm run --prefix btnlauncher2-electron-app build
         env:
           BUILD_NUMBER: ${{ github.run_number }}
           NODE_ENV: production
@@ -188,7 +188,7 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     timeout-minutes: 60
     env:
-      XMCL_E2E_LOCALES: ${{ github.event.inputs.locales || 'en' }}
+      BTNLAUNCHER2_E2E_LOCALES: ${{ github.event.inputs.locales || 'en' }}
       PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
     steps:
@@ -205,7 +205,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Install Electron binary
-        run: pnpm --prefix=xmcl-electron-app exec install-electron
+        run: pnpm --prefix=btnlauncher2-electron-app exec install-electron
 
       - name: Install e2e dependencies
         run: pnpm e2e:install --frozen-lockfile
@@ -216,7 +216,7 @@ jobs:
           NODE_ENV: production
 
       - name: Compile main process
-        run: pnpm --prefix=xmcl-electron-app compile
+        run: pnpm --prefix=btnlauncher2-electron-app compile
 
       - name: Run e2e showcase group
         run: ${{ runner.os == 'Linux' && 'xvfb-run --auto-servernum' || '' }} pnpm --prefix=e2e test:showcase

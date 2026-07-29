@@ -4,12 +4,12 @@ import {
   MinecraftLocation,
   Version,
   Version as VersionJson,
-} from '@xmcl/core'
-import { filterEntries, open, readEntry, walkEntriesGenerator } from '@xmcl/unzip'
+} from '@btnlauncher2/core'
+import { filterEntries, open, readEntry, walkEntriesGenerator } from '@btnlauncher2/unzip'
 import { spawn } from 'child_process'
 import { readFile, writeFile } from 'fs/promises'
 import { delimiter, dirname, join, relative, sep } from 'path'
-import { ZipFile } from '@xmcl/yauzl'
+import { ZipFile } from '@btnlauncher2/yauzl'
 import { diagnoseFile, Issue } from './diagnose'
 import { LibrariesTrackerEvents, LibraryOptions, installResolvedLibraries } from './libraries'
 import { convertClasspathToMaven, parseManifest } from './manifest'

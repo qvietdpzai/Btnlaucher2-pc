@@ -1,5 +1,5 @@
-import { ConnectionUserInfo, PromiseSignal } from '@xmcl/runtime-api'
-import type { MultiplayerIceServerCredential, MultiplayerRoomAdmission } from '@xmcl/runtime-api'
+import { ConnectionUserInfo, PromiseSignal } from '@btnlauncher2/runtime-api'
+import type { MultiplayerIceServerCredential, MultiplayerRoomAdmission } from '@btnlauncher2/runtime-api'
 import type { InitiateOptions, Peers } from './peers'
 
 type DescriptionType = 'offer' | 'answer'

@@ -1,4 +1,4 @@
-import { PackMeta, readIcon, readPackMeta } from '@xmcl/resourcepack'
+import { PackMeta, readIcon, readPackMeta } from '@btnlauncher2/resourcepack'
 import { ResourceDomain } from '../ResourceDomain'
 import { ResourceType } from '../ResourceType'
 import type { IResourceParser } from './index'

@@ -1,5 +1,5 @@
-import { FileSystem, openFileSystem } from '@xmcl/system'
-import { getBlockCount, getMaterialList, getUsedBlocks, isAir, isBlueprintFile, readBlueprint } from '@xmcl/schematic'
+import { FileSystem, openFileSystem } from '@btnlauncher2/system'
+import { getBlockCount, getMaterialList, getUsedBlocks, isAir, isBlueprintFile, readBlueprint } from '@btnlauncher2/schematic'
 import { readFile } from 'fs/promises'
 import { basename, extname } from 'path'
 import { fabricModParser } from './fabric_mod'

@@ -4,7 +4,7 @@
  * and the {@link launch} function to launch the game.
  *
  * @packageDocumentation
- * @module @xmcl/core
+ * @module @btnlauncher2/core
  */
 
 export * from './launch'

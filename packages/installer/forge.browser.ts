@@ -1,4 +1,4 @@
-import { parse as parseForge } from '@xmcl/forge-site-parser'
+import { parse as parseForge } from '@btnlauncher2/forge-site-parser'
 import { doFetch, FetchOptions } from './utils.browser'
 
 export interface ForgeVersionList {

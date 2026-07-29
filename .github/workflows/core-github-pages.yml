@@ -42,9 +42,9 @@ jobs:
         build_dir: docs/
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
-    - name: Notify the xmcl-page
+    - name: Notify the btnlauncher2-page
       uses: benc-uk/workflow-dispatch@v1
       with:
         token: ${{ secrets.GITHUB_PAT }}
-        repo: Voxelum/xmcl-page
+        repo: qvietdpzai/Btnlaucher2-pc
         workflow: deploy.yaml

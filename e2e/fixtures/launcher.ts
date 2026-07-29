@@ -3,10 +3,10 @@
  * isolated, freshly-created launcher root.
  *
  * Determinism guarantees:
- *  - Per-test temp directory for both Electron `userData` and the XMCL game
+ *  - Per-test temp directory for both Electron `userData` and the btnlauncher2 game
  *    data root. No shared state between tests.
- *  - Auto-updater disabled via XMCL_E2E env var.
- *  - Real `java` spawn short-circuited via XMCL_E2E_NO_LAUNCH.
+ *  - Auto-updater disabled via BTNLAUNCHER2_E2E env var.
+ *  - Real `java` spawn short-circuited via BTNLAUNCHER2_E2E_NO_LAUNCH.
  *  - Microsoft OAuth not exercised in this PR — tests use offline auth.
  *
  * Tutorial guarantees:
@@ -28,7 +28,7 @@ import { SeedInstance, seedSandbox } from '../helpers/sandbox'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = resolve(__dirname, '../..')
-const ELECTRON_ENTRY = resolve(REPO_ROOT, 'xmcl-electron-app/dist/index.js')
+const ELECTRON_ENTRY = resolve(REPO_ROOT, 'btnlauncher2-electron-app/dist/index.js')
 
 // Persistent profile root for the **showcase** group (e2e/specs/showcase/**).
 // Unlike the CI safety-net group — which isolates every test into a throwaway
@@ -53,10 +53,10 @@ function isShowcase(file: string): boolean {
 // the workspace electron the launcher itself uses — the same binary `compile`
 // produces output for.
 const ELECTRON_BIN = process.platform === 'win32'
-  ? resolve(REPO_ROOT, 'xmcl-electron-app/node_modules/electron/dist/electron.exe')
+  ? resolve(REPO_ROOT, 'btnlauncher2-electron-app/node_modules/electron/dist/electron.exe')
   : process.platform === 'darwin'
-    ? resolve(REPO_ROOT, 'xmcl-electron-app/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron')
-    : resolve(REPO_ROOT, 'xmcl-electron-app/node_modules/electron/dist/electron')
+    ? resolve(REPO_ROOT, 'btnlauncher2-electron-app/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron')
+    : resolve(REPO_ROOT, 'btnlauncher2-electron-app/node_modules/electron/dist/electron')
 
 /**
  * Poll `app.windows()` until at least one window's `url()` matches `pattern`,
@@ -178,20 +178,20 @@ export const test = base.extend<{
     const persistent = isShowcase(testInfo.file) && !launcherOptions.bootstrap
     const tempRoot = persistent
       ? SHOWCASE_ROOT
-      : await mkdtemp(join(tmpdir(), 'xmcl-e2e-'))
+      : await mkdtemp(join(tmpdir(), 'btnlauncher2-e2e-'))
     const appDataPath = join(tempRoot, 'appData')
     const gameDataPath = join(tempRoot, 'gameData')
     await mkdir(appDataPath, { recursive: true })
     await mkdir(gameDataPath, { recursive: true })
 
-    // Layout matches what xmcl-runtime/app/LauncherApp.ts expects:
-    //   {appDataPath}/xmcl/root  -> contains the game data path
+    // Layout matches what btnlauncher2-runtime/app/LauncherApp.ts expects:
+    //   {appDataPath}/btnlauncher2/root  -> contains the game data path
     // We write directly into the e2e-controlled appData parent so a fresh
     // run skips the bootstrap dialog. To trigger bootstrap, leave it absent.
     if (!launcherOptions.bootstrap) {
-      const xmclDir = join(appDataPath, 'xmcl')
-      await mkdir(xmclDir, { recursive: true })
-      await writeFile(join(xmclDir, 'root'), gameDataPath)
+      const btnlauncher2Dir = join(appDataPath, 'btnlauncher2')
+      await mkdir(btnlauncher2Dir, { recursive: true })
+      await writeFile(join(btnlauncher2Dir, 'root'), gameDataPath)
     }
 
     if (launcherOptions.seed) {
@@ -202,17 +202,17 @@ export const test = base.extend<{
     const app = await _electron.launch({
       executablePath: ELECTRON_BIN,
       args: [ELECTRON_ENTRY],
-      cwd: resolve(REPO_ROOT, 'xmcl-electron-app/dist'),
+      cwd: resolve(REPO_ROOT, 'btnlauncher2-electron-app/dist'),
       env: {
         ...process.env,
         // Test-mode flags consumed by main process hooks (see ElectronLauncherApp.ts).
-        XMCL_E2E: '1',
-        XMCL_E2E_APP_DATA: appDataPath,
+        BTNLAUNCHER2_E2E: '1',
+        BTNLAUNCHER2_E2E_APP_DATA: appDataPath,
         // Isolate the onboarding data-root default so the bootstrap wizard
         // never commits the real ~/.minecraftx (see pluginSetup.ts).
-        XMCL_E2E_GAME_DATA: gameDataPath,
-        XMCL_E2E_NO_LAUNCH: '1',
-        XMCL_E2E_LOCALE: locale,
+        BTNLAUNCHER2_E2E_GAME_DATA: gameDataPath,
+        BTNLAUNCHER2_E2E_NO_LAUNCH: '1',
+        BTNLAUNCHER2_E2E_LOCALE: locale,
         // Make the launcher logs deterministic.
         NODE_ENV: 'production',
         FORCE_COLOR: '0',

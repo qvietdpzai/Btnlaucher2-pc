@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "preLaunchTask": "dev",
-            "program": "${workspaceFolder}/xmcl-electron-app/dist/index.js",
+            "program": "${workspaceFolder}/btnlauncher2-electron-app/dist/index.js",
             "showAsyncStacks": true,
             "args": [
                 "--remote-debugging-port=9300",
@@ -18,21 +18,21 @@
             ],
             "sourceMaps": true,
             "resolveSourceMapLocations": [
-                "${workspaceFolder}/xmcl-electron-app/dist/**",
+                "${workspaceFolder}/btnlauncher2-electron-app/dist/**",
                 "!**/node_modules/**"
             ],
             "outFiles": [
-                "${workspaceFolder}/xmcl-electron-app/dist/*.js"
+                "${workspaceFolder}/btnlauncher2-electron-app/dist/*.js"
             ],
-            "runtimeExecutable": "${workspaceFolder}/xmcl-electron-app/node_modules/.bin/electron",
+            "runtimeExecutable": "${workspaceFolder}/btnlauncher2-electron-app/node_modules/.bin/electron",
             "skipFiles": [
                 "<node_internals>/**",
                 "**/node_modules/diagnostic-channel-publishers/**",
-                "${workspaceFolder}/xmcl-runtime/app/DummyLogger.ts",
-                "${workspaceFolder}/xmcl-runtime/infra/plugins/uncaught_error.ts",
-                "${workspaceFolder}/xmcl-runtime/infra/plugins/log_consumer.ts"
+                "${workspaceFolder}/btnlauncher2-runtime/app/DummyLogger.ts",
+                "${workspaceFolder}/btnlauncher2-runtime/infra/plugins/uncaught_error.ts",
+                "${workspaceFolder}/btnlauncher2-runtime/infra/plugins/log_consumer.ts"
             ],
-            "cwd": "${workspaceFolder}/xmcl-electron-app/dist",
+            "cwd": "${workspaceFolder}/btnlauncher2-electron-app/dist",
             "env": {
                 "NODE_ENV": "development",
             },
@@ -52,33 +52,33 @@
             ],
             "sourceMaps": true,
             "resolveSourceMapLocations": [
-                "${workspaceFolder}/xmcl-electron-app/dist/**",
+                "${workspaceFolder}/btnlauncher2-electron-app/dist/**",
                 "!**/node_modules/**"
             ],
             "outFiles": [
-                "${workspaceFolder}/xmcl-electron-app/dist/*.js"
+                "${workspaceFolder}/btnlauncher2-electron-app/dist/*.js"
             ],
             "skipFiles": [
                 "<node_internals>/**",
                 "**/node_modules/diagnostic-channel-publishers/**",
-                "${workspaceFolder}/xmcl-runtime/app/DummyLogger.ts",
-                "${workspaceFolder}/xmcl-runtime/uncaughtError/pluginUncaughtError.ts",
-                "${workspaceFolder}/xmcl-runtime/logger/pluginLogConsumer.ts"
+                "${workspaceFolder}/btnlauncher2-runtime/app/DummyLogger.ts",
+                "${workspaceFolder}/btnlauncher2-runtime/uncaughtError/pluginUncaughtError.ts",
+                "${workspaceFolder}/btnlauncher2-runtime/logger/pluginLogConsumer.ts"
             ],
-            "cwd": "${workspaceFolder}/xmcl-electron-app/build/output/win-unpacked",
+            "cwd": "${workspaceFolder}/btnlauncher2-electron-app/build/output/win-unpacked",
             "env": {
                 "NODE_ENV": "production",
             },
             "windows": {
-                "runtimeExecutable": "${workspaceFolder}/xmcl-electron-app/build/output/win-unpacked/X Minecraft Launcher.exe",
+                "runtimeExecutable": "${workspaceFolder}/btnlauncher2-electron-app/build/output/win-unpacked/Btn Minecraft Launcher.exe",
                 "env": {}
             },
             "linux": {
-                "runtimeExecutable": "${workspaceFolder}/xmcl-electron-app/build/output/linux-unpacked/xmcl",
+                "runtimeExecutable": "${workspaceFolder}/btnlauncher2-electron-app/build/output/linux-unpacked/btnlauncher2",
                 "env": {}
             },
             "osx": {
-                "runtimeExecutable": "${workspaceFolder}/xmcl-electron-app/build/output/mac/X Minecraft Launcher.app/Contents/MacOS/X Minecraft Launcher",
+                "runtimeExecutable": "${workspaceFolder}/btnlauncher2-electron-app/build/output/mac/Btn Minecraft Launcher.app/Contents/MacOS/Btn Minecraft Launcher",
                 "env": {}
             }
         },

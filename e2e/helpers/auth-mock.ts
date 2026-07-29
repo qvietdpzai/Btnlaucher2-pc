@@ -6,7 +6,7 @@
  *
  * Strategy outline (NOT implemented in this PR):
  *
- * 1. Set XMCL_E2E_FAKE_MSA env so MicrosoftAccountSystem swaps its fetch
+ * 1. Set BTNLAUNCHER2_E2E_FAKE_MSA env so MicrosoftAccountSystem swaps its fetch
  *    implementation for one routed to a local in-process server.
  * 2. The local server replies with deterministic fixtures for:
  *      POST https://login.microsoftonline.com/consumers/oauth2/v2.0/token

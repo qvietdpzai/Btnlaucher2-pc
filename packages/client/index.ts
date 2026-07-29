@@ -4,7 +4,7 @@
  * You can use {@link queryStatus} with {@link QueryOptions} to ping a {@link Status} of a server
  *
  * @packageDocumentation
- * @module @xmcl/client
+ * @module @btnlauncher2/client
  */
 
 export * from './coders'

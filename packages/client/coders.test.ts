@@ -17,7 +17,7 @@ import {
   UUID,
   UShort,
 } from './coders'
-import { ByteBuffer } from '@xmcl/bytebuffer'
+import { ByteBuffer } from '@btnlauncher2/bytebuffer'
 import { randomUUID } from 'crypto'
 import { describe, test, expect } from 'vitest'
 

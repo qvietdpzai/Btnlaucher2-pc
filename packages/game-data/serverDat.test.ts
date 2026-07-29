@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs'
 import { describe, expect, test } from 'vitest'
-import { serialize, TagType } from '@xmcl/nbt'
+import { serialize, TagType } from '@btnlauncher2/nbt'
 import { readServerInfo, readServerInfoSync, writeServerInfo, writeServerInfoSync } from './index'
 
 describe('Server Info', () => {

@@ -2,10 +2,10 @@
  * The nbt module provides nbt {@link serialize} and {@link deserialize} functions.
  *
  * @packageDocumentation
- * @module @xmcl/nbt
+ * @module @btnlauncher2/nbt
  */
 
-import { ByteBuffer } from '@xmcl/bytebuffer'
+import { ByteBuffer } from '@btnlauncher2/bytebuffer'
 import { readUTF8, writeUTF8 } from './utils'
 import {
   ungzip,

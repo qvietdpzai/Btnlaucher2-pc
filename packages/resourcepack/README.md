@@ -1,9 +1,9 @@
 # Resourcepack Module
 
-[![npm version](https://img.shields.io/npm/v/@xmcl/resourcepack.svg)](https://www.npmjs.com/package/@xmcl/resourcepack)
-[![Downloads](https://img.shields.io/npm/dm/@xmcl/resourcepack.svg)](https://npmjs.com/@xmcl/resourcepack)
-[![Install size](https://packagephobia.now.sh/badge?p=@xmcl/resourcepack)](https://packagephobia.now.sh/result?p=@xmcl/resourcepack)
-[![npm](https://img.shields.io/npm/l/@xmcl/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@btnlauncher2/resourcepack.svg)](https://www.npmjs.com/package/@btnlauncher2/resourcepack)
+[![Downloads](https://img.shields.io/npm/dm/@btnlauncher2/resourcepack.svg)](https://npmjs.com/@btnlauncher2/resourcepack)
+[![Install size](https://packagephobia.now.sh/badge?p=@btnlauncher2/resourcepack)](https://packagephobia.now.sh/result?p=@btnlauncher2/resourcepack)
+[![npm](https://img.shields.io/npm/l/@btnlauncher2/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
 [![Build Status](https://github.com/voxelum/minecraft-launcher-core-node/workflows/Build/badge.svg)](https://github.com/Voxelum/minecraft-launcher-core-node/actions?query=workflow%3ABuild)
 
 Provide function to read resource pack.
@@ -15,7 +15,7 @@ Provide function to read resource pack.
 Read pack metadata from file:
 
 ```ts
-import { ResourcePack, PackMeta } from "@xmcl/resourcepack"
+import { ResourcePack, PackMeta } from "@btnlauncher2/resourcepack"
 const fileFullPath = "path/to/pack/some-pack.zip";
 const pack: PackMeta.Pack = await ResourcePack.readPackMeta(fileFullPath);
 // or you want read from folder, same function call
@@ -31,7 +31,7 @@ const fromBuff: PackMeta.Pack = await ResourcePack.readPackMeta(fileFullPath, fi
 Read pack icon:
 
 ```ts
-import { ResourcePack, PackMeta } from "@xmcl/resourcepack"
+import { ResourcePack, PackMeta } from "@btnlauncher2/resourcepack"
 const fileFullPath = "path/to/pack/some-pack.zip";
 const pack: Uint8Array = await ResourcePack.readIcon(fileFullPath);
 ```
@@ -39,7 +39,7 @@ const pack: Uint8Array = await ResourcePack.readIcon(fileFullPath);
 Put them together in efficent way (don't open resource pack again and again):
 
 ```ts
-import { ResourcePack, PackMeta } from "@xmcl/resourcepack"
+import { ResourcePack, PackMeta } from "@btnlauncher2/resourcepack"
 const fileFullPath = "path/to/pack/some-pack.zip";
 const res = await ResourcePack.open(fileFullPath);
 const pack: PackMeta.Pack = await ResourcePack.readPackMeta(res);
@@ -56,7 +56,7 @@ const icon: Uint8Array = await res.icon();
 You can read resource pack content just like Minecraft:
 
 ```ts
-import { ResourcePack, ResourceLocation } from "@xmcl/resourcepack"
+import { ResourcePack, ResourceLocation } from "@btnlauncher2/resourcepack"
 const fileFullPath = "path/to/pack/some-pack.zip";
 const pack: ResourcePack = await ResourcePack.open(fileFullPath);
 
@@ -79,8 +79,8 @@ if (resource) {
 You can use this to load Minecraft block model and texture just like Minecraft.
 
 ```ts
-import { ResourcePack, Resource, BlockModel,ResourceManager, ModelLoader } from "@xmcl/resourcepack";
-import { openFileSystem } from "@xmcl/system";
+import { ResourcePack, Resource, BlockModel,ResourceManager, ModelLoader } from "@btnlauncher2/resourcepack";
+import { openFileSystem } from "@btnlauncher2/system";
 
 const man = new ResourceManager();
 const resourcePack = new ResourcePack(await openFileSystem("/path/to/resource-pack.zip"));
@@ -104,8 +104,8 @@ const resolvedModel: BlockModel.Resolved = models["block/grass"];
 You can use this module in nodejs/electron:
 
 ```ts
-import { openFileSystem } from "@xmcl/system";
-import { ResourcePack, Resource, ResourceManager, ResourceLocation  } from "@xmcl/resourcepack";
+import { openFileSystem } from "@btnlauncher2/system";
+import { ResourcePack, Resource, ResourceManager, ResourceLocation  } from "@btnlauncher2/resourcepack";
 const manager: ResourceManager = new ResourceManager();
 
 // add a resource source which load resource from file

@@ -1,6 +1,6 @@
-# @xmcl/yauzl
+# @btnlauncher2/yauzl
 
-A fork of [`yauzl`](https://github.com/thejoshwolfe/yauzl) v2.10.0 maintained for the XMCL launcher.
+A fork of [`yauzl`](https://github.com/thejoshwolfe/yauzl) v2.10.0 maintained for the btnlauncher2 launcher.
 
 ## Why fork?
 

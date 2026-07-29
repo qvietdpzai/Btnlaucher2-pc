@@ -1,5 +1,5 @@
 {
-  "name": "@xmcl/semver",
+  "name": "@btnlauncher2/semver",
   "version": "0.1.1",
   "main": "./index.ts",
   "author": {
@@ -19,11 +19,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Voxelum/x-minecraft-launcher.git"
+    "url": "git+https://github.com/qvietdpzai/Btnlaucher2-pc.git"
   },
   "devDependencies": {
     "@types/node": "^24.13.3",
-    "@xmcl/oxlint-config": "workspace:^*",
+    "@btnlauncher2/oxlint-config": "workspace:^*",
     "esbuild": "^0.25.12",
     "oxlint": "^1.63.0",
     "typescript": "^5.9.3"

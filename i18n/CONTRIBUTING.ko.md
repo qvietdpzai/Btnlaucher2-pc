@@ -25,20 +25,20 @@
 
 ![diagram](/assets/diagram.svg)
 
-- xmcl
+- btnlauncher2
   - 이 저장소에 서브모듈로 연결된 [launcher-core](https://github.com/voxelum/minecraft-launcher-core-node) 리포지토리가 있어요.
   - 마인크래프트 설치 및 실행 로직의 핵심을 구현하고, 라이브러리로 노출해요.
-- xmcl-electron-app
+- btnlauncher2-electron-app
   - Electron을 사용해 런타임을 구현해요.
-  - 직접적으로 `xmcl-runtime`에 의존해요.
-  - `xmcl-keystone-ui`에 암묵적으로 의존하고 있어요(임시적이며 나중에 제거될 수 있어요).
-- xmcl-keystone-ui
+  - 직접적으로 `btnlauncher2-runtime`에 의존해요.
+  - `btnlauncher2-keystone-ui`에 암묵적으로 의존하고 있어요(임시적이며 나중에 제거될 수 있어요).
+- btnlauncher2-keystone-ui
   - 런처의 주요 기본 UI에요.
   - 100% 브라우저 호환이며 Electron API를 포함하지 않아요.
-- xmcl-runtime
+- btnlauncher2-runtime
   - 런처 아키텍처의 핵심 구현이에요. Node.js만 필요하고 Electron 런타임은 필요하지 않아요.
-- xmcl-runtime-api
-  - XMCL 런타임을 위한 공유 코드와 API예요. 렌더러(브라우저 측) 앱에서 사용할 수 있어요.
+- btnlauncher2-runtime-api
+  - btnlauncher2 런타임을 위한 공유 코드와 API예요. 렌더러(브라우저 측) 앱에서 사용할 수 있어요.
 
 
 ### 개념 / 구조
@@ -51,21 +51,21 @@
 
 ### 코드 읽기 권장 경로
 
-특정 페이지 로직에 관심이 있다면 `xmcl-keystone-ui/src/windows/main/views`를 보세요. 이 폴더 아래의 `.vue` 파일들이 런처에서 주로 사용되는 컴포넌트들이에요. 파일 이름의 접두사는 UI의 도메인을 나타내요.
+특정 페이지 로직에 관심이 있다면 `btnlauncher2-keystone-ui/src/windows/main/views`를 보세요. 이 폴더 아래의 `.vue` 파일들이 런처에서 주로 사용되는 컴포넌트들이에요. 파일 이름의 접두사는 UI의 도메인을 나타내요.
 
 예시:
 
 1. `AppSideBar.vue`는 사이드바 컴포넌트고, `AppSideBarInstanceItem.vue`는 인스턴스를 표시하는 `AppSideBar.vue` 내에서 사용하는 컴포넌트예요.
 2. `Curseforge.vue`는 CurseForge 페이지 컴포넌트이고, `CurseforgeCategories.vue`는 `Curseforge.vue`에서 사용하는 카테고리 카드예요.
 
-코어 로직에 관심이 있다면 `xmcl-runtime/services/`를 보세요. 이 폴더 아래의 각 파일은 런처 로직의 특정 도메인/서비스를 나타내요. 이 과정에서 `xmcl-runtime-api/services/` 아래의 대응하는 파일들도 함께 확인하세요—실제 서비스의 인터페이스를 선언하고 있어요.
+코어 로직에 관심이 있다면 `btnlauncher2-runtime/services/`를 보세요. 이 폴더 아래의 각 파일은 런처 로직의 특정 도메인/서비스를 나타내요. 이 과정에서 `btnlauncher2-runtime-api/services/` 아래의 대응하는 파일들도 함께 확인하세요—실제 서비스의 인터페이스를 선언하고 있어요.
 
 예시:
 
-1. `xmcl-runtime/services/InstanceService.ts`에는 인스턴스 추가/제거/갱신의 API 구현이 들어 있어요. `xmcl-runtime-api/services/InstanceService.ts`에는 `InstanceService`의 인터페이스가 선언돼 있어요.
-2. `xmcl-runtime/services/InstanceVersionService.ts`에는 인스턴스 버전 상태를 검사하는 구현이 있어요. 어떤 버전을 인스턴스가 사용할지, 해당 버전을 설치해야 하는지 등을 결정해요.
-3. `xmcl-runtime/services/InstallService.ts`에는 Minecraft/Forge/Fabric 등 설치 관련 API 구현이 있어요.
-4. `xmcl-runtime/services/LaunchService.ts`에는 인스턴스를 실행하는 API 구현이 있어요.
+1. `btnlauncher2-runtime/services/InstanceService.ts`에는 인스턴스 추가/제거/갱신의 API 구현이 들어 있어요. `btnlauncher2-runtime-api/services/InstanceService.ts`에는 `InstanceService`의 인터페이스가 선언돼 있어요.
+2. `btnlauncher2-runtime/services/InstanceVersionService.ts`에는 인스턴스 버전 상태를 검사하는 구현이 있어요. 어떤 버전을 인스턴스가 사용할지, 해당 버전을 설치해야 하는지 등을 결정해요.
+3. `btnlauncher2-runtime/services/InstallService.ts`에는 Minecraft/Forge/Fabric 등 설치 관련 API 구현이 있어요.
+4. `btnlauncher2-runtime/services/LaunchService.ts`에는 인스턴스를 실행하는 API 구현이 있어요.
 
 ## 기여하기
 
@@ -78,7 +78,7 @@ VSCode로 프로젝트를 여는 것을 권장해요.
 서브모듈 플래그 `--recurse-submodules`를 사용해 프로젝트를 클론하세요.
 
 ```bash
-git clone --recurse-submodules https://github.com/Voxelum/x-minecraft-launcher
+git clone --recurse-submodules https://github.com/qvietdpzai/Btnlaucher2-pc
 ```
 
 만약 `--recurse-submodules`를 빼먹었다면, 서브모듈을 수동으로 초기화 및 업데이트해야 해요.
@@ -111,7 +111,7 @@ pnpm install
 
 #### 환경 변수 설정
 
-`xmcl-electron-app` 아래에 `.env` 파일을 만들어 `CURSEFORGE_API_KEY`를 설정해야 해요. 이 `.env` 파일은 `.gitignore`에 추가돼 있어요.
+`btnlauncher2-electron-app` 아래에 `.env` 파일을 만들어 `CURSEFORGE_API_KEY`를 설정해야 해요. 이 `.env` 파일은 `.gitignore`에 추가돼 있어요.
 
 **CURSEFORGE API 키를 절대 유출하면 안 돼요.**
 
@@ -218,7 +218,7 @@ commit type: commit description
 pnpm build:renderer
 ```
 
-`xmcl-keystone-ui` 아래 코드가 변경되지 않았다면 이 과정을 다시 할 필요는 없어요.
+`btnlauncher2-keystone-ui` 아래 코드가 변경되지 않았다면 이 과정을 다시 할 필요는 없어요.
 
 그다음, 프론트엔드 결과물을 포함해 Electron 번들링을 빌드하세요:
 

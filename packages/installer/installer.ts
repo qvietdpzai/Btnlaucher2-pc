@@ -3,7 +3,7 @@ import {
   MinecraftFolder,
   ResolvedLibrary,
   ResolvedVersion,
-} from '@xmcl/core'
+} from '@btnlauncher2/core'
 import { readFile } from 'fs/promises'
 import { join } from 'path'
 import { AssetsOptions, AssetsTrackerEvents, installAssets, installResolvedAssets } from './assets'

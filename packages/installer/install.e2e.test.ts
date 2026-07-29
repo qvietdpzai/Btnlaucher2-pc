@@ -1,9 +1,9 @@
-import { MinecraftFolder, MinecraftLocation, ResolvedVersion } from '@xmcl/core'
+import { MinecraftFolder, MinecraftLocation, ResolvedVersion } from '@btnlauncher2/core'
 import { existsSync } from 'fs'
 import { describe, expect, test } from 'vitest'
 import { installMinecraft, MinecraftVersion } from './index'
 import { completeInstallation } from './installer'
-import { ProgressTracker } from '@xmcl/file-transfer'
+import { ProgressTracker } from '@btnlauncher2/file-transfer'
 
 const javaPath = (global as any).Java
 

@@ -10,7 +10,7 @@ jobs:
     - name: Download Releases
       uses: robinraju/release-downloader@v1.7
       with:
-        repository: "voxelum/x-minecraft-launcher"
+        repository: "qvietdpzai/Btnlaucher2-pc"
         tag: ${{ github.event.release.tag_name }}
         fileName: "*"
         out-file-path: build
@@ -19,7 +19,7 @@ jobs:
       env:
         AZURE_ACCOUNT_KEY: ${{ secrets.AZURE_ACCOUNT_KEY }}
       with:
-        account: xmcl
+        account: btnlauncher2
         container: releases
         directory: ./build
     - name: Update Web Page
@@ -28,7 +28,7 @@ jobs:
         workflow: Deploy
         token: ${{ secrets.PAT_GITHUB_TOKEN }}
         ref: 'master'
-        repo: 'voxelum/xmcl-page'
+        repo: 'qvietdpzai/Btnlaucher2-pc'
     - name: Create release version file
       run: |
         mkdir releases
@@ -41,7 +41,7 @@ jobs:
       env:
         AZURE_ACCOUNT_KEY: ${{ secrets.AZURE_ACCOUNT_KEY }}
       with:
-        account: xmcl
+        account: btnlauncher2
         container: releases
         directory: ./releases
 
@@ -55,21 +55,21 @@ jobs:
     - name: Download asar bundles
       uses: robinraju/release-downloader@v1.7
       with:
-        repository: "voxelum/x-minecraft-launcher"
+        repository: "qvietdpzai/Btnlaucher2-pc"
         tag: ${{ github.event.release.tag_name }}
         fileName: "app-*.asar.gz"
         out-file-path: build
     - name: Download asar checksums
       uses: robinraju/release-downloader@v1.7
       with:
-        repository: "voxelum/x-minecraft-launcher"
+        repository: "qvietdpzai/Btnlaucher2-pc"
         tag: ${{ github.event.release.tag_name }}
         fileName: "app-*.asar.sha256"
         out-file-path: build
     - name: Download manifest
       uses: robinraju/release-downloader@v1.7
       with:
-        repository: "voxelum/x-minecraft-launcher"
+        repository: "qvietdpzai/Btnlaucher2-pc"
         tag: ${{ github.event.release.tag_name }}
         fileName: "manifest.json"
         out-file-path: meta
@@ -93,12 +93,12 @@ jobs:
           gunzip -c "$gz" > "$dir/app.asar"
           cp "build/app-$VERSION-$plat.asar.sha256" "$dir/app.asar.sha256"
           case "$plat" in
-            win*) cp xmcl-electron-app/icons/dark.ico "$dir/icon.ico" ;;
-            mac*) cp xmcl-electron-app/icons/dark.icns "$dir/icon.icns" ;;
+            win*) cp btnlauncher2-electron-app/icons/dark.ico "$dir/icon.ico" ;;
+            mac*) cp btnlauncher2-electron-app/icons/dark.icns "$dir/icon.icns" ;;
           esac
-          cp xmcl-asar/README.md "$dir/README.md"
-          node -e "const fs=require('fs');const pj=require('./xmcl-asar/package.json');pj.name='@xmcl/app-$plat';pj.version='$VERSION';pj.electron='$ELECTRON';fs.writeFileSync('$dir/package.json',JSON.stringify(pj,null,2))"
-          echo "Publishing @xmcl/app-$plat@$VERSION (electron $ELECTRON)"
+          cp btnlauncher2-asar/README.md "$dir/README.md"
+          node -e "const fs=require('fs');const pj=require('./btnlauncher2-asar/package.json');pj.name='@btnlauncher2/app-$plat';pj.version='$VERSION';pj.electron='$ELECTRON';fs.writeFileSync('$dir/package.json',JSON.stringify(pj,null,2))"
+          echo "Publishing @btnlauncher2/app-$plat@$VERSION (electron $ELECTRON)"
           ( cd "$dir" && npm publish --access public )
         done
       env:
@@ -129,12 +129,12 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v5
       with:
-        repository: Voxelum/homebrew-xmcl
-        path: homebrew-xmcl
+        repository: qvietdpzai/Btnlaucher2-pc
+        path: homebrew-btnlauncher2
         ref: master
         token: ${{ secrets.PAT_GITHUB_TOKEN }}
     - name: Synchronize formula repository
-      working-directory: homebrew-xmcl
+      working-directory: homebrew-btnlauncher2
       run: git pull --ff-only origin master
     - uses: actions/github-script@v8
       name: Update Brew Formula
@@ -143,41 +143,41 @@ jobs:
         script: |
           const version = '${{ github.event.release.tag_name }}'.substring(1);
           const fs = require('fs');
-          const text = `cask "xmcl" do
+          const text = `cask "btnlauncher2" do
             version "${version}"
             sha256 :no_check
             arch arm: "arm64", intel: "x86_64"
 
             on_arm do 
-              url "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v${version}/xmcl-${version}-arm64.dmg"
+              url "https://github.com/qvietdpzai/Btnlaucher2-pc/releases/download/v${version}/btnlauncher2-${version}-arm64.dmg"
             end
 
             on_intel do
-              url "https://github.com/Voxelum/x-minecraft-launcher/releases/download/v${version}/xmcl-${version}-x64.dmg"
+              url "https://github.com/qvietdpzai/Btnlaucher2-pc/releases/download/v${version}/btnlauncher2-${version}-x64.dmg"
             end
 
-            name "X Minecraft Launcher"
+            name "Btn Minecraft Launcher"
             desc "An Open Source Minecraft Launcher with Modern UX. Provides a Disk Efficient way to manage all your Mods!"
-            homepage "https://xmcl.app"
+            homepage "https://btnlauncher2.app"
 
             livecheck do
               url :url
               strategy :header_match
             end
             
-            app "X Minecraft Launcher.app"
+            app "Btn Minecraft Launcher.app"
 
             zap trash: [
-              "~/Applications/X Minecraft Launcher.app",
-              "~/Library/Application Support/xmcl",
-              "~/Library/Preferences/xmcl.plist",
-              "~/Library/Saved Application State/xmcl.savedState"
+              "~/Applications/Btn Minecraft Launcher.app",
+              "~/Library/Application Support/btnlauncher2",
+              "~/Library/Preferences/btnlauncher2.plist",
+              "~/Library/Saved Application State/btnlauncher2.savedState"
             ]
           end
           `
-          fs.writeFileSync('./homebrew-xmcl/Casks/xmcl.rb', text);
-    - name: Push to homebrew-xmcl
-      working-directory: homebrew-xmcl
+          fs.writeFileSync('./homebrew-btnlauncher2/Casks/btnlauncher2.rb', text);
+    - name: Push to homebrew-btnlauncher2
+      working-directory: homebrew-btnlauncher2
       run: |
         if [ -z "$(git status --porcelain)" ]; then
           echo "Formula already up to date."
@@ -185,8 +185,8 @@ jobs:
         fi
         git config user.name ci010
         git config user.email cijhn@hotmail.com
-        git add Casks/xmcl.rb
-        git commit -m "Bump xmcl to ${{ github.event.release.tag_name }}"
+        git add Casks/btnlauncher2.rb
+        git commit -m "Bump btnlauncher2 to ${{ github.event.release.tag_name }}"
         git push origin HEAD:master
 
   update-winget:
@@ -202,7 +202,7 @@ jobs:
       - name: Download Releases
         uses: robinraju/release-downloader@v1.8
         with:
-          repository: "voxelum/x-minecraft-launcher"
+          repository: "qvietdpzai/Btnlaucher2-pc"
           tag: ${{ github.event.release.tag_name }}
           fileName: "version"
       - uses: actions/github-script@v8
@@ -221,7 +221,7 @@ jobs:
           .\wingetcreate.exe update CI010.XMinecraftLauncher -u $Env:URL -v $Env:VERSION -t $Env:TOKEN --submit
         env:
           TOKEN: ${{ secrets.WINGET_GITHUB_TOKEN }}
-          URL: ${{ format('https://xmcl-core-api.azurewebsites.net/api/appx?version={0}', steps.version.outputs.result) }}
+          URL: ${{ format('https://btnlauncher2-core-api.azurewebsites.net/api/appx?version={0}', steps.version.outputs.result) }}
 
   update-flatpak:
     needs:
@@ -234,7 +234,7 @@ jobs:
       - name: Checkout flatpak-metadata
         uses: actions/checkout@v5
         with:
-          repository: Voxelum/flatpak-metadata
+          repository: qvietdpzai/Btnlaucher2-pc
           path: flatpak-metadata
           token: ${{ secrets.PAT_GITHUB_TOKEN }}
       - name: Update version and metainfo
@@ -251,12 +251,12 @@ jobs:
           export DATE=$(date -u -d "${{ github.event.release.published_at }}" +%Y-%m-%d)
           node -e '
             const fs = require("fs");
-            const file = "app.xmcl.voxelum.metainfo.xml";
+            const file = "app.btnlauncher2.metainfo.xml";
             const tag = process.env.TAG;
             const date = process.env.DATE;
             const entry =
               `    <release version="${tag}" date="${date}">\n` +
-              `      <url>https://github.com/Voxelum/x-minecraft-launcher/releases/tag/${tag}</url>\n` +
+              `      <url>https://github.com/qvietdpzai/Btnlaucher2-pc/releases/tag/${tag}</url>\n` +
               `    </release>`;
             let xml = fs.readFileSync(file, "utf8");
             if (xml.includes(`version="${tag}"`)) {
@@ -277,7 +277,7 @@ jobs:
           fi
           git config user.name ci010
           git config user.email cijhn@hotmail.com
-          git add version app.xmcl.voxelum.metainfo.xml
+          git add version app.btnlauncher2.metainfo.xml
           git commit -m "Update metadata for ${{ github.event.release.tag_name }}"
           git push origin HEAD:main
       - name: Mirror GitHub release
@@ -290,7 +290,7 @@ jobs:
             exit 0
           fi
           gh release create "${{ github.event.release.tag_name }}" \
-            --title "Release for XMCL - ${{ github.event.release.tag_name }}" \
+            --title "Release for btnlauncher2 - ${{ github.event.release.tag_name }}" \
             --notes "Update metadata for ${{ github.event.release.tag_name }}"
 
   # publish-msstore:
@@ -301,9 +301,9 @@ jobs:
   #   - name: Download Releases
   #     uses: robinraju/release-downloader@v1.7
   #     with:
-  #       repository: "voxelum/x-minecraft-launcher"
+  #       repository: "qvietdpzai/Btnlaucher2-pc"
   #       tag: ${{ github.event.release.tag_name }}
-  #       fileName: "xmcl-*.appx"
+  #       fileName: "btnlauncher2-*.appx"
   #       out-file-path: build
   #   - name: Steup msstore cli
   #     uses: microsoft/setup-msstore-cli@main
@@ -312,4 +312,4 @@ jobs:
   #       msstore reconfigure --tenantId ${{ secrets.AZURE_AD_TENANT_ID }} --clientSecret ${{ secrets.AZURE_AD_CLIENT_SECRET }} --clientId ${{ secrets.AZURE_AD_CLIENT_ID }} --sellerId ${{ secrets.SELLER_ID }}
   #   - name: Publish appx to msstore
   #     run: |
-  #       msstore publish -v --appId 9MXJWHXTP4B9 --inputDirectory xmcl-electron-app/build/output
+  #       msstore publish -v --appId 9MXJWHXTP4B9 --inputDirectory btnlauncher2-electron-app/build/output

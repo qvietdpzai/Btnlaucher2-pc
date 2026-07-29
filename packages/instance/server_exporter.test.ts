@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { ServerFSExporter, ServerExporter } from './server_exporter'
-import { ServerOptions } from '@xmcl/core'
+import { ServerOptions } from '@btnlauncher2/core'
 import { join } from 'path'
 
 class DummyExporter extends ServerExporter {

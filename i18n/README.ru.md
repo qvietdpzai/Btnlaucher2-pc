@@ -1,15 +1,15 @@
 <p align="center">
-  <a href="https://xmcl.app" target="_blank">
-    <img alt="Logo" width="100" src="https://github.com/Voxelum/x-minecraft-launcher/blob/master/xmcl-electron-app/icons/dark@256x256.png">
+  <a href="https://btnlauncher2.app" target="_blank">
+    <img alt="Logo" width="100" src="https://github.com/qvietdpzai/Btnlaucher2-pc/blob/master/btnlauncher2-electron-app/icons/dark@256x256.png">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Voxelum/x-minecraft-launcher">
-    <img src="https://github.com/Voxelum/x-minecraft-launcher/workflows/Build/badge.svg" alt="Build">
+  <a href="https://github.com/qvietdpzai/Btnlaucher2-pc">
+    <img src="https://github.com/qvietdpzai/Btnlaucher2-pc/workflows/Build/badge.svg" alt="Build">
   </a>
-  <a href="https://github.com/Voxelum/x-minecraft-launcher/blob/master/LICENSE">
-    <img src="https://img.shields.io/npm/l/@xmcl/core.svg" alt="License">
+  <a href="https://github.com/qvietdpzai/Btnlaucher2-pc/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/@btnlauncher2/core.svg" alt="License">
   </a>
   <a href="https://conventionalcommits.org">
     <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Commit">
@@ -19,19 +19,19 @@
     <img src="https://discord.com/api/guilds/405213567118213121/widget.png" alt="Discord">
   </a>
   <a href="https://kook.top/gqjSHh">
-    <img src="https://img.shields.io/endpoint?url=https://api.xmcl.app/kook-badge" alt="Kook">
+    <img src="https://img.shields.io/endpoint?url=https://api.btnlauncher2.app/kook-badge" alt="Kook">
   </a>
   <a href="https://afdian.net/@ci010">
-    <img src="https://img.shields.io/endpoint?url=https://api.xmcl.app/afdian-badge" alt="afdian">
+    <img src="https://img.shields.io/endpoint?url=https://api.btnlauncher2.app/afdian-badge" alt="afdian">
   </a>
-  <a href="https://patreon.com/xmcl">
-    <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dxmcl%26type%3Dpledges" alt="patreon">
+  <a href="https://patreon.com/btnlauncher2">
+    <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dbtnlauncher2%26type%3Dpledges" alt="patreon">
   </a>
 </p>
 
-![home](https://raw.githubusercontent.com/Voxelum/xmcl-page/master/.vitepress/theme/assets/home.png)
+![home](https://raw.githubusercontent.com/qvietdpzai/Btnlaucher2-pc/master/.vitepress/theme/assets/home.png)
 
-Посетите [официальный сайт](https://xmcl.app) чтобы скачать программу !
+Посетите [официальный сайт](https://btnlauncher2.app) чтобы скачать программу !
 
 Если у вас есть winget, вы можете использовать его для установки
 
@@ -56,7 +56,7 @@ winget install CI010.XMinecraftLauncher
 
 Для общего разработчика, смотрите [Вклад](i18n/CONTRIBUTING.ru.md)
 
-Для разработчика локализации i18n, пожалуйста, перейдите по ссылке [Начало работы с локализацией](https://docs.xmcl.app/en/guide/i18n)
+Для разработчика локализации i18n, пожалуйста, перейдите по ссылке [Начало работы с локализацией](https://docs.btnlauncher2.app/en/guide/i18n)
 ## ЛИЦЕНЗИЯ
 
 [MIT](LICENSE)

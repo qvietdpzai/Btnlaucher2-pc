@@ -3,7 +3,7 @@ import { link, mkdir, readFile, readdir, writeFile } from 'fs/promises'
 import { dirname, join } from 'path'
 import { Application, Comment, ContainerReflection, DeclarationReflection, ParameterReflection, Reflection, ReflectionFlag, ReflectionFlags, ReflectionKind, SourceReference, TSConfigReader, TypeDocReader } from 'typedoc'
 
-const renderLink = (fileName: string, line: number) => `<a href="https://github.com/Voxelum/x-minecraft-launcher/blob/master/${fileName}#L${line}" target="_blank" rel="noreferrer">${fileName}:${line}</a>`
+const renderLink = (fileName: string, line: number) => `<a href="https://github.com/qvietdpzai/Btnlaucher2-pc/blob/master/${fileName}#L${line}" target="_blank" rel="noreferrer">${fileName}:${line}</a>`
 const renderSourceReferences = (locations: SourceReference[]) =>
   `<p style="font-size: 14px; color: var(--vp-c-text-2)">
 <strong>Defined in:</strong> ${locations.map((l) => renderLink(l.fileName, l.line)).join(', ')}
@@ -53,7 +53,7 @@ async function generateDocs() {
       return {
         content: await readFile(filePath, 'utf-8').catch(() => ''),
         existed: existsSync(join(projectRoot, filePath)),
-        module: `@xmcl/${f}`,
+        module: `@btnlauncher2/${f}`,
       }
     }),
   )
@@ -324,7 +324,7 @@ async function generateDocs() {
     if (refl.kindOf(ReflectionKind.Module) && refl instanceof ContainerReflection) {
       // module
 
-      const simpleName = refl.name.startsWith('@xmcl') ? refl.name.substring(6) : refl.name
+      const simpleName = refl.name.startsWith('@btnlauncher2') ? refl.name.substring(6) : refl.name
 
       const sidebarItem = {
         text: '📦 ' + refl.name,

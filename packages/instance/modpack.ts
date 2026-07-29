@@ -1,4 +1,4 @@
-import type { Version } from '@xmcl/core'
+import type { Version } from '@btnlauncher2/core'
 import { InstanceData, PartialRuntimeVersions, RuntimeVersions } from './instance'
 import { InstanceFile } from './files'
 import { CreateInstanceOptions } from './create'
@@ -146,7 +146,7 @@ export interface ModrinthModpackManifest {
  * A single component patch as stored under `patches/<uid>.json` in a Prism /
  * MultiMC export. See https://github.com/MultiMC/Launcher/wiki/Instance-File-Format.
  *
- * Only the fields xmcl currently consumes are typed; the rest are passed through.
+ * Only the fields btnlauncher2 currently consumes are typed; the rest are passed through.
  */
 export interface MMCComponentPatch {
   formatVersion?: number
@@ -380,7 +380,7 @@ export function getInstanceConfigFromMmcModpack(manifest: MMCModpackManifest) {
   }
 
   // gh #1386 — Import per-instance commands when OverrideCommands is enabled.
-  // PostExitCommand has no xmcl equivalent and is intentionally dropped.
+  // PostExitCommand has no btnlauncher2 equivalent and is intentionally dropped.
   if (manifest.cfg.OverrideCommands === 'true') {
     if (manifest.cfg.PreLaunchCommand) {
       result.preExecuteCommand = manifest.cfg.PreLaunchCommand
@@ -403,7 +403,7 @@ export function getInstanceConfigFromMmcModpack(manifest: MMCModpackManifest) {
  * `MMC-hint: "local"` jars bundled under `libraries/` in the modpack) and the
  * base metadata (`assetIndex`, `arguments`, ...). Writing it to
  * `versions/<id>/<id>.json` and pinning the instance's `version` to `<id>` lets
- * xmcl launch the merged result without regenerating the Forge `version.json`
+ * btnlauncher2 launch the merged result without regenerating the Forge `version.json`
  * (which would otherwise reset `mainClass` and drop the extra libraries — see
  * gh #1555 / GTNH 2.8.4).
  *

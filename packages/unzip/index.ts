@@ -1,9 +1,9 @@
 /**
- * @module @xmcl/unzip
+ * @module @btnlauncher2/unzip
  */
 import { Readable } from 'stream'
 import { inflateRawSync } from 'zlib'
-import { Entry, fromBuffer, fromFd, open as yopen, ZipFile, ZipFileOptions, Options } from '@xmcl/yauzl'
+import { Entry, fromBuffer, fromFd, open as yopen, ZipFile, ZipFileOptions, Options } from '@btnlauncher2/yauzl'
 
 export type OpenTarget = string | Buffer | number
 
@@ -87,7 +87,7 @@ export async function readEntry(zip: ZipFile, entry: Entry, options?: ZipFileOpt
 }
 
 /** Per-entry memo of the resolved absolute offset of the file data. */
-const kDataStart = Symbol('xmcl.dataStart')
+const kDataStart = Symbol('btnlauncher2.dataStart')
 
 function readerRead(reader: { read(b: Buffer, o: number, l: number, p: number, cb: (e: Error | null) => void): void }, buffer: Buffer, position: number, length: number): Promise<void> {
   return new Promise((resolve, reject) => {

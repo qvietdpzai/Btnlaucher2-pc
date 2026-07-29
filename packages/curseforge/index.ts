@@ -1,6 +1,6 @@
 /* eslint-disable n/no-unsupported-features/node-builtins */
 /**
- * @module @xmcl/curseforge
+ * @module @btnlauncher2/curseforge
  */
 
 export interface ModAsset {

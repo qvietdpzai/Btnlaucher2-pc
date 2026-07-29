@@ -1,5 +1,5 @@
 /**
- * @module @xmcl/wrtc-multiplayer
+ * @module @btnlauncher2/wrtc-multiplayer
  *
  * Runtime for the multiplayer preload process. Exposes the WebRTC peer
  * mesh, LAN bridge, NAT detection and instance sharing primitives.

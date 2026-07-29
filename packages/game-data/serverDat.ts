@@ -1,4 +1,4 @@
-import { deserialize, deserializeSync, serialize, serializeSync, TagType } from '@xmcl/nbt'
+import { deserialize, deserializeSync, serialize, serializeSync, TagType } from '@btnlauncher2/nbt'
 
 export class ServerInfo {
   @TagType(TagType.String)

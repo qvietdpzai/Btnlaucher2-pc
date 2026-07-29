@@ -1,4 +1,4 @@
-import { getPlatform, Platform } from '@xmcl/core'
+import { getPlatform, Platform } from '@btnlauncher2/core'
 import { doFetch, FetchOptions } from './utils.browser'
 
 /**

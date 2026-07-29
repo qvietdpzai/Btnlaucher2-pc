@@ -1,5 +1,5 @@
 {
-  "name": "@xmcl/sqlite",
+  "name": "@btnlauncher2/sqlite",
   "private": false,
   "version": "0.0.2",
   "main": "./index.ts",
@@ -15,12 +15,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Voxelum/x-minecraft-launcher.git"
+    "url": "git+https://github.com/qvietdpzai/Btnlaucher2-pc.git"
   },
   "devDependencies": {
     "@types/node": "^24.13.3",
     "kysely": "^0.28.14",
-    "@xmcl/oxlint-config": "workspace:^*",
+    "@btnlauncher2/oxlint-config": "workspace:^*",
     "esbuild": "^0.25.12",
     "oxlint": "^1.63.0",
     "typescript": "^5.9.3"

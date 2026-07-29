@@ -72,7 +72,7 @@ describe('Resourcepack', () => {
       // newlines inside the `description` field which strict JSON.parse
       // rejects. We re-escape such control chars as a fallback so the
       // launcher can preview the same packs the game accepts.
-      const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'xmcl-rp-lenient-'))
+      const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'btnlauncher2-rp-lenient-'))
       fs.writeFileSync(path.join(tmp, 'pack.mcmeta'),
         '{\n   "pack": {\n     "pack_format": 15,\n     "description": "line one\nline two"\n   }\n}',
         'utf-8')

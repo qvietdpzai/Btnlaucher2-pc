@@ -19,7 +19,7 @@
  * Backing buffer: ArrayBuffer, Accessor: DataView
  * Released under the Apache License, Version 2.0
  * see: https://github.com/dcodeIO/bytebuffer.js for details
- * @module @xmcl/bytebuffer
+ * @module @btnlauncher2/bytebuffer
  */
 
 export class ByteBuffer {

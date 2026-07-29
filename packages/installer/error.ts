@@ -1,4 +1,4 @@
-import type { ResolvedLibrary, Version } from '@xmcl/core'
+import type { ResolvedLibrary, Version } from '@btnlauncher2/core'
 import type { InstallProfile } from './profile'
 
 export class InstallError extends Error {

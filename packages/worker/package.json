@@ -1,8 +1,8 @@
 {
-  "name": "@xmcl/worker",
+  "name": "@btnlauncher2/worker",
   "private": true,
   "version": "1.0.1",
-  "description": "Worker utility of the xmcl",
+  "description": "Worker utility of the btnlauncher2",
   "main": "./index.ts",
   "scripts": {
     "test": "vitest",

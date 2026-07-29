@@ -1,4 +1,4 @@
-import { LiteloaderModMetadata, readLiteloaderMod } from '@xmcl/mod-parser'
+import { LiteloaderModMetadata, readLiteloaderMod } from '@btnlauncher2/mod-parser'
 import type { IResourceParser } from './index'
 import { ResourceDomain } from '../ResourceDomain'
 import { ResourceType } from '../ResourceType'

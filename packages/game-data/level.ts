@@ -1,8 +1,8 @@
 /**
- * @module @xmcl/world
+ * @module @btnlauncher2/world
  */
-import { deserialize } from '@xmcl/nbt'
-import { FileSystem, openFileSystem } from '@xmcl/system'
+import { deserialize } from '@btnlauncher2/nbt'
+import { FileSystem, openFileSystem } from '@btnlauncher2/system'
 
 function findVersion(arr: bigint[], bitLen: number): string {
   const index = 4096

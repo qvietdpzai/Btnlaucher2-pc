@@ -1,5 +1,5 @@
 {
-  "name": "@xmcl/instance",
+  "name": "@btnlauncher2/instance",
   "private": true,
   "version": "1.1.2",
   "description": "Core instance management functionality for Minecraft launchers",
@@ -19,9 +19,9 @@
     "url": "https://github.com/Voxelum/minecraft-launcher-core-node"
   },
   "dependencies": {
-    "@xmcl/core": "workspace:*",
-    "@xmcl/installer": "workspace:*",
-    "@xmcl/utils": "workspace:*",
+    "@btnlauncher2/core": "workspace:*",
+    "@btnlauncher2/installer": "workspace:*",
+    "@btnlauncher2/utils": "workspace:*",
     "@types/ssh2": "^1.15.5",
     "zod": "^4.1.13",
     "fs-extra": "^11.1.0"

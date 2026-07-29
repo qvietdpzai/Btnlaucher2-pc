@@ -1,4 +1,4 @@
-import { LanServerInfo } from '@xmcl/client'
+import { LanServerInfo } from '@btnlauncher2/client'
 import { createServer } from 'net'
 import { defineMessage, MessageType } from './message'
 import { ServerProxy } from '../ServerProxy'

@@ -1,5 +1,5 @@
-import { MinecraftFolder } from '@xmcl/core'
-import { open } from '@xmcl/unzip'
+import { MinecraftFolder } from '@btnlauncher2/core'
+import { open } from '@btnlauncher2/unzip'
 import { createWriteStream, existsSync } from 'fs'
 import { mkdir, readFile, rm } from 'fs/promises'
 import { dirname, join } from 'path'

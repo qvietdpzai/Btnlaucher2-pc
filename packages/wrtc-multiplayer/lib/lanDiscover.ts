@@ -1,9 +1,9 @@
-import { LanServerInfo, MinecraftLanDiscover } from '@xmcl/client'
+import { LanServerInfo, MinecraftLanDiscover } from '@btnlauncher2/client'
 import { createSocket } from 'dgram'
 import { MessageLan } from './messages/lan'
 import type { Peers } from './peers'
 import { EventEmitter } from 'stream'
-import { PromiseSignal } from '@xmcl/runtime-api'
+import { PromiseSignal } from '@btnlauncher2/runtime-api'
 
 function setup(discover: MinecraftLanDiscover, lanScope: Set<string>, allPeers: Peers) {
   discover.bind().then(() => {

@@ -1,4 +1,4 @@
-import { open, openEntryReadStream, walkEntriesGenerator } from '@xmcl/unzip'
+import { open, openEntryReadStream, walkEntriesGenerator } from '@btnlauncher2/unzip'
 import { ChildProcess, SpawnOptions, spawn } from 'child_process'
 import { randomUUID } from 'crypto'
 import { EventEmitter } from 'events'

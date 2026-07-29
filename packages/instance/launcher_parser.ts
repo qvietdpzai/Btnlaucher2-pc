@@ -1,4 +1,4 @@
-import { isSystemError } from '@xmcl/utils'
+import { isSystemError } from '@btnlauncher2/utils'
 import { existsSync, readdir } from 'fs-extra'
 import { join } from 'path'
 import type { InstanceType, ThirdPartyLauncherManifest } from './modpack'

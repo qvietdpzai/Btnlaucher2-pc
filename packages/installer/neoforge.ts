@@ -1,6 +1,6 @@
-import { MinecraftFolder, MinecraftLocation, Version as VersionJson } from '@xmcl/core'
-import { download, getDownloadBaseOptions } from '@xmcl/file-transfer'
-import { open, readEntry } from '@xmcl/unzip'
+import { MinecraftFolder, MinecraftLocation, Version as VersionJson } from '@btnlauncher2/core'
+import { download, getDownloadBaseOptions } from '@btnlauncher2/file-transfer'
+import { open, readEntry } from '@btnlauncher2/unzip'
 import { unlink } from 'fs/promises'
 import {
   BadForgeInstallerJarError,

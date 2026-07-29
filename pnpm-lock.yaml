@@ -116,7 +116,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -137,7 +137,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -158,7 +158,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       bytebuffer:
@@ -179,20 +179,20 @@ importers:
 
   packages/client:
     dependencies:
-      '@xmcl/bytebuffer':
+      '@btnlauncher2/bytebuffer':
         specifier: workspace:^*
         version: link:../bytebuffer
-      '@xmcl/nbt':
+      '@btnlauncher2/nbt':
         specifier: workspace:^*
         version: link:../nbt
-      '@xmcl/text-component':
+      '@btnlauncher2/text-component':
         specifier: workspace:^*
         version: link:../text-component
     devDependencies:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -213,14 +213,14 @@ importers:
 
   packages/core:
     dependencies:
-      '@xmcl/unzip':
+      '@btnlauncher2/unzip':
         specifier: workspace:^*
         version: link:../unzip
     devDependencies:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -264,7 +264,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -286,7 +286,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -308,7 +308,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -326,17 +326,17 @@ importers:
 
   packages/game-data:
     dependencies:
-      '@xmcl/nbt':
+      '@btnlauncher2/nbt':
         specifier: workspace:^*
         version: link:../nbt
-      '@xmcl/system':
+      '@btnlauncher2/system':
         specifier: workspace:^*
         version: link:../system
     devDependencies:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -360,7 +360,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -378,22 +378,22 @@ importers:
 
   packages/installer:
     dependencies:
-      '@xmcl/asm':
+      '@btnlauncher2/asm':
         specifier: workspace:^*
         version: link:../asm
-      '@xmcl/core':
+      '@btnlauncher2/core':
         specifier: workspace:^*
         version: link:../core
-      '@xmcl/file-transfer':
+      '@btnlauncher2/file-transfer':
         specifier: workspace:^*
         version: link:../file-transfer
-      '@xmcl/forge-site-parser':
+      '@btnlauncher2/forge-site-parser':
         specifier: workspace:^*
         version: link:../forge-site-parser
-      '@xmcl/unzip':
+      '@btnlauncher2/unzip':
         specifier: workspace:^*
         version: link:../unzip
-      '@xmcl/yauzl':
+      '@btnlauncher2/yauzl':
         specifier: workspace:^*
         version: link:../yauzl
       tar-stream:
@@ -415,7 +415,7 @@ importers:
       '@types/yazl':
         specifier: ^2.4.5
         version: 2.4.5
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -436,13 +436,13 @@ importers:
       '@types/ssh2':
         specifier: ^1.15.5
         version: 1.15.5
-      '@xmcl/core':
+      '@btnlauncher2/core':
         specifier: workspace:*
         version: link:../core
-      '@xmcl/installer':
+      '@btnlauncher2/installer':
         specifier: workspace:*
         version: link:../installer
-      '@xmcl/utils':
+      '@btnlauncher2/utils':
         specifier: workspace:*
         version: link:../utils
       fs-extra:
@@ -467,10 +467,10 @@ importers:
 
   packages/mod-parser:
     dependencies:
-      '@xmcl/asm':
+      '@btnlauncher2/asm':
         specifier: workspace:^*
         version: link:../asm
-      '@xmcl/system':
+      '@btnlauncher2/system':
         specifier: workspace:^*
         version: link:../system
       smol-toml:
@@ -480,7 +480,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -501,7 +501,7 @@ importers:
       '@types/three':
         specifier: ^0.150.0
         version: 0.150.2
-      '@xmcl/resourcepack':
+      '@btnlauncher2/resourcepack':
         specifier: workspace:^*
         version: link:../resourcepack
       three:
@@ -511,7 +511,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -567,7 +567,7 @@ importers:
 
   packages/nbt:
     dependencies:
-      '@xmcl/bytebuffer':
+      '@btnlauncher2/bytebuffer':
         specifier: workspace:^*
         version: link:../bytebuffer
       pako:
@@ -580,7 +580,7 @@ importers:
       '@types/pako':
         specifier: ^2.0.0
         version: 2.0.0
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -623,25 +623,25 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/game-data':
+      '@btnlauncher2/game-data':
         specifier: workspace:*
         version: link:../game-data
-      '@xmcl/instance':
+      '@btnlauncher2/instance':
         specifier: workspace:*
         version: link:../instance
-      '@xmcl/mod-parser':
+      '@btnlauncher2/mod-parser':
         specifier: workspace:*
         version: link:../mod-parser
-      '@xmcl/resourcepack':
+      '@btnlauncher2/resourcepack':
         specifier: workspace:*
         version: link:../resourcepack
-      '@xmcl/schematic':
+      '@btnlauncher2/schematic':
         specifier: workspace:*
         version: link:../schematic
-      '@xmcl/system':
+      '@btnlauncher2/system':
         specifier: workspace:*
         version: link:../system
-      '@xmcl/utils':
+      '@btnlauncher2/utils':
         specifier: workspace:*
         version: link:../utils
       chokidar:
@@ -665,7 +665,7 @@ importers:
 
   packages/resourcepack:
     dependencies:
-      '@xmcl/system':
+      '@btnlauncher2/system':
         specifier: workspace:^*
         version: link:../system
     devDependencies:
@@ -681,14 +681,14 @@ importers:
 
   packages/schematic:
     dependencies:
-      '@xmcl/nbt':
+      '@btnlauncher2/nbt':
         specifier: workspace:^*
         version: link:../nbt
     devDependencies:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -709,7 +709,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -727,7 +727,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -745,10 +745,10 @@ importers:
 
   packages/system:
     dependencies:
-      '@xmcl/unzip':
+      '@btnlauncher2/unzip':
         specifier: workspace:^*
         version: link:../unzip
-      '@xmcl/yauzl':
+      '@btnlauncher2/yauzl':
         specifier: workspace:^*
         version: link:../yauzl
       jszip:
@@ -758,7 +758,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -779,7 +779,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -799,14 +799,14 @@ importers:
 
   packages/unzip:
     dependencies:
-      '@xmcl/yauzl':
+      '@btnlauncher2/yauzl':
         specifier: workspace:^*
         version: link:../yauzl
     devDependencies:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       esbuild:
@@ -907,22 +907,22 @@ importers:
 
   packages/wrtc-multiplayer:
     dependencies:
-      '@xmcl/client':
+      '@btnlauncher2/client':
         specifier: workspace:*
         version: link:../client
-      '@xmcl/nat-api':
+      '@btnlauncher2/nat-api':
         specifier: workspace:*
         version: link:../nat-api
-      '@xmcl/runtime-api':
+      '@btnlauncher2/runtime-api':
         specifier: workspace:*
-        version: link:../../xmcl-runtime-api
-      '@xmcl/stun-client':
+        version: link:../../btnlauncher2-runtime-api
+      '@btnlauncher2/stun-client':
         specifier: ^1.0.0
         version: 1.0.0
-      '@xmcl/text-component':
+      '@btnlauncher2/text-component':
         specifier: workspace:*
         version: link:../text-component
-      '@xmcl/utils':
+      '@btnlauncher2/utils':
         specifier: workspace:*
         version: link:../utils
       lodash.debounce:
@@ -938,7 +938,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:*
         version: link:../oxlint-config
       oxlint:
@@ -960,7 +960,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:^*
         version: link:../oxlint-config
       typescript:
@@ -970,7 +970,7 @@ importers:
         specifier: ^4.1.0
         version: 4.1.8(@opentelemetry/api@1.9.0)(@types/node@24.13.3)(@vitest/coverage-v8@4.1.8)(vite@8.0.16(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(sass@1.99.0)(terser@5.20.0)(tsx@4.21.0)(yaml@2.9.0))
 
-  xmcl-electron-app:
+  btnlauncher2-electron-app:
     devDependencies:
       '@electron/rebuild':
         specifier: ^4.2.0
@@ -1005,37 +1005,37 @@ importers:
       '@vue/runtime-dom':
         specifier: latest
         version: 3.5.40
-      '@xmcl/client':
+      '@btnlauncher2/client':
         specifier: workspace:*
         version: link:../packages/client
-      '@xmcl/core':
+      '@btnlauncher2/core':
         specifier: workspace:*
         version: link:../packages/core
-      '@xmcl/file-transfer':
+      '@btnlauncher2/file-transfer':
         specifier: workspace:*
         version: link:../packages/file-transfer
-      '@xmcl/installer':
+      '@btnlauncher2/installer':
         specifier: workspace:*
         version: link:../packages/installer
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:*
         version: link:../packages/oxlint-config
-      '@xmcl/resource':
+      '@btnlauncher2/resource':
         specifier: workspace:*
         version: link:../packages/resource
-      '@xmcl/runtime':
+      '@btnlauncher2/runtime':
         specifier: workspace:*
-        version: link:../xmcl-runtime
-      '@xmcl/runtime-api':
+        version: link:../btnlauncher2-runtime
+      '@btnlauncher2/runtime-api':
         specifier: workspace:*
-        version: link:../xmcl-runtime-api
-      '@xmcl/utils':
+        version: link:../btnlauncher2-runtime-api
+      '@btnlauncher2/utils':
         specifier: workspace:*
         version: link:../packages/utils
-      '@xmcl/windows-utils':
+      '@btnlauncher2/windows-utils':
         specifier: ^0.0.15
         version: 0.0.15
-      '@xmcl/wrtc-multiplayer':
+      '@btnlauncher2/wrtc-multiplayer':
         specifier: workspace:*
         version: link:../packages/wrtc-multiplayer
       app-builder-lib:
@@ -1132,7 +1132,7 @@ importers:
         specifier: ^7.28.0
         version: 7.28.0
 
-  xmcl-keystone-ui:
+  btnlauncher2-keystone-ui:
     dependencies:
       '@earendil-works/pi-agent-core':
         specifier: 0.81.1
@@ -1149,49 +1149,49 @@ importers:
       '@vueuse/core':
         specifier: ^14.3.0
         version: 14.3.0(vue@3.5.33(typescript@5.9.3))
-      '@xmcl/core':
+      '@btnlauncher2/core':
         specifier: workspace:*
         version: link:../packages/core
-      '@xmcl/curseforge':
+      '@btnlauncher2/curseforge':
         specifier: workspace:*
         version: link:../packages/curseforge
-      '@xmcl/game-data':
+      '@btnlauncher2/game-data':
         specifier: workspace:*
         version: link:../packages/game-data
-      '@xmcl/gamesetting':
+      '@btnlauncher2/gamesetting':
         specifier: workspace:*
         version: link:../packages/gamesetting
-      '@xmcl/installer':
+      '@btnlauncher2/installer':
         specifier: workspace:*
         version: link:../packages/installer
-      '@xmcl/instance':
+      '@btnlauncher2/instance':
         specifier: workspace:*
         version: link:../packages/instance
-      '@xmcl/mod-parser':
+      '@btnlauncher2/mod-parser':
         specifier: workspace:*
         version: link:../packages/mod-parser
-      '@xmcl/model':
+      '@btnlauncher2/model':
         specifier: workspace:*
         version: link:../packages/model
-      '@xmcl/modrinth':
+      '@btnlauncher2/modrinth':
         specifier: workspace:*
         version: link:../packages/modrinth
-      '@xmcl/resource':
+      '@btnlauncher2/resource':
         specifier: workspace:*
         version: link:../packages/resource
-      '@xmcl/resourcepack':
+      '@btnlauncher2/resourcepack':
         specifier: workspace:*
         version: link:../packages/resourcepack
-      '@xmcl/runtime-api':
+      '@btnlauncher2/runtime-api':
         specifier: workspace:*
-        version: link:../xmcl-runtime-api
-      '@xmcl/semver':
+        version: link:../btnlauncher2-runtime-api
+      '@btnlauncher2/semver':
         specifier: workspace:*
         version: link:../packages/semver
-      '@xmcl/text-component':
+      '@btnlauncher2/text-component':
         specifier: workspace:*
         version: link:../packages/text-component
-      '@xmcl/user':
+      '@btnlauncher2/user':
         specifier: workspace:*
         version: link:../packages/user
       async-mutex:
@@ -1267,7 +1267,7 @@ importers:
       '@vitejs/plugin-vue':
         specifier: ^6.0.6
         version: 6.0.6(vite@8.0.16(@types/node@24.13.3)(esbuild@0.28.1)(jiti@2.7.0)(sass@1.99.0)(terser@5.20.0)(tsx@4.21.0)(yaml@2.8.4))(vue@3.5.33(typescript@5.9.3))
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:*
         version: link:../packages/oxlint-config
       chalk:
@@ -1310,7 +1310,7 @@ importers:
         specifier: ^3.0.0
         version: 3.2.8(typescript@5.9.3)
 
-  xmcl-runtime:
+  btnlauncher2-runtime:
     dependencies:
       '@aws-crypto/crc32':
         specifier: ^5.2.0
@@ -1327,85 +1327,85 @@ importers:
       '@earendil-works/pi-ai':
         specifier: 0.81.1
         version: 0.81.1(ws@8.21.1)(zod@4.1.13)
-      '@xmcl/client':
+      '@btnlauncher2/client':
         specifier: workspace:*
         version: link:../packages/client
-      '@xmcl/core':
+      '@btnlauncher2/core':
         specifier: workspace:*
         version: link:../packages/core
-      '@xmcl/curseforge':
+      '@btnlauncher2/curseforge':
         specifier: workspace:*
         version: link:../packages/curseforge
-      '@xmcl/discord-rpc':
+      '@btnlauncher2/discord-rpc':
         specifier: workspace:*
         version: link:../packages/discord-rpc
-      '@xmcl/file-transfer':
+      '@btnlauncher2/file-transfer':
         specifier: workspace:*
         version: link:../packages/file-transfer
-      '@xmcl/forge-site-parser':
+      '@btnlauncher2/forge-site-parser':
         specifier: workspace:*
         version: link:../packages/forge-site-parser
-      '@xmcl/game-data':
+      '@btnlauncher2/game-data':
         specifier: workspace:*
         version: link:../packages/game-data
-      '@xmcl/gamesetting':
+      '@btnlauncher2/gamesetting':
         specifier: workspace:*
         version: link:../packages/gamesetting
-      '@xmcl/installer':
+      '@btnlauncher2/installer':
         specifier: workspace:*
         version: link:../packages/installer
-      '@xmcl/instance':
+      '@btnlauncher2/instance':
         specifier: workspace:*
         version: link:../packages/instance
-      '@xmcl/mod-parser':
+      '@btnlauncher2/mod-parser':
         specifier: workspace:*
         version: link:../packages/mod-parser
-      '@xmcl/model':
+      '@btnlauncher2/model':
         specifier: workspace:*
         version: link:../packages/model
-      '@xmcl/modrinth':
+      '@btnlauncher2/modrinth':
         specifier: workspace:*
         version: link:../packages/modrinth
-      '@xmcl/nat-api':
+      '@btnlauncher2/nat-api':
         specifier: workspace:*
         version: link:../packages/nat-api
-      '@xmcl/nbt':
+      '@btnlauncher2/nbt':
         specifier: workspace:*
         version: link:../packages/nbt
-      '@xmcl/resource':
+      '@btnlauncher2/resource':
         specifier: workspace:*
         version: link:../packages/resource
-      '@xmcl/resourcepack':
+      '@btnlauncher2/resourcepack':
         specifier: workspace:*
         version: link:../packages/resourcepack
-      '@xmcl/runtime-api':
+      '@btnlauncher2/runtime-api':
         specifier: workspace:*
-        version: link:../xmcl-runtime-api
-      '@xmcl/schematic':
+        version: link:../btnlauncher2-runtime-api
+      '@btnlauncher2/schematic':
         specifier: workspace:*
         version: link:../packages/schematic
-      '@xmcl/sqlite':
+      '@btnlauncher2/sqlite':
         specifier: workspace:*
         version: link:../packages/sqlite
-      '@xmcl/system':
+      '@btnlauncher2/system':
         specifier: workspace:*
         version: link:../packages/system
-      '@xmcl/text-component':
+      '@btnlauncher2/text-component':
         specifier: workspace:*
         version: link:../packages/text-component
-      '@xmcl/unzip':
+      '@btnlauncher2/unzip':
         specifier: workspace:*
         version: link:../packages/unzip
-      '@xmcl/user':
+      '@btnlauncher2/user':
         specifier: workspace:*
         version: link:../packages/user
-      '@xmcl/utils':
+      '@btnlauncher2/utils':
         specifier: workspace:*
         version: link:../packages/utils
-      '@xmcl/worker':
+      '@btnlauncher2/worker':
         specifier: workspace:*
         version: link:../packages/worker
-      '@xmcl/yauzl':
+      '@btnlauncher2/yauzl':
         specifier: workspace:*
         version: link:../packages/yauzl
       applicationinsights:
@@ -1520,7 +1520,7 @@ importers:
       '@types/yazl':
         specifier: ^2.4.2
         version: 2.4.2
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:*
         version: link:../packages/oxlint-config
       cross-env:
@@ -1542,63 +1542,63 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
 
-  xmcl-runtime-api:
+  btnlauncher2-runtime-api:
     dependencies:
-      '@xmcl/client':
+      '@btnlauncher2/client':
         specifier: workspace:*
         version: link:../packages/client
-      '@xmcl/core':
+      '@btnlauncher2/core':
         specifier: workspace:*
         version: link:../packages/core
-      '@xmcl/curseforge':
+      '@btnlauncher2/curseforge':
         specifier: workspace:*
         version: link:../packages/curseforge
-      '@xmcl/file-transfer':
+      '@btnlauncher2/file-transfer':
         specifier: workspace:*
         version: link:../packages/file-transfer
-      '@xmcl/forge-site-parser':
+      '@btnlauncher2/forge-site-parser':
         specifier: workspace:*
         version: link:../packages/forge-site-parser
-      '@xmcl/game-data':
+      '@btnlauncher2/game-data':
         specifier: workspace:*
         version: link:../packages/game-data
-      '@xmcl/gamesetting':
+      '@btnlauncher2/gamesetting':
         specifier: workspace:*
         version: link:../packages/gamesetting
-      '@xmcl/installer':
+      '@btnlauncher2/installer':
         specifier: workspace:*
         version: link:../packages/installer
-      '@xmcl/instance':
+      '@btnlauncher2/instance':
         specifier: workspace:*
         version: link:../packages/instance
-      '@xmcl/mod-parser':
+      '@btnlauncher2/mod-parser':
         specifier: workspace:*
         version: link:../packages/mod-parser
-      '@xmcl/model':
+      '@btnlauncher2/model':
         specifier: workspace:*
         version: link:../packages/model
-      '@xmcl/modrinth':
+      '@btnlauncher2/modrinth':
         specifier: workspace:*
         version: link:../packages/modrinth
-      '@xmcl/nbt':
+      '@btnlauncher2/nbt':
         specifier: workspace:*
         version: link:../packages/nbt
-      '@xmcl/resource':
+      '@btnlauncher2/resource':
         specifier: workspace:*
         version: link:../packages/resource
-      '@xmcl/resourcepack':
+      '@btnlauncher2/resourcepack':
         specifier: workspace:*
         version: link:../packages/resourcepack
-      '@xmcl/system':
+      '@btnlauncher2/system':
         specifier: workspace:*
         version: link:../packages/system
-      '@xmcl/text-component':
+      '@btnlauncher2/text-component':
         specifier: workspace:*
         version: link:../packages/text-component
-      '@xmcl/unzip':
+      '@btnlauncher2/unzip':
         specifier: workspace:*
         version: link:../packages/unzip
-      '@xmcl/user':
+      '@btnlauncher2/user':
         specifier: workspace:*
         version: link:../packages/user
       zod:
@@ -1608,7 +1608,7 @@ importers:
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
-      '@xmcl/oxlint-config':
+      '@btnlauncher2/oxlint-config':
         specifier: workspace:*
         version: link:../packages/oxlint-config
       esbuild:
@@ -3541,10 +3541,10 @@ packages:
     peerDependencies:
       vue: ^3.5.0
 
-  '@xmcl/stun-client@1.0.0':
+  '@btnlauncher2/stun-client@1.0.0':
     resolution: {integrity: sha512-OrvzFEMGC9eSNvfHiIsa4GAUpslD64fS/LtI+WaXliL9122dDn2guxiwhvw8aWuBTS0HdbCCBjRtLXS6LbecWw==}
 
-  '@xmcl/windows-utils@0.0.15':
+  '@btnlauncher2/windows-utils@0.0.15':
     resolution: {integrity: sha512-UZkmEF87mfpiTe9+O9dAggTK/OeLfd61qZhlDUNolw5UfjjjzmdNe7Crgo81AKuDXhkv21TYsj9jt3okPd4vlw==}
 
   '@xmldom/xmldom@0.8.13':
@@ -8330,9 +8330,9 @@ snapshots:
     dependencies:
       vue: 3.5.33(typescript@5.9.3)
 
-  '@xmcl/stun-client@1.0.0': {}
+  '@btnlauncher2/stun-client@1.0.0': {}
 
-  '@xmcl/windows-utils@0.0.15': {}
+  '@btnlauncher2/windows-utils@0.0.15': {}
 
   '@xmldom/xmldom@0.8.13': {}
 

@@ -91,7 +91,7 @@ jobs:
         with:
           api-token: ${{ secrets.CODE_SIGN_TOKEN }}
           organization-id: ab51b40d-a5bd-4d25-ae54-66ccabf86161
-          project-slug: x-minecraft-launcher
+          project-slug: Btnlaucher2-pc
           signing-policy-slug: release-signing
           github-artifact-id: ${{ steps.upload-artifact.outputs.artifact-id }}
           artifact-configuration-slug: appx

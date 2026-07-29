@@ -1,5 +1,5 @@
 {
-  "name": "@xmcl/bore",
+  "name": "@btnlauncher2/bore",
   "version": "1.0.0",
   "main": "./index.ts",
   "description": "bore.pub implementation in typescript",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Voxelum/x-minecraft-launcher.git"
+    "url": "git+https://github.com/qvietdpzai/Btnlaucher2-pc.git"
   },
   "author": "cijhn@hotmail.com",
   "keywords": [
@@ -33,7 +33,7 @@
   "homepage": "https://github.com/Voxelum/minecraft-launcher-core-node#readme",
   "devDependencies": {
     "@types/node": "^24.13.3",
-    "@xmcl/oxlint-config": "workspace:^*",
+    "@btnlauncher2/oxlint-config": "workspace:^*",
     "esbuild": "^0.25.12",
     "oxlint": "^1.63.0",
     "tslib": "^2.5.0",

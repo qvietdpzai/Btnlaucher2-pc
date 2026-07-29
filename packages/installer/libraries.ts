@@ -1,13 +1,13 @@
 /* eslint-disable n/no-unsupported-features/node-builtins */
-import { MinecraftFolder, MinecraftLocation, ResolvedLibrary, ResolvedVersion } from '@xmcl/core'
-import { isNotNull } from '@xmcl/core/utils'
-import { open, readAllEntries, walkEntriesGenerator } from '@xmcl/unzip'
+import { MinecraftFolder, MinecraftLocation, ResolvedLibrary, ResolvedVersion } from '@btnlauncher2/core'
+import { isNotNull } from '@btnlauncher2/core/utils'
+import { open, readAllEntries, walkEntriesGenerator } from '@btnlauncher2/unzip'
 import {
   DownloadBaseOptions,
   downloadMultiple,
   DownloadMultipleOption,
   getDownloadBaseOptions,
-} from '@xmcl/file-transfer'
+} from '@btnlauncher2/file-transfer'
 import { stat } from 'fs/promises'
 import { join } from 'path'
 import { diagnoseFile } from './diagnose'

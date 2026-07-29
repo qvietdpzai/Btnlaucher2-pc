@@ -1,4 +1,4 @@
-// Type definitions for @xmcl/yauzl 2.10
+// Type definitions for @btnlauncher2/yauzl 2.10
 // Fork of yauzl 2.10 with ZIP64 single-disk archives accepted.
 // Upstream definitions by: Florian Keller <https://github.com/ffflorian> (DefinitelyTyped)
 

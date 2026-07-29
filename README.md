@@ -1,21 +1,21 @@
 <p align="center">
-  <a href="https://xmcl.app" target="_blank">
-    <img alt="Logo" width="100" src="https://github.com/Voxelum/x-minecraft-launcher/blob/master/xmcl-electron-app/icons/dark@256x256.png">
+  <a href="https://btnlauncher2.app" target="_blank">
+    <img alt="Logo" width="100" src="https://github.com/qvietdpzai/Btnlaucher2-pc/blob/master/btnlauncher2-electron-app/icons/dark@256x256.png">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Voxelum/x-minecraft-launcher">
-    <img src="https://github.com/Voxelum/x-minecraft-launcher/workflows/Build/badge.svg" alt="Build">
+  <a href="https://github.com/qvietdpzai/Btnlaucher2-pc">
+    <img src="https://github.com/qvietdpzai/Btnlaucher2-pc/workflows/Build/badge.svg" alt="Build">
   </a>
-  <a href="https://github.com/Voxelum/x-minecraft-launcher/blob/master/LICENSE">
-    <img src="https://img.shields.io/npm/l/@xmcl/core.svg" alt="License">
+  <a href="https://github.com/qvietdpzai/Btnlaucher2-pc/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/@btnlauncher2/core.svg" alt="License">
   </a>
   <a href="https://conventionalcommits.org">
     <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Commit">
   </a>
-  <a href="https://flathub.org/en/apps/app.xmcl.voxelum">
-    <img src="https://img.shields.io/flathub/v/app.xmcl.voxelum?logo=flathub&label=Flathub" alt="Flathub">
+  <a href="https://flathub.org/en/apps/app.btnlauncher2">
+    <img src="https://img.shields.io/flathub/v/app.btnlauncher2?logo=flathub&label=Flathub" alt="Flathub">
   </a>
 </p>
 
@@ -23,26 +23,26 @@
   <a href="https://discord.gg/W5XVwYY7GQ">
     <img src="https://img.shields.io/discord/405213567118213121?logo=discord&logoColor=white&label=Discord&color=5865F2" alt="Discord">
   </a>
-  <a href="https://www.reddit.com/r/XMCL/">
-    <img src="https://img.shields.io/badge/Reddit-r%2FXMCL-FF4500?logo=reddit&logoColor=white" alt="Reddit">
+  <a href="https://www.reddit.com/r/BTNLAUNCHER2/">
+    <img src="https://img.shields.io/badge/Reddit-r%2FBTNLAUNCHER2-FF4500?logo=reddit&logoColor=white" alt="Reddit">
   </a>
   <a href="https://kook.top/gqjSHh">
-    <img src="https://img.shields.io/endpoint?url=https://api.xmcl.app/kook-badge" alt="Kook">
+    <img src="https://img.shields.io/endpoint?url=https://api.btnlauncher2.app/kook-badge" alt="Kook">
   </a>
 </p>
 
 <p align="center">
   <a href="https://afdian.com/@ci010">
-    <img src="https://img.shields.io/endpoint?url=https://api.xmcl.app/afdian-badge" alt="afdian">
+    <img src="https://img.shields.io/endpoint?url=https://api.btnlauncher2.app/afdian-badge" alt="afdian">
   </a>
-  <a href="https://patreon.com/xmcl">
-    <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dxmcl%26type%3Dpledges" alt="patreon">
+  <a href="https://patreon.com/btnlauncher2">
+    <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dbtnlauncher2%26type%3Dpledges" alt="patreon">
   </a>
 </p>
 
-![home](https://raw.githubusercontent.com/Voxelum/xmcl-page/master/.vitepress/theme/assets/home.png)
+![home](https://raw.githubusercontent.com/qvietdpzai/Btnlaucher2-pc/master/.vitepress/theme/assets/home.png)
 
-Visit the [official site](https://xmcl.app) to download the app!
+Visit the [official site](https://btnlauncher2.app) to download the app!
 
 If you have winget, you can use winget to install
 
@@ -53,15 +53,15 @@ winget install CI010.XMinecraftLauncher
 HomeBrew installation also available via tap
 
 ```bash
-brew tap voxelum/xmcl
-brew install --cask voxelum/xmcl/xmcl
+brew tap voxelum/btnlauncher2
+brew install --cask voxelum/btnlauncher2/btnlauncher2
 sudo xattr -rd com.apple.quarantine /Applications/X\ Minecraft\ Launcher.app
 ```
 
-On Linux, XMCL is also available on Flathub:
+On Linux, btnlauncher2 is also available on Flathub:
 
 ```bash
-flatpak install flathub app.xmcl.voxelum
+flatpak install flathub app.btnlauncher2
 ```
 
 <kbd>[<img title="Ukraine" alt="Ukraine" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/1280px-Flag_of_Ukraine.svg.png" width="22">](i18n/README.uk.md)</kbd>
@@ -93,38 +93,38 @@ flatpak install flathub app.xmcl.voxelum
 
 ## Core Libraries
 
-This repository also includes the **Minecraft Launcher Core** (`@xmcl/*` packages) — a set of npm packages providing useful functions to build a Minecraft launcher. [API Documentation](https://docs.xmcl.app/en/core)
+This repository also includes the **Minecraft Launcher Core** (`@btnlauncher2/*` packages) — a set of npm packages providing useful functions to build a Minecraft launcher. [API Documentation](https://docs.btnlauncher2.app/en/core)
 
 | Package | Description | Version |
 | --- | --- | --- |
-| [@xmcl/core](packages/core) | Launch Minecraft | [![npm](https://img.shields.io/npm/v/@xmcl/core.svg)](https://www.npmjs.com/package/@xmcl/core) |
-| [@xmcl/installer](packages/installer) | Install Minecraft, Forge, Fabric, Quilt, OptiFine, JVM | [![npm](https://img.shields.io/npm/v/@xmcl/installer.svg)](https://www.npmjs.com/package/@xmcl/installer) |
-| [@xmcl/user](packages/user) | User authentication and skin | [![npm](https://img.shields.io/npm/v/@xmcl/user.svg)](https://www.npmjs.com/package/@xmcl/user) |
-| [@xmcl/mod-parser](packages/mod-parser) | Parse Forge/LiteLoader/Fabric mods | [![npm](https://img.shields.io/npm/v/@xmcl/mod-parser.svg)](https://www.npmjs.com/package/@xmcl/mod-parser) |
-| [@xmcl/curseforge](packages/curseforge) | CurseForge API | [![npm](https://img.shields.io/npm/v/@xmcl/curseforge.svg)](https://www.npmjs.com/package/@xmcl/curseforge) |
-| [@xmcl/modrinth](packages/modrinth) | Modrinth API | [![npm](https://img.shields.io/npm/v/@xmcl/modrinth.svg)](https://www.npmjs.com/package/@xmcl/modrinth) |
-| [@xmcl/nbt](packages/nbt) | Parse NBT | [![npm](https://img.shields.io/npm/v/@xmcl/nbt.svg)](https://www.npmjs.com/package/@xmcl/nbt) |
-| [@xmcl/game-data](packages/game-data) | Load level data or servers.dat | [![npm](https://img.shields.io/npm/v/@xmcl/game-data.svg)](https://www.npmjs.com/package/@xmcl/game-data) |
-| [@xmcl/resourcepack](packages/resourcepack) | Parse resource packs | [![npm](https://img.shields.io/npm/v/@xmcl/resourcepack.svg)](https://www.npmjs.com/package/@xmcl/resourcepack) |
-| [@xmcl/gamesetting](packages/gamesetting) | Parse game settings | [![npm](https://img.shields.io/npm/v/@xmcl/gamesetting.svg)](https://www.npmjs.com/package/@xmcl/gamesetting) |
-| [@xmcl/client](packages/client) | Minecraft client network utilities | [![npm](https://img.shields.io/npm/v/@xmcl/client.svg)](https://www.npmjs.com/package/@xmcl/client) |
-| [@xmcl/model](packages/model) | Display player/block models | [![npm](https://img.shields.io/npm/v/@xmcl/model.svg)](https://www.npmjs.com/package/@xmcl/model) |
-| [@xmcl/text-component](packages/text-component) | Parse Minecraft text components | [![npm](https://img.shields.io/npm/v/@xmcl/text-component.svg)](https://www.npmjs.com/package/@xmcl/text-component) |
-| [@xmcl/forge-site-parser](packages/forge-site-parser) | Parse Forge website | [![npm](https://img.shields.io/npm/v/@xmcl/forge-site-parser.svg)](https://www.npmjs.com/package/@xmcl/forge-site-parser) |
-| [@xmcl/file-transfer](packages/file-transfer) | High-performance file downloads | [![npm](https://img.shields.io/npm/v/@xmcl/file-transfer.svg)](https://www.npmjs.com/package/@xmcl/file-transfer) |
-| [@xmcl/nat-api](packages/nat-api) | UPnP and NAT-PMP port mapping | [![npm](https://img.shields.io/npm/v/@xmcl/nat-api.svg)](https://www.npmjs.com/package/@xmcl/nat-api) |
-| [@xmcl/system](packages/system) | FS middleware for browser/Node | [![npm](https://img.shields.io/npm/v/@xmcl/system.svg)](https://www.npmjs.com/package/@xmcl/system) |
-| [@xmcl/unzip](packages/unzip) | yauzl unzip wrapper | [![npm](https://img.shields.io/npm/v/@xmcl/unzip.svg)](https://www.npmjs.com/package/@xmcl/unzip) |
-| [@xmcl/semver](packages/semver) | Fabric semver format | [![npm](https://img.shields.io/npm/v/@xmcl/semver.svg)](https://www.npmjs.com/package/@xmcl/semver) |
-| [@xmcl/bytebuffer](packages/bytebuffer) | ByteBuffer implementation | [![npm](https://img.shields.io/npm/v/@xmcl/bytebuffer.svg)](https://www.npmjs.com/package/@xmcl/bytebuffer) |
+| [@btnlauncher2/core](packages/core) | Launch Minecraft | [![npm](https://img.shields.io/npm/v/@btnlauncher2/core.svg)](https://www.npmjs.com/package/@btnlauncher2/core) |
+| [@btnlauncher2/installer](packages/installer) | Install Minecraft, Forge, Fabric, Quilt, OptiFine, JVM | [![npm](https://img.shields.io/npm/v/@btnlauncher2/installer.svg)](https://www.npmjs.com/package/@btnlauncher2/installer) |
+| [@btnlauncher2/user](packages/user) | User authentication and skin | [![npm](https://img.shields.io/npm/v/@btnlauncher2/user.svg)](https://www.npmjs.com/package/@btnlauncher2/user) |
+| [@btnlauncher2/mod-parser](packages/mod-parser) | Parse Forge/LiteLoader/Fabric mods | [![npm](https://img.shields.io/npm/v/@btnlauncher2/mod-parser.svg)](https://www.npmjs.com/package/@btnlauncher2/mod-parser) |
+| [@btnlauncher2/curseforge](packages/curseforge) | CurseForge API | [![npm](https://img.shields.io/npm/v/@btnlauncher2/curseforge.svg)](https://www.npmjs.com/package/@btnlauncher2/curseforge) |
+| [@btnlauncher2/modrinth](packages/modrinth) | Modrinth API | [![npm](https://img.shields.io/npm/v/@btnlauncher2/modrinth.svg)](https://www.npmjs.com/package/@btnlauncher2/modrinth) |
+| [@btnlauncher2/nbt](packages/nbt) | Parse NBT | [![npm](https://img.shields.io/npm/v/@btnlauncher2/nbt.svg)](https://www.npmjs.com/package/@btnlauncher2/nbt) |
+| [@btnlauncher2/game-data](packages/game-data) | Load level data or servers.dat | [![npm](https://img.shields.io/npm/v/@btnlauncher2/game-data.svg)](https://www.npmjs.com/package/@btnlauncher2/game-data) |
+| [@btnlauncher2/resourcepack](packages/resourcepack) | Parse resource packs | [![npm](https://img.shields.io/npm/v/@btnlauncher2/resourcepack.svg)](https://www.npmjs.com/package/@btnlauncher2/resourcepack) |
+| [@btnlauncher2/gamesetting](packages/gamesetting) | Parse game settings | [![npm](https://img.shields.io/npm/v/@btnlauncher2/gamesetting.svg)](https://www.npmjs.com/package/@btnlauncher2/gamesetting) |
+| [@btnlauncher2/client](packages/client) | Minecraft client network utilities | [![npm](https://img.shields.io/npm/v/@btnlauncher2/client.svg)](https://www.npmjs.com/package/@btnlauncher2/client) |
+| [@btnlauncher2/model](packages/model) | Display player/block models | [![npm](https://img.shields.io/npm/v/@btnlauncher2/model.svg)](https://www.npmjs.com/package/@btnlauncher2/model) |
+| [@btnlauncher2/text-component](packages/text-component) | Parse Minecraft text components | [![npm](https://img.shields.io/npm/v/@btnlauncher2/text-component.svg)](https://www.npmjs.com/package/@btnlauncher2/text-component) |
+| [@btnlauncher2/forge-site-parser](packages/forge-site-parser) | Parse Forge website | [![npm](https://img.shields.io/npm/v/@btnlauncher2/forge-site-parser.svg)](https://www.npmjs.com/package/@btnlauncher2/forge-site-parser) |
+| [@btnlauncher2/file-transfer](packages/file-transfer) | High-performance file downloads | [![npm](https://img.shields.io/npm/v/@btnlauncher2/file-transfer.svg)](https://www.npmjs.com/package/@btnlauncher2/file-transfer) |
+| [@btnlauncher2/nat-api](packages/nat-api) | UPnP and NAT-PMP port mapping | [![npm](https://img.shields.io/npm/v/@btnlauncher2/nat-api.svg)](https://www.npmjs.com/package/@btnlauncher2/nat-api) |
+| [@btnlauncher2/system](packages/system) | FS middleware for browser/Node | [![npm](https://img.shields.io/npm/v/@btnlauncher2/system.svg)](https://www.npmjs.com/package/@btnlauncher2/system) |
+| [@btnlauncher2/unzip](packages/unzip) | yauzl unzip wrapper | [![npm](https://img.shields.io/npm/v/@btnlauncher2/unzip.svg)](https://www.npmjs.com/package/@btnlauncher2/unzip) |
+| [@btnlauncher2/semver](packages/semver) | Fabric semver format | [![npm](https://img.shields.io/npm/v/@btnlauncher2/semver.svg)](https://www.npmjs.com/package/@btnlauncher2/semver) |
+| [@btnlauncher2/bytebuffer](packages/bytebuffer) | ByteBuffer implementation | [![npm](https://img.shields.io/npm/v/@btnlauncher2/bytebuffer.svg)](https://www.npmjs.com/package/@btnlauncher2/bytebuffer) |
 
 ## Contribute
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Voxelum/x-minecraft-launcher)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Voxelum/Btnlaucher2-pc)
 
 For general developer, see [Contributing](./CONTRIBUTING.md)
 
-For i18n localization developer, please follow [Getting Started with Localization](https://docs.xmcl.app/en/guide/i18n)
+For i18n localization developer, please follow [Getting Started with Localization](https://docs.btnlauncher2.app/en/guide/i18n)
 
 ## LICENSE
 
@@ -134,7 +134,7 @@ For i18n localization developer, please follow [Getting Started with Localizatio
 
 | [![](https://github.com/DGP-Studio/Snap.Hutao/assets/10614984/73ae8b90-f3c7-4033-b2b7-f4126331ce66)](https://signpath.io/) | Free code signing on Windows provided by [SignPath.io](https://signpath.io/), certificate by [SignPath Foundation](https://signpath.org/) |
 | :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: |
-| [![](https://deno.com/images/deno_logo_4.gif)](https://deno.com/deploy) | [Deno Deploy](https://deno.com/deploy), XMCL leverage its hassle-free platform for serverless JavaScript applications. Provided by [Deno](https://deno.com/)   |
+| [![](https://deno.com/images/deno_logo_4.gif)](https://deno.com/deploy) | [Deno Deploy](https://deno.com/deploy), btnlauncher2 leverage its hassle-free platform for serverless JavaScript applications. Provided by [Deno](https://deno.com/)   |
 | [![](assets/EdgeOne.png)](https://edgeone.ai/) | [Best Asian CDN, Edge, and Secure Solutions - Tencent EdgeOne](https://edgeone.ai/),CDN acceleration and security protection for this project are sponsored by Tencent EdgeOne. |
 
 ### Sponsor (AFDIAN)

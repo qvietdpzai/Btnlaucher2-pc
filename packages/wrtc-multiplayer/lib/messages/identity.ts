@@ -1,4 +1,4 @@
-import { ConnectionUserInfo } from '@xmcl/runtime-api'
+import { ConnectionUserInfo } from '@btnlauncher2/runtime-api'
 import { defineMessage, MessageType } from './message'
 
 export const MessageIdentity: MessageType<ConnectionUserInfo> = 'identity'

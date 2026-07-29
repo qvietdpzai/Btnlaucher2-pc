@@ -1,5 +1,5 @@
 /**
- * @module @xmcl/file-transfer
+ * @module @btnlauncher2/file-transfer
  */
 
 export * from './agent'

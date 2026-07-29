@@ -38,25 +38,25 @@
       }
     },
     {
-      "files": ["**/xmcl-runtime/**"],
+      "files": ["**/btnlauncher2-runtime/**"],
       "rules": {
         "import/no-cycle": "off"
       }
     },
     {
-      "files": ["**/xmcl-runtime-api/**"],
+      "files": ["**/btnlauncher2-runtime-api/**"],
       "rules": {
         "import/no-cycle": "off"
       }
     },
     {
-      "files": ["**/xmcl-electron-app/**"],
+      "files": ["**/btnlauncher2-electron-app/**"],
       "rules": {
         "import/no-cycle": "off"
       }
     },
     {
-      "files": ["**/xmcl-keystone-ui/**"],
+      "files": ["**/btnlauncher2-keystone-ui/**"],
       "rules": {
         "import/no-cycle": "off"
       }

@@ -1,0 +1,58 @@
+{
+    "name": "@btnlauncher2/runtime-api",
+    "version": "0.45.4",
+    "author": "ci010 <cijhn@hotmail.com>",
+    "description": "Shared API for between launcher renderer & main process",
+    "license": "MIT",
+    "main": "index.ts",
+    "type": "module",
+    "sideEffects": false,
+    "engines": {
+        "node": ">=20"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/qvietdpzai/Btnlaucher2-pc"
+    },
+    "scripts": {
+        "build": "pnpm run build:cjs && pnpm run build:esm && pnpm run build:type",
+        "build:cjs": "esbuild --bundle --platform=node --outfile=dist/index.js --target=es2020 --format=cjs --external:semver index.ts",
+        "build:esm": "esbuild --bundle --platform=node --outfile=dist/index.mjs --target=es2020 --format=esm --external:semver index.ts",
+        "build:type": "tsc --project ./tsconfig.json",
+        "check": "tsc --noEmit --project ./tsconfig.json",
+        "lint": "oxlint -c ./node_modules/@btnlauncher2/oxlint-config/oxlintrc.json .",
+        "fmt": "oxfmt -c .oxfmtrc.json .",
+        "lint:fix": "pnpm lint fix"
+    },
+    "dependencies": {
+        "zod": "^4.1.13",
+        "@btnlauncher2/client": "workspace:*",
+        "@btnlauncher2/instance": "workspace:*",
+        "@btnlauncher2/resource": "workspace:*",
+        "@btnlauncher2/file-transfer": "workspace:*",
+        "@btnlauncher2/core": "workspace:*",
+        "@btnlauncher2/curseforge": "workspace:*",
+        "@btnlauncher2/forge-site-parser": "workspace:*",
+        "@btnlauncher2/game-data": "workspace:*",
+        "@btnlauncher2/gamesetting": "workspace:*",
+        "@btnlauncher2/installer": "workspace:*",
+        "@btnlauncher2/mod-parser": "workspace:*",
+        "@btnlauncher2/model": "workspace:*",
+        "@btnlauncher2/modrinth": "workspace:*",
+        "@btnlauncher2/nbt": "workspace:*",
+        "@btnlauncher2/resourcepack": "workspace:*",
+        "@btnlauncher2/system": "workspace:*",
+        "@btnlauncher2/text-component": "workspace:*",
+        "@btnlauncher2/unzip": "workspace:*",
+        "@btnlauncher2/user": "workspace:*"
+    },
+    "devDependencies": {
+        "@types/node": "^24.13.3",
+        "@btnlauncher2/oxlint-config": "workspace:*",
+        "oxfmt": "^0.48.0",
+        "oxlint": "^1.63.0",
+        "esbuild": "^0.25.12",
+        "tslib": "^2.5.0",
+        "typescript": "^5.9.3"
+    }
+}

@@ -1,4 +1,4 @@
-import { BlockModel, PackMeta } from '@xmcl/resourcepack'
+import { BlockModel, PackMeta } from '@btnlauncher2/resourcepack'
 import { Material } from 'three/src/materials/Material'
 import { LinearFilter, NearestFilter } from 'three/src/constants'
 import { Object3D } from 'three/src/core/Object3D'

@@ -1,4 +1,4 @@
-import { AggregateExecutor, AnyError, WorkerQueue, isSystemError } from '@xmcl/utils'
+import { AggregateExecutor, AnyError, WorkerQueue, isSystemError } from '@btnlauncher2/utils'
 import { FSWatcher } from 'chokidar'
 import { basename, join, resolve, sep } from 'path'
 import { File } from '../File'

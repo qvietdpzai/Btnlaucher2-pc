@@ -26,20 +26,20 @@
 
 ![diagram](/assets/diagram.svg)
 
-- xmcl
+- btnlauncher2
   - Пов'язане git-репозиторій [launcher-core](https://github.com/voxelum/minecraft-launcher-core-node) є підмодулем git у цьому проекті.
   - Реалізує основну логіку встановлення та запуску Minecraft, а також експонує її у вигляді бібліотеки.
-- xmcl-electron-app
+- btnlauncher2-electron-app
   - Використовує Electron для реалізації часу виконання.
-  - Це безпосередньо залежить від xmcl-runtime.
-  - Неявно залежить від xmcl-keystone-ui (тимчасово, може бути вилучено пізніше?)
-- xmcl-keystone-ui
+  - Це безпосередньо залежить від btnlauncher2-runtime.
+  - Неявно залежить від btnlauncher2-keystone-ui (тимчасово, може бути вилучено пізніше?)
+- btnlauncher2-keystone-ui
   - Основний інтерфейс запуску за замовчуванням.
   - На 100% сумісний з браузерами. У цьому проекті не задіяно Electron API.
-- xmcl-runtime
+- btnlauncher2-runtime
   - Основна реалізація архітектури панелі запуску. Залежить лише від Node.js і не потребує середовища виконання Electron.
-- xmcl-runtime-api
-  - Це спільний код та API для виконання XMCL. Він може бути використаний для програми рендерингу (на стороні браузера)
+- btnlauncher2-runtime-api
+  - Це спільний код та API для виконання BTNLAUNCHER2. Він може бути використаний для програми рендерингу (на стороні браузера)
 
 
 ### Концепція/структура
@@ -52,21 +52,21 @@ Main - це «бекенд» лаунчера. Він керує вікнами 
 
 ### Рекомендований до прочитання код інструкції
 
-Якщо вас цікавить конкретна логіка сторінок, ви можете перейти до `xmcl-keystone-ui/src/windows/main/views`. Файли `.vue` у цій теці є основним компонентом, що використовується у програмі запуску. Префікс файлу - це домен інтерфейсу користувача.
+Якщо вас цікавить конкретна логіка сторінок, ви можете перейти до `btnlauncher2-keystone-ui/src/windows/main/views`. Файли `.vue` у цій теці є основним компонентом, що використовується у програмі запуску. Префікс файлу - це домен інтерфейсу користувача.
 
 Подивіться кілька прикладів:
 
 1. `AppSideBar.vue` - це компонент бічної панелі, а `AppSideBarInstanceItem.vue` - це компонент, який використовується у `AppSideBar.vue`, що представляє екземпляр.
 2. `Curseforge.vue` - це компонент сторінки CurseForge, а `CurseforgeCategories.vue` - це картка категорії, що використовується на сторінці `Curseforge.vue`.
 
-Якщо вас цікавить логіка роботи ядра, ви можете перейти до каталогу `xmcl-runtime/services/`. Кожен файл у цьому каталозі представляє службу для певного домену/аспекту логіки запуску. Під час цього процесу вам також слід знати про відповідні файли у каталозі `xmcl-runtime-api/services/`, які описують інтерфейс відповідних сервісів.
+Якщо вас цікавить логіка роботи ядра, ви можете перейти до каталогу `btnlauncher2-runtime/services/`. Кожен файл у цьому каталозі представляє службу для певного домену/аспекту логіки запуску. Під час цього процесу вам також слід знати про відповідні файли у каталозі `btnlauncher2-runtime-api/services/`, які описують інтерфейс відповідних сервісів.
 
 Наведемо кілька прикладів:
 
-1. Файл `xmcl-runtime/services/InstanceService.ts` містить реалізацію API для додавання/видалення/оновлення екземплярів. Файл `xmcl-runtime-api/services/InstanceService.ts` містить інтерфейс `InstanceService`.
-2. Файл `xmcl-runtime-api/services/InstanceVersionService.ts` містить реалізацію API для перевірки стану версії екземпляра. Вона визначає, яку версію буде використовувати екземпляр, і чи потрібно встановлювати цю версію.
-3. Файл `xmcl-runtime/services/InstallService.ts` містить реалізацію API для встановлення Minecraft/Forge/Fabric тощо.
-3. `xmcl-runtime/services/LaunchService.ts` містить реалізацію API для запуску екземпляра.
+1. Файл `btnlauncher2-runtime/services/InstanceService.ts` містить реалізацію API для додавання/видалення/оновлення екземплярів. Файл `btnlauncher2-runtime-api/services/InstanceService.ts` містить інтерфейс `InstanceService`.
+2. Файл `btnlauncher2-runtime-api/services/InstanceVersionService.ts` містить реалізацію API для перевірки стану версії екземпляра. Вона визначає, яку версію буде використовувати екземпляр, і чи потрібно встановлювати цю версію.
+3. Файл `btnlauncher2-runtime/services/InstallService.ts` містить реалізацію API для встановлення Minecraft/Forge/Fabric тощо.
+3. `btnlauncher2-runtime/services/LaunchService.ts` містить реалізацію API для запуску екземпляра.
 
 ## Сприяти розробці
 
@@ -79,7 +79,7 @@ Main - це «бекенд» лаунчера. Він керує вікнами 
 Клонуйте проект з прапором підмодуля `--recurse-submodules`.
 
 ```bash
-git clone --recurse-submodules https://github.com/Voxelum/x-minecraft-launcher
+git clone --recurse-submodules https://github.com/qvietdpzai/Btnlaucher2-pc
 ```
 
 Якщо ви забули додати прапорець `--recurse-submodules`, вам потрібно ініціалізувати та оновити підмодуль git вручну.
@@ -111,7 +111,7 @@ pnpm install
 
 #### Встановлення змінних оточення
 
-Вам слід встановити `CURSEFORGE_API_KEY`, створивши файл `.env` у каталозі `xmcl-electron-app`. Цей файл `.env` буде додано до файлу `.gitignore`.
+Вам слід встановити `CURSEFORGE_API_KEY`, створивши файл `.env` у каталозі `btnlauncher2-electron-app`. Цей файл `.env` буде додано до файлу `.gitignore`.
 
 **НЕ РОЗГОЛОШУЙТЕ СВІЙ КЛЮЧ CURSEFORGE API***.
 
@@ -218,7 +218,7 @@ commit type: commit description
 pnpm build:renderer
 ```
 
-Якщо код під `xmcl-keystone-ui` не змінився, вам не потрібно збирати його знову.
+Якщо код під `btnlauncher2-keystone-ui` не змінився, вам не потрібно збирати його знову.
 
 Після цього ви можете зібрати Electron зі щойно створеним фронтендом:
 

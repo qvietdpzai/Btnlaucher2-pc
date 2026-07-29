@@ -1,4 +1,4 @@
-import { FileSystem, resolveFileSystem } from '@xmcl/system'
+import { FileSystem, resolveFileSystem } from '@btnlauncher2/system'
 
 export interface QuiltModMetadata {
   /**

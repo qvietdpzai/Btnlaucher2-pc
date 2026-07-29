@@ -1,4 +1,4 @@
-import { deserialize, serialize, TagType } from '@xmcl/nbt'
+import { deserialize, serialize, TagType } from '@btnlauncher2/nbt'
 import { Blueprint, BlockState, BlueprintFormat, parseBlockState, stringifyBlockState } from '../model'
 import { compoundListSchema } from '../nbtSchema'
 import { readVarInts, withSchema, writeVarInts } from '../nbtUtil'
@@ -105,7 +105,7 @@ export async function writeSponge(blueprint: Blueprint): Promise<Uint8Array> {
     BlockEntities: blockEntities,
     Metadata: withSchema({
       Name: blueprint.name ?? '',
-      Author: blueprint.author ?? 'XMCL',
+      Author: blueprint.author ?? 'BTNLAUNCHER2',
     }, { Name: TagType.String, Author: TagType.String }),
   }
 

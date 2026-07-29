@@ -1,4 +1,4 @@
-import { QuiltModMetadata, readQuiltMod } from '@xmcl/mod-parser'
+import { QuiltModMetadata, readQuiltMod } from '@btnlauncher2/mod-parser'
 import { ResourceDomain } from '../ResourceDomain'
 import { ResourceType } from '../ResourceType'
 import type { IResourceParser } from './index'

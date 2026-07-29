@@ -33,7 +33,7 @@ interface PackageJson {
 }
 
 const DRY = !process.env.CI
-const appPackageDirs = ['xmcl-keystone-ui', 'xmcl-runtime', 'xmcl-runtime-api']
+const appPackageDirs = ['btnlauncher2-keystone-ui', 'btnlauncher2-runtime', 'btnlauncher2-runtime-api']
 
 function runGit(args: string[]) {
   return execFileSync('git', args, { encoding: 'utf8' }).trim()
@@ -195,7 +195,7 @@ function writeVersions(packages: PackageInfo[], rootVersion: string) {
   }
   writeJson(rootFile, { ...readJson(rootFile), version: rootVersion })
 
-  const electronFile = 'xmcl-electron-app/package.json'
+  const electronFile = 'btnlauncher2-electron-app/package.json'
   writeJson(electronFile, { ...readJson(electronFile), version: rootVersion })
 }
 
@@ -208,7 +208,7 @@ function getCommitInfoText(packages: PackageInfo[]) {
       if (typeof reason === 'string') {
         body += `  - ${reason}\n`
       } else {
-        body += `  - ${reason.header} ([${reason.hash}](https://github.com/Voxelum/x-minecraft-launcher/commit/${reason.hash}))\n`
+        body += `  - ${reason.header} ([${reason.hash}](https://github.com/qvietdpzai/Btnlaucher2-pc/commit/${reason.hash}))\n`
       }
     }
   }
@@ -245,7 +245,7 @@ function getAppChangelog(version: string) {
     body += `\n### ${section.title}\n\n`
     for (const commit of matched) {
       const scope = commit.scope ? `**${commit.scope}**: ` : ''
-      body += `- ${scope}${commit.subject || commit.header} ([${commit.hash}](https://github.com/Voxelum/x-minecraft-launcher/commit/${commit.hash}))\n`
+      body += `- ${scope}${commit.subject || commit.header} ([${commit.hash}](https://github.com/qvietdpzai/Btnlaucher2-pc/commit/${commit.hash}))\n`
     }
   }
   return body

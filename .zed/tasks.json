@@ -50,14 +50,14 @@
   },
   {
     "label": "Electron: Main (Development)",
-    "command": "${ZED_WORKTREE_ROOT}/xmcl-electron-app/node_modules/.bin/electron",
+    "command": "${ZED_WORKTREE_ROOT}/btnlauncher2-electron-app/node_modules/.bin/electron",
     "args": [
-      "${ZED_WORKTREE_ROOT}/xmcl-electron-app/dist/index.js",
+      "${ZED_WORKTREE_ROOT}/btnlauncher2-electron-app/dist/index.js",
       "--remote-debugging-port=9300",
       "--trace-uncaught",
       "--trace-deprecation"
     ],
-    "cwd": "${ZED_WORKTREE_ROOT}/xmcl-electron-app/dist",
+    "cwd": "${ZED_WORKTREE_ROOT}/btnlauncher2-electron-app/dist",
     "env": {
       "NODE_ENV": "development"
     },
@@ -66,13 +66,13 @@
   },
   {
     "label": "Electron: Main (Production - Windows)",
-    "command": "${ZED_WORKTREE_ROOT}/xmcl-electron-app/build/output/win-unpacked/X Minecraft Launcher.exe",
+    "command": "${ZED_WORKTREE_ROOT}/btnlauncher2-electron-app/build/output/win-unpacked/Btn Minecraft Launcher.exe",
     "args": [
       "--remote-debugging-port=9300",
       "--trace-uncaught",
       "--trace-deprecation"
     ],
-    "cwd": "${ZED_WORKTREE_ROOT}/xmcl-electron-app/build/output/win-unpacked",
+    "cwd": "${ZED_WORKTREE_ROOT}/btnlauncher2-electron-app/build/output/win-unpacked",
     "env": {
       "NODE_ENV": "production"
     },
@@ -81,13 +81,13 @@
   },
   {
     "label": "Electron: Main (Production - Linux)",
-    "command": "${ZED_WORKTREE_ROOT}/xmcl-electron-app/build/output/linux-unpacked/xmcl",
+    "command": "${ZED_WORKTREE_ROOT}/btnlauncher2-electron-app/build/output/linux-unpacked/btnlauncher2",
     "args": [
       "--remote-debugging-port=9300",
       "--trace-uncaught",
       "--trace-deprecation"
     ],
-    "cwd": "${ZED_WORKTREE_ROOT}/xmcl-electron-app/build/output/linux-unpacked",
+    "cwd": "${ZED_WORKTREE_ROOT}/btnlauncher2-electron-app/build/output/linux-unpacked",
     "env": {
       "NODE_ENV": "production"
     },
@@ -96,13 +96,13 @@
   },
   {
     "label": "Electron: Main (Production - macOS)",
-    "command": "${ZED_WORKTREE_ROOT}/xmcl-electron-app/build/output/mac/X Minecraft Launcher.app/Contents/MacOS/X Minecraft Launcher",
+    "command": "${ZED_WORKTREE_ROOT}/btnlauncher2-electron-app/build/output/mac/Btn Minecraft Launcher.app/Contents/MacOS/Btn Minecraft Launcher",
     "args": [
       "--remote-debugging-port=9300",
       "--trace-uncaught",
       "--trace-deprecation"
     ],
-    "cwd": "${ZED_WORKTREE_ROOT}/xmcl-electron-app/build/output/mac",
+    "cwd": "${ZED_WORKTREE_ROOT}/btnlauncher2-electron-app/build/output/mac",
     "env": {
       "NODE_ENV": "production"
     },

@@ -3,7 +3,7 @@ import { ChildProcess, ExecOptions, spawn, SpawnOptions } from 'child_process'
 import { access, mkdir, stat } from 'fs/promises'
 import { dirname } from 'path'
 
-export { checksum } from '@xmcl/core'
+export { checksum } from '@btnlauncher2/core'
 
 export function missing(target: string) {
   return access(target).then(

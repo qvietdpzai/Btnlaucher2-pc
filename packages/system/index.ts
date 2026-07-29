@@ -1,7 +1,7 @@
 /**
- * @module @xmcl/system
+ * @module @btnlauncher2/system
  */
-import { open, readEntry, readEntryBuffered, readAllEntries } from '@xmcl/unzip'
+import { open, readEntry, readEntryBuffered, readAllEntries } from '@btnlauncher2/unzip'
 import {
   access as saccess,
   stat as sstat,
@@ -12,7 +12,7 @@ import {
 import { promisify } from 'util'
 import { join, sep } from 'path'
 import { FileSystem } from './system'
-import { ZipFile, Entry } from '@xmcl/yauzl'
+import { ZipFile, Entry } from '@btnlauncher2/yauzl'
 
 const access = promisify(saccess)
 const stat = promisify(sstat)

@@ -1,9 +1,9 @@
 # Client Module
 
-[![npm version](https://img.shields.io/npm/v/@xmcl/client.svg)](https://www.npmjs.com/package/@xmcl/client)
-[![Downloads](https://img.shields.io/npm/dm/@xmcl/client.svg)](https://npmjs.com/@xmcl/client)
-[![Install size](https://packagephobia.now.sh/badge?p=@xmcl/client)](https://packagephobia.now.sh/result?p=@xmcl/client)
-[![npm](https://img.shields.io/npm/l/@xmcl/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@btnlauncher2/client.svg)](https://www.npmjs.com/package/@btnlauncher2/client)
+[![Downloads](https://img.shields.io/npm/dm/@btnlauncher2/client.svg)](https://npmjs.com/@btnlauncher2/client)
+[![Install size](https://packagephobia.now.sh/badge?p=@btnlauncher2/client)](https://packagephobia.now.sh/result?p=@btnlauncher2/client)
+[![npm](https://img.shields.io/npm/l/@btnlauncher2/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
 [![Build Status](https://github.com/voxelum/minecraft-launcher-core-node/workflows/Build/badge.svg)](https://github.com/Voxelum/minecraft-launcher-core-node/actions?query=workflow%3ABuild)
 
 Minecraft socket pipeline utilities. Support Minecraft lan server discovery.
@@ -15,7 +15,7 @@ Minecraft socket pipeline utilities. Support Minecraft lan server discovery.
 Read sever info (server ip, port) and fetch its status (ping, server motd):
 
 ```ts
-import { queryStatus, Status, QueryOptions } from '@xmcl/client'
+import { queryStatus, Status, QueryOptions } from '@btnlauncher2/client'
 const serverInfo = {
     host: 'your host',
     port: 25565, // be default
@@ -36,7 +36,7 @@ You can detect if player share LAN server.
 Or you can fake a LAN server.
 
 ```ts
-import { MinecraftLanDiscover, LanServerInfo } from '@xmcl/client'
+import { MinecraftLanDiscover, LanServerInfo } from '@btnlauncher2/client'
 const discover = new MinecraftLanDiscover();
 
 await discover.bind(); // start to listen any lan server

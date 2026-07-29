@@ -1,4 +1,4 @@
-import { MinecraftFolder } from '@xmcl/core'
+import { MinecraftFolder } from '@btnlauncher2/core'
 import { copyFile, mkdir } from 'fs/promises'
 import { existsSync } from 'fs'
 import { expect, test } from 'vitest'

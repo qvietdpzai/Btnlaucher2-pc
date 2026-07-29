@@ -1,6 +1,6 @@
-import type { ModpackInstallProfile } from '@xmcl/instance'
-import type { FabricModMetadata, LiteloaderModMetadata, QuiltModMetadata } from '@xmcl/mod-parser'
-import type { PackMeta } from '@xmcl/resourcepack'
+import type { ModpackInstallProfile } from '@btnlauncher2/instance'
+import type { FabricModMetadata, LiteloaderModMetadata, QuiltModMetadata } from '@btnlauncher2/mod-parser'
+import type { PackMeta } from '@btnlauncher2/resourcepack'
 import { ForgeModCommonMetadata, NeoforgeMetadata } from './mod'
 import { ResourceType } from './ResourceType'
 

@@ -1,5 +1,5 @@
 {
-  "name": "@xmcl/game-data",
+  "name": "@btnlauncher2/game-data",
   "version": "1.2.7",
   "main": "./index.ts",
   "description": "Parse minecraft game related data like level.dat, server.dat",
@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build:type": "tsc",
-    "build:cjs": "esbuild --target=es2020 --external:@xmcl/* --platform=neutral --sourcemap --format=cjs --bundle --outfile=dist/index.js index.ts",
-    "build:esm": "esbuild --target=es2020 --external:@xmcl/* --platform=neutral --sourcemap --format=esm --bundle --outfile=dist/index.mjs index.ts"
+    "build:cjs": "esbuild --target=es2020 --external:@btnlauncher2/* --platform=neutral --sourcemap --format=cjs --bundle --outfile=dist/index.js index.ts",
+    "build:esm": "esbuild --target=es2020 --external:@btnlauncher2/* --platform=neutral --sourcemap --format=esm --bundle --outfile=dist/index.mjs index.ts"
   },
   "publishConfig": {
     "main": "./dist/index.js",
@@ -17,12 +17,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@xmcl/nbt": "workspace:^*",
-    "@xmcl/system": "workspace:^*"
+    "@btnlauncher2/nbt": "workspace:^*",
+    "@btnlauncher2/system": "workspace:^*"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Voxelum/x-minecraft-launcher.git"
+    "url": "git+https://github.com/qvietdpzai/Btnlaucher2-pc.git"
   },
   "author": "cijhn@hotmail.com",
   "keywords": [
@@ -41,7 +41,7 @@
   "homepage": "https://github.com/Voxelum/minecraft-launcher-core-node#readme",
   "devDependencies": {
     "@types/node": "^24.13.3",
-    "@xmcl/oxlint-config": "workspace:^*",
+    "@btnlauncher2/oxlint-config": "workspace:^*",
     "tslib": "^2.5.0",
     "esbuild": "^0.25.12",
     "oxlint": "^1.63.0",

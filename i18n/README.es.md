@@ -1,15 +1,15 @@
 <p align="center">
-  <a href="https://xmcl.app" target="_blank">
-    <img alt="Logo" width="100" src="https://github.com/Voxelum/x-minecraft-launcher/blob/master/xmcl-electron-app/icons/dark@256x256.png">
+  <a href="https://btnlauncher2.app" target="_blank">
+    <img alt="Logo" width="100" src="https://github.com/qvietdpzai/Btnlaucher2-pc/blob/master/btnlauncher2-electron-app/icons/dark@256x256.png">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Voxelum/x-minecraft-launcher">
-    <img src="https://github.com/Voxelum/x-minecraft-launcher/workflows/Build/badge.svg" alt="Build">
+  <a href="https://github.com/qvietdpzai/Btnlaucher2-pc">
+    <img src="https://github.com/qvietdpzai/Btnlaucher2-pc/workflows/Build/badge.svg" alt="Build">
   </a>
-  <a href="https://github.com/Voxelum/x-minecraft-launcher/blob/master/LICENSE">
-    <img src="https://img.shields.io/npm/l/@xmcl/core.svg" alt="Licencia">
+  <a href="https://github.com/qvietdpzai/Btnlaucher2-pc/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/@btnlauncher2/core.svg" alt="Licencia">
   </a>
   <a href="https://conventionalcommits.org">
     <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Commit">
@@ -19,19 +19,19 @@
     <img src="https://discord.com/api/guilds/405213567118213121/widget.png" alt="Discord">
   </a>
   <a href="https://kook.top/gqjSHh">
-    <img src="https://img.shields.io/endpoint?url=https://api.xmcl.app/kook-badge" alt="Kook">
+    <img src="https://img.shields.io/endpoint?url=https://api.btnlauncher2.app/kook-badge" alt="Kook">
   </a>
   <a href="https://afdian.com/@ci010">
-    <img src="https://img.shields.io/endpoint?url=https://api.xmcl.app/afdian-badge" alt="afdian">
+    <img src="https://img.shields.io/endpoint?url=https://api.btnlauncher2.app/afdian-badge" alt="afdian">
   </a>
-  <a href="https://patreon.com/xmcl">
-    <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dxmcl%26type%3Dpledges" alt="patreon">
+  <a href="https://patreon.com/btnlauncher2">
+    <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dbtnlauncher2%26type%3Dpledges" alt="patreon">
   </a>
 </p>
 
-![home](https://raw.githubusercontent.com/Voxelum/xmcl-page/master/.vitepress/theme/assets/home.png)
+![home](https://raw.githubusercontent.com/qvietdpzai/Btnlaucher2-pc/master/.vitepress/theme/assets/home.png)
 
-¡Visita el [sitio oficial](https://xmcl.app) para descargar la aplicación!
+¡Visita el [sitio oficial](https://btnlauncher2.app) para descargar la aplicación!
 
 Si tienes winget, puedes usarlo para instalar:
 
@@ -42,8 +42,8 @@ winget install CI010.XMinecraftLauncher
 La instalación con HomeBrew también está disponible a través de tap:
 
 ```bash
-brew tap voxelum/xmcl
-brew install --cask --no-quarantine voxelum/xmcl
+brew tap voxelum/btnlauncher2
+brew install --cask --no-quarantine voxelum/btnlauncher2
 ```
 
 ## Características
@@ -61,11 +61,11 @@ brew install --cask --no-quarantine voxelum/xmcl
 
 ## Contribuir
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Voxelum/x-minecraft-launcher)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Voxelum/Btnlaucher2-pc)
 
 Para desarrolladores en general, consulta [Cómo contribuir](./CONTRIBUTING.md)
 
-Para desarrolladores de i18n y localización, por favor sigue la [Guía de inicio para la localización](https://docs.xmcl.app/en/guide/i18n)
+Para desarrolladores de i18n y localización, por favor sigue la [Guía de inicio para la localización](https://docs.btnlauncher2.app/en/guide/i18n)
 
 ## LICENCIA
 
@@ -75,7 +75,7 @@ Para desarrolladores de i18n y localización, por favor sigue la [Guía de inici
 
 | [![](https://github.com/DGP-Studio/Snap.Hutao/assets/10614984/73ae8b90-f3c7-4033-b2b7-f4126331ce66)](https://signpath.io/) | Firma de código gratuita en Windows proporcionada por [SignPath.io](https://signpath.io/), certificado por [SignPath Foundation](https://signpath.org/) |
 | :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: |
-| [![](https://deno.com/images/deno_logo_4.gif)](https://deno.com/deploy) | [Deno Deploy](https://deno.com/deploy), XMCL aprovecha su plataforma sin complicaciones para aplicaciones JavaScript sin servidor. Proporcionado por [Deno](https://deno.com/)   |
+| [![](https://deno.com/images/deno_logo_4.gif)](https://deno.com/deploy) | [Deno Deploy](https://deno.com/deploy), btnlauncher2 aprovecha su plataforma sin complicaciones para aplicaciones JavaScript sin servidor. Proporcionado por [Deno](https://deno.com/)   |
 | [![](assets/EdgeOne.png)](https://edgeone.ai/) | [Mejores soluciones CDN, Edge y de Seguridad de Asia - Tencent EdgeOne](https://edgeone.ai/), la aceleración CDN y protección de seguridad para este proyecto están patrocinadas por Tencent EdgeOne. |
 
 ### Patrocinador (AFDIAN)

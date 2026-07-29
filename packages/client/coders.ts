@@ -1,7 +1,7 @@
-import { deserializeSync, serializeSync } from '@xmcl/nbt'
-import { ByteBuffer } from '@xmcl/bytebuffer'
-import '@xmcl/bytebuffer/varint32'
-import '@xmcl/bytebuffer/varint64'
+import { deserializeSync, serializeSync } from '@btnlauncher2/nbt'
+import { ByteBuffer } from '@btnlauncher2/bytebuffer'
+import '@btnlauncher2/bytebuffer/varint32'
+import '@btnlauncher2/bytebuffer/varint64'
 import type { PacketRegistry } from './channel'
 
 export interface SlotData {

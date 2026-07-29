@@ -1,5 +1,5 @@
 {
-  "name": "@xmcl/nbt",
+  "name": "@btnlauncher2/nbt",
   "version": "3.0.3",
   "main": "./index.ts",
   "browser": "./dist/index.browser.mjs",
@@ -11,7 +11,7 @@
     "build:type": "tsc",
     "build:cjs": "esbuild --target=node16 --platform=node --sourcemap --format=cjs --bundle --outfile=dist/index.js index.ts",
     "build:esm": "esbuild --target=node16 --platform=node --sourcemap --format=esm --bundle --outfile=dist/index.mjs index.ts",
-    "build:browser": "esbuild --target=es2020 --external:@xmcl/* --external:pako --sourcemap --format=esm --bundle --outfile=dist/index.browser.mjs index.ts"
+    "build:browser": "esbuild --target=es2020 --external:@btnlauncher2/* --external:pako --sourcemap --format=esm --bundle --outfile=dist/index.browser.mjs index.ts"
   },
   "publishConfig": {
     "access": "public",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Voxelum/x-minecraft-launcher.git"
+    "url": "git+https://github.com/qvietdpzai/Btnlaucher2-pc.git"
   },
   "author": "cijhn@hotmail.com",
   "keywords": [
@@ -33,7 +33,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@xmcl/bytebuffer": "workspace:^*",
+    "@btnlauncher2/bytebuffer": "workspace:^*",
     "pako": "^2.1.0"
   },
   "bugs": {
@@ -43,7 +43,7 @@
   "devDependencies": {
     "@types/node": "^24.13.3",
     "@types/pako": "^2.0.0",
-    "@xmcl/oxlint-config": "workspace:^*",
+    "@btnlauncher2/oxlint-config": "workspace:^*",
     "esbuild": "^0.25.12",
     "oxlint": "^1.63.0",
     "typescript": "^5.9.3",

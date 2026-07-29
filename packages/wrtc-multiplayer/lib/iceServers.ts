@@ -1,4 +1,4 @@
-import type { MultiplayerIceServerCredential } from '@xmcl/runtime-api'
+import type { MultiplayerIceServerCredential } from '@btnlauncher2/runtime-api'
 import { readFile } from 'fs/promises'
 import { join } from 'path'
 import { PeerConnectionFactory } from './PeerConnectionFactory'

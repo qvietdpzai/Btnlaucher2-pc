@@ -2,7 +2,7 @@ import * as path from 'path'
 import { readForgeMod, readForgeModToml } from './forge'
 import { ForgeConfig } from './forgeConfig'
 import { describe, test, expect } from 'vitest'
-import { openFileSystem } from '@xmcl/system'
+import { openFileSystem } from '@btnlauncher2/system'
 
 describe('Forge', () => {
   test('should identify the package usage', async ({ mock }) => {

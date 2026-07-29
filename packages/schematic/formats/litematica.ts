@@ -1,4 +1,4 @@
-import { deserialize, getPrototypeOf, serialize, TagType } from '@xmcl/nbt'
+import { deserialize, getPrototypeOf, serialize, TagType } from '@btnlauncher2/nbt'
 import { Blueprint, BlockState, BlueprintFormat, isAir, stringifyBlockState } from '../model'
 import { compoundListSchema } from '../nbtSchema'
 import { packLitematicaStates, unpackLitematicaStates, withSchema } from '../nbtUtil'
@@ -193,7 +193,7 @@ export async function writeLitematic(blueprint: Blueprint): Promise<Uint8Array> 
 
   const metadata: any = {
     Name: blueprint.name ?? regionName,
-    Author: blueprint.author ?? 'XMCL',
+    Author: blueprint.author ?? 'BTNLAUNCHER2',
     Description: blueprint.description ?? '',
     EnclosingSize: withSchema({ x: size.x, y: size.y, z: size.z }, sizeSchema),
     TimeCreated: now,

@@ -1,4 +1,4 @@
-import { FabricModMetadata, readFabricMod } from '@xmcl/mod-parser'
+import { FabricModMetadata, readFabricMod } from '@btnlauncher2/mod-parser'
 import { ResourceDomain } from '../ResourceDomain'
 import { ResourceType } from '../ResourceType'
 import type { IResourceParser } from './index'

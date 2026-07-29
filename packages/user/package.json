@@ -1,5 +1,5 @@
 {
-  "name": "@xmcl/user",
+  "name": "@btnlauncher2/user",
   "version": "4.4.1",
   "main": "./index.ts",
   "description": "Minecraft user related functions, including Yggdrasil authenticator, player skin fetcher, and Mojang security API",
@@ -25,7 +25,7 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Voxelum/x-minecraft-launcher.git"
+    "url": "git+https://github.com/qvietdpzai/Btnlaucher2-pc.git"
   },
   "author": "cijhn@hotmail.com",
   "keywords": [

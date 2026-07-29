@@ -1,9 +1,9 @@
 # ASM Module
 
-[![npm version](https://img.shields.io/npm/v/@xmcl/asm.svg)](https://www.npmjs.com/package/@xmcl/asm)
-[![Downloads](https://img.shields.io/npm/dm/@xmcl/asm.svg)](https://npmjs.com/@xmcl/asm)
-[![Install size](https://packagephobia.now.sh/badge?p=@xmcl/asm)](https://packagephobia.now.sh/result?p=@xmcl/asm)
-[![npm](https://img.shields.io/npm/l/@xmcl/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@btnlauncher2/asm.svg)](https://www.npmjs.com/package/@btnlauncher2/asm)
+[![Downloads](https://img.shields.io/npm/dm/@btnlauncher2/asm.svg)](https://npmjs.com/@btnlauncher2/asm)
+[![Install size](https://packagephobia.now.sh/badge?p=@btnlauncher2/asm)](https://packagephobia.now.sh/result?p=@btnlauncher2/asm)
+[![npm](https://img.shields.io/npm/l/@btnlauncher2/minecraft-launcher-core.svg)](https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE)
 [![Build Status](https://github.com/voxelum/minecraft-launcher-core-node/workflows/Build/badge.svg)](https://github.com/Voxelum/minecraft-launcher-core-node/actions?query=workflow%3ABuild)
 
 Parse Java bytecode, which port from [java asm package](https://asm.ow2.io/).
@@ -15,7 +15,7 @@ Parse Java bytecode, which port from [java asm package](https://asm.ow2.io/).
 The usage is just like asm library in java:
 
 ```ts
-import { AnnotationVisitor, ClassReader, ClassVisitor, MethodVisitor, Opcodes } from '@xmcl/asm'
+import { AnnotationVisitor, ClassReader, ClassVisitor, MethodVisitor, Opcodes } from '@btnlauncher2/asm'
 
 
 class CustomClassVisitor extends ClassVisitor {

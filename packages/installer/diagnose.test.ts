@@ -1,5 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
-import { MinecraftFolder } from '@xmcl/core'
+import { MinecraftFolder } from '@btnlauncher2/core'
 import { describe, test, expect, beforeEach, vi } from 'vitest'
 import { diagnoseLibraries } from './libraries'
 import * as fs from 'fs/promises'

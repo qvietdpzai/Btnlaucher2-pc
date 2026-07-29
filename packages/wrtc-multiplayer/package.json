@@ -1,8 +1,8 @@
 {
   "version": "0.2.2",
-  "name": "@xmcl/wrtc-multiplayer",
+  "name": "@btnlauncher2/wrtc-multiplayer",
   "private": true,
-  "description": "WebRTC-based multiplayer runtime for X Minecraft Launcher (runs inside the multiplayer preload process)",
+  "description": "WebRTC-based multiplayer runtime for Btn Minecraft Launcher (runs inside the multiplayer preload process)",
   "main": "./index.ts",
   "scripts": {
     "check": "tsc --project tsconfig.json --noEmit",
@@ -13,19 +13,19 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
-    "@xmcl/client": "workspace:*",
-    "@xmcl/nat-api": "workspace:*",
-    "@xmcl/runtime-api": "workspace:*",
-    "@xmcl/stun-client": "^1.0.0",
-    "@xmcl/text-component": "workspace:*",
-    "@xmcl/utils": "workspace:*",
+    "@btnlauncher2/client": "workspace:*",
+    "@btnlauncher2/nat-api": "workspace:*",
+    "@btnlauncher2/runtime-api": "workspace:*",
+    "@btnlauncher2/stun-client": "^1.0.0",
+    "@btnlauncher2/text-component": "workspace:*",
+    "@btnlauncher2/utils": "workspace:*",
     "lodash.debounce": "^4.0.8",
     "node-datachannel": "0.32.3"
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.7",
     "@types/node": "^24.13.3",
-    "@xmcl/oxlint-config": "workspace:*",
+    "@btnlauncher2/oxlint-config": "workspace:*",
     "oxlint": "^1.63.0",
     "typescript": "^5.9.3"
   },

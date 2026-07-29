@@ -35,7 +35,7 @@ async function fetchSampleModpack(): Promise<string> {
 
   const ab = await fetch(file.url).then((r) => r.arrayBuffer())
   const buf = Buffer.from(ab as ArrayBuffer)
-  const dir = await mkdtemp(join(tmpdir(), 'xmcl-e2e-modpack-'))
+  const dir = await mkdtemp(join(tmpdir(), 'btnlauncher2-e2e-modpack-'))
   const out = join(dir, file.filename)
   await writeFile(out, buf)
   return out
