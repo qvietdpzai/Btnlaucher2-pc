@@ -1,18 +1,18 @@
 <#
 .SYNOPSIS
-  Portable installer for X Minecraft Launcher (XMCL).
+  Portable installer for Btn Minecraft Launcher (BtnLauncher2).
 
 .DESCRIPTION
   Reconstructs a runnable launcher folder — equivalent to extracting the
   official Windows zip — by downloading the matching Electron prebuilt from the
-  npmmirror Electron mirror and the app.asar from the `@xmcl/app` npm package.
-  Intended for users behind the GFW who have not installed XMCL yet.
+  npmmirror Electron mirror and the app.asar from the `@btnlauncher2/app` npm package.
+  Intended for users behind the GFW who have not installed BtnLauncher2 yet.
 
   The resulting folder shares its user data with a normal install, because the
   Electron app name comes from app.asar's package.json, not the exe name.
 
 .PARAMETER InstallDir
-  Target directory. Defaults to "$env:LOCALAPPDATA\Programs\XMCL".
+  Target directory. Defaults to "$env:LOCALAPPDATA\Programs\BtnLauncher2".
 
 .PARAMETER Version
   App version to install (e.g. 0.49.3). Defaults to the latest published.
@@ -28,14 +28,14 @@
   Launch the launcher after install completes.
 
 .EXAMPLE
-  irm https://xmcl.app/install.ps1 | iex
+  irm https://btnlauncher2.app/install.ps1 | iex
 
 .EXAMPLE
-  .\install.ps1 -InstallDir D:\Apps\XMCL -Launch
+  .\install.ps1 -InstallDir D:\Apps\BtnLauncher2 -Launch
 #>
 [CmdletBinding()]
 param(
-  [string]$InstallDir = "$env:LOCALAPPDATA\Programs\XMCL",
+  [string]$InstallDir = "$env:LOCALAPPDATA\Programs\BtnLauncher2",
   [string]$Version = 'latest',
   [string]$Registry = 'https://registry.npmmirror.com',
   [string]$ElectronMirror = 'https://npmmirror.com/mirrors/electron',
@@ -46,7 +46,7 @@ $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue' # Invoke-WebRequest is ~10x faster without the progress bar.
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-$AppName = 'X Minecraft Launcher'
+$AppName = 'Btn Minecraft Launcher'
 $Tar = Join-Path $env:SystemRoot 'System32\tar.exe' # bsdtar, shipped since Windows 10 1803.
 
 function Write-Step($msg) { Write-Host "==> $msg" -ForegroundColor Cyan }
@@ -60,7 +60,7 @@ switch ($env:PROCESSOR_ARCHITECTURE) {
   'x86'   { $electronArch = 'ia32';  $asarPlatform = 'win-ia32' }
   default { throw "Unsupported architecture: $env:PROCESSOR_ARCHITECTURE" }
 }
-$Package = "@xmcl/app-$asarPlatform"
+$Package = "@btnlauncher2/app-$asarPlatform"
 
 # 2. Resolve the app + Electron version from the npm package metadata. The
 #    published package.json carries a custom `electron` field pinning the exact
@@ -72,7 +72,7 @@ $electronVersion = $meta.electron
 if (-not $electronVersion) { throw "Package $Package@$appVersion has no 'electron' field." }
 Write-Host "    app=$appVersion electron=$electronVersion arch=$electronArch"
 
-$tmp = Join-Path ([System.IO.Path]::GetTempPath()) "xmcl-install-$([guid]::NewGuid().ToString('N'))"
+$tmp = Join-Path ([System.IO.Path]::GetTempPath()) "btnlauncher2-install-$([guid]::NewGuid().ToString('N'))"
 New-Item -ItemType Directory -Force -Path $tmp | Out-Null
 try {
   # 3. Download + extract the Electron prebuilt. These files are byte-identical
@@ -88,7 +88,7 @@ try {
   Expand-Archive -Path $electronZip -DestinationPath $InstallDir -Force
 
   # 4. Replace the stub default app with our app.asar, pulled from the
-  #    @xmcl/app-<platform> package tarball (npmmirror's per-file endpoint is
+  #    @btnlauncher2/app-<platform> package tarball (npmmirror's per-file endpoint is
   #    whitelist-only; package tarballs are unrestricted). The tarball also
   #    carries the checksum and the icon.
   $resources = Join-Path $InstallDir 'resources'
@@ -123,7 +123,7 @@ try {
   $exe = Join-Path $InstallDir "$AppName.exe"
   Move-Item -Force (Join-Path $InstallDir 'electron.exe') $exe
 
-  # 7. Stamp the XMCL icon + version info into the exe, exactly like the
+  # 7. Stamp the BtnLauncher2 icon + version info into the exe, exactly like the
   #    official electron-builder output does with rcedit. Best-effort: the
   #    launcher already shows the correct icon at runtime (set from inside
   #    app.asar), so this only fixes the static file icon in Explorer. rcedit

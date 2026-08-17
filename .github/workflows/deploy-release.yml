@@ -6,6 +6,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    # Requires Azure + npm secrets not configured on this fork; skip silently.
+    if: ${{ secrets.AZURE_ACCOUNT_KEY != '' }}
     steps:
     - name: Download Releases
       uses: robinraju/release-downloader@v1.7
@@ -48,6 +50,8 @@ jobs:
   publish-asar-npm:
     name: Publish app.asar to npm
     runs-on: ubuntu-latest
+    # Requires npm token not configured on this fork; skip silently.
+    if: ${{ secrets.NPM_AUTH_TOKEN != '' }}
     steps:
     - name: Checkout
       uses: actions/checkout@v5

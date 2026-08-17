@@ -3,7 +3,7 @@
     "private": true,
     "version": "0.60.1",
     "author": "ci010 <cijhn@hotmail.com>",
-    "description": "The runtime for x minecraft launcher in nodejs",
+    "description": "The runtime for btn launcher in nodejs",
     "license": "MIT",
     "main": "index.ts",
     "engines": {

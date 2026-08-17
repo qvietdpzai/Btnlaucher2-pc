@@ -20,7 +20,7 @@ export const config = {
   // set this to your own repo!
   publish: [{
     provider: 'github',
-    owner: 'voxelum',
+    owner: 'qvietdpzai',
     repo: 'Btnlaucher2-pc',
   }],
   files: [{
@@ -39,7 +39,7 @@ export const config = {
     identityName: 'btnlauncher2',
     backgroundColor: 'transparent',
     publisher: process.env.PUBLISHER,
-    publisherDisplayName: 'CI010',
+    publisherDisplayName: 'BtnLauncher2',
     setBuildNumber: true,
   },
   dmg: {
@@ -76,7 +76,7 @@ export const config = {
   },
   win: {
     certificateFile: undefined as string | undefined,
-    publisherName: 'CI010',
+    publisherName: 'BtnLauncher2',
     icon: 'icons/dark.ico',
     electronLanguages: ['en-US'],
     target: [

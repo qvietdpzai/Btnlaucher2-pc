@@ -1,26 +1,26 @@
 #!/bin/sh
-# Portable installer for X Minecraft Launcher (XMCL) — macOS & Linux.
+# Portable installer for Btn Minecraft Launcher (BtnLauncher2) — macOS & Linux.
 #
 # Reconstructs a runnable launcher — equivalent to extracting the official
 # tar.xz (Linux) or the dmg's .app (macOS) — by downloading the matching
 # Electron prebuilt from the npmmirror Electron mirror and the app.asar from the
-# per-platform @xmcl/app-<platform> npm package. Intended for users behind the
-# GFW who have not installed XMCL yet.
+# per-platform @btnlauncher2/app-<platform> npm package. Intended for users behind the
+# GFW who have not installed BtnLauncher2 yet.
 #
 # Usage:
-#   curl -fsSL https://xmcl.app/install.sh | sh
-#   curl -fsSL https://xmcl.app/install.sh | sh -s -- --launch
+#   curl -fsSL https://btnlauncher2.app/install.sh | sh
+#   curl -fsSL https://btnlauncher2.app/install.sh | sh -s -- --launch
 #   ./install.sh --install-dir ~/Apps --version 0.56.6 --launch
 #
-# Env overrides: XMCL_REGISTRY, XMCL_ELECTRON_MIRROR, XMCL_INSTALL_DIR.
+# Env overrides: BTNLAUNCHER2_REGISTRY, BTNLAUNCHER2_ELECTRON_MIRROR, BTNLAUNCHER2_INSTALL_DIR.
 set -eu
 
-REGISTRY="${XMCL_REGISTRY:-https://registry.npmmirror.com}"
-ELECTRON_MIRROR="${XMCL_ELECTRON_MIRROR:-https://npmmirror.com/mirrors/electron}"
-APP_NAME="X Minecraft Launcher"
+REGISTRY="${BTNLAUNCHER2_REGISTRY:-https://registry.npmmirror.com}"
+ELECTRON_MIRROR="${BTNLAUNCHER2_ELECTRON_MIRROR:-https://npmmirror.com/mirrors/electron}"
+APP_NAME="Btn Minecraft Launcher"
 
 VERSION="latest"
-INSTALL_DIR="${XMCL_INSTALL_DIR:-}"
+INSTALL_DIR="${BTNLAUNCHER2_INSTALL_DIR:-}"
 LAUNCH=0
 SKIP_ICON=0
 
@@ -71,10 +71,10 @@ case "$arch" in
 esac
 
 platform="${plat_base}${plat_suffix}"   # mac | mac-arm64 | linux | linux-arm64
-pkg="@xmcl/app-${platform}"
+pkg="@btnlauncher2/app-${platform}"
 
 if [ -z "$INSTALL_DIR" ]; then
-  if [ "$os" = "Darwin" ]; then INSTALL_DIR="$HOME/Applications"; else INSTALL_DIR="$HOME/.local/share/xmcl"; fi
+  if [ "$os" = "Darwin" ]; then INSTALL_DIR="$HOME/Applications"; else INSTALL_DIR="$HOME/.local/share/btnlauncher2"; fi
 fi
 
 # --- resolve version + electron from npm metadata ----------------------------
@@ -133,7 +133,7 @@ if [ "$os" = "Darwin" ]; then
   pb() { /usr/libexec/PlistBuddy -c "$1" "$plist" >/dev/null 2>&1 || true; }
   pb "Set :CFBundleExecutable $APP_NAME"
   pb "Set :CFBundleName $APP_NAME"
-  pb "Set :CFBundleIdentifier xmcl"
+  pb "Set :CFBundleIdentifier btnlauncher2"
   # CFBundleDisplayName may be absent in Electron's plist, so add it if Set fails.
   /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName $APP_NAME" "$plist" >/dev/null 2>&1 \
     || /usr/libexec/PlistBuddy -c "Add :CFBundleDisplayName string $APP_NAME" "$plist" >/dev/null 2>&1 || true
@@ -162,8 +162,8 @@ else
   rm -f "$INSTALL_DIR/resources/default_app.asar"
   mv "$asar_src" "$INSTALL_DIR/resources/app.asar"
 
-  mv "$INSTALL_DIR/electron" "$INSTALL_DIR/xmcl"
-  chmod +x "$INSTALL_DIR/xmcl"
+  mv "$INSTALL_DIR/electron" "$INSTALL_DIR/btnlauncher2"
+  chmod +x "$INSTALL_DIR/btnlauncher2"
 
   # chrome-sandbox must be root-owned + setuid, which needs privileges we may
   # not have in a portable install. Best-effort; otherwise --no-sandbox works.
@@ -174,7 +174,7 @@ else
     fi
   fi
 
-  step "Installed to $INSTALL_DIR/xmcl"
-  echo "    if it fails with a sandbox error, run: $INSTALL_DIR/xmcl --no-sandbox"
-  [ "$LAUNCH" = "1" ] && "$INSTALL_DIR/xmcl" >/dev/null 2>&1 &
+  step "Installed to $INSTALL_DIR/btnlauncher2"
+  echo "    if it fails with a sandbox error, run: $INSTALL_DIR/btnlauncher2 --no-sandbox"
+  [ "$LAUNCH" = "1" ] && "$INSTALL_DIR/btnlauncher2" >/dev/null 2>&1 &
 fi
