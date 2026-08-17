@@ -278,8 +278,9 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - build
-    # Azure blob storage secret is not configured on this fork; skip silently.
-    if: ${{ secrets.AZURE_ACCOUNT_KEY != '' }}
+    # Disabled on this fork: requires the AZURE_ACCOUNT_KEY secret (Azure blob
+    # storage) which is not configured here.
+    if: ${{ false }}
     steps:
       - name: Download Source Map
         uses: actions/download-artifact@v7
